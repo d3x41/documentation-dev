@@ -10,13 +10,16 @@ defmodule KaisenDocumentation.MixProject do
       deps: deps(),
 
       # Docs
-      name: "KaisenLinux",
+      name: "Documentation",
       homepage_url: "https://kaisenlinux.org/documentation/",
+      authors: "Arnaud Cormier & Kevin Chevreuil",
       docs: [
         main: "md/documentation",
         api_reference: false,
         logo: "priv/assets/kaisen-logo.jpg",
         assets: "priv/assets",
+        before_closing_head_tag: &docs_before_closing_head_tag/1,
+        formatters: ["html"],
         extra_section: "Guides",
         extras: [
           "md/documentation.md": [ title: "Kaisen Linux | Documentation"],
@@ -85,4 +88,10 @@ defmodule KaisenDocumentation.MixProject do
       {:ex_doc, "~> 0.23", only: :dev, runtime: false},
     ]
   end
+
+  # adding custom stylesheet
+  defp docs_before_closing_head_tag(:html) do
+    ~s{<link rel="stylesheet" href="assets/doc.css">}
+  end
+  defp docs_before_closing_head_tag(_), do: ""
 end

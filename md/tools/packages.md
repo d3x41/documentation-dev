@@ -151,7 +151,7 @@ This package replaces the old kaisen-*-default-profile packages which installed 
 This package installs the kaisen-update-skel command.  
 
 ### kaisen-manpages
-This package is simply an offline implementation of the entire https://kaisenlinux.org/manpages domain in order to access the centralized manpages of the tools built into Kaisen Linux without requiring an internet connection. An Apache server is installed with this package to read HTML pages via localhost.
+This package is simply an offline implementation of the entire https://kaisenlinux.org/manpages/ domain in order to access the centralized manpages of the tools built into Kaisen Linux without requiring an internet connection. An Apache server is installed with this package to read HTML pages via localhost.
 
 ### veracrypt
 Tool to HDD, SSD and system disks encryption.
