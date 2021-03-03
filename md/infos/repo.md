@@ -22,17 +22,3 @@ CAUTION: Installing packages from this repository can break certain parts of you
 ## Which repository to use
 
 You can use them all. However, if you are new to GNU / Linux, avoid the kaisen-testing repository, repairing your system can be complicated in case of problems.
-
-## Adding repositories
-
-We recommend adding a repository file to `/etc/apt/sources.list.d/file.list`. This keeps a functional `/etc/apt/sources.list` file in case of problems.
-Here are the others Kaisen Linux repositories that you can enter in this file:
-
-```bash
-deb https://kaisendeb.lf.je/kaisen kaisen-devel main contrib non-free
-deb-src https://kaisendeb.lf.je/kaisen kaisen-devel main contrib non-free
-deb https://kaisendeb.lf.je/kaisen kaisen-packages main contrib non-free
-deb-src https://kaisendeb.lf.je/kaisen kaisen-packages main contrib non-free
-deb https://kaisendeb.lf.je/kaisen kaisen-testing main contrib non-free
-deb-src https://kaisendeb.lf.je/kaisen kaisen-testing main contrib non-free
-```
