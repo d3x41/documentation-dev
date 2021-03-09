@@ -64,6 +64,30 @@ After starting the virtual machine, via the menu:
 Kaisen Linux => Services => Virtualization => virtualbox-guest-enable
 ```
 
+### Install guest additions from a host system other than Kaisen Linux
+
+To install the VirtualBox Guest Additions from a host system other than Kaisen Linux, you must use the Guest Additions ISO provided by Oracle which can be downloaded here: https://download.virtualbox.org/virtualbox/6.1.18/VBoxGuestAdditions_6.1.18.iso (Version 6.1.18 is the latest version as of this writing).
+Once the CD is inserted into the VM, run these commands:
+```bash
+sudo mkdir /tmp/vboxguests
+sudo cp -rf /media/cdrom0/* /tmp/vboxguests
+sudo /tmp/vboxguests/autorun.sh
+```
+Let the process complete and follow the given steps.
+Once all this is done, you must restart the VM and you will be able to enjoy the full guest additions installed on the VM!
+
+### Install guest additions from a Kaisen Linux system host
+
+To install the VirtualBox Guest Additions from a Kaisen Linux system host, you can find the ISO of guest additions here: **/usr/share/virtualbox/VBoxGuestAdditions.iso**
+Once the CD is inserted into the VM, run these commands:
+```bash
+sudo mkdir /tmp/vboxguests
+sudo cp -rf /media/cdrom0/* /tmp/vboxguests
+sudo /tmp/vboxguests/autorun.sh
+```
+Let the process complete and follow the given steps.
+Once all this is done, you must restart the VM and you will be able to enjoy the full guest additions installed on the VM!
+
 ## VMWare Workstation
 
 You can virtualize Kaisen Linux with VMWare Workstation hypervisor.

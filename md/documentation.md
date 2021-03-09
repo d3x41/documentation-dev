@@ -4,7 +4,7 @@
 
 It is a complete operating system whose originality is to provide a set of tools dedicated to system administration and covering all the needs for diagnosing and dealing with faults or failures of an installed system and its components. The most important system tools are available.   
 
-Since 1.5, Kaisen Linux is a rolling release based on debian testing. 
+Since release 1.0 named, Kaisen Linux is a rolling release (continuous update) based on debian testing. 
 
 ## Quick start
 
@@ -16,9 +16,9 @@ Since 1.5, Kaisen Linux is a rolling release based on debian testing.
     - [Kaisen Linux System Rescue](https://iso.kaisenlinux.org/rolling/kaisenlinuxrolling1.5-amd64-SR.iso)
 2. Launch it in a VM
 3. Boot on the live mode or install Kaisen Linux
-4. Explore and test sysadmin tools
+4. Explore and test sysadmin and technicians tools
 5. Read Kaisen Linux documentation or [Kaisen Linux manpages](https://kaisenlinux.org/manpages/) for help
-6. Join our [community forum](https://forum.kaisenlinux.org/) ;-)
+6. Join our [community forum](https://forum.kaisenlinux.org) ;-)
 
 ## Documentation guides
 
