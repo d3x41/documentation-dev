@@ -30,16 +30,16 @@ This section lists all existing official links for the project.
 ## APT repositories [NEW]
 
 ```bash
-deb https://deb.kaisenlinux.org/kaisen kaisen-rolling main contrib non-free
-deb https://deb.kaisenlinux.org/kaisen kaisen-devel main contrib non-free
-deb https://deb.kaisenlinux.org/kaisen kaisen-packages main contrib non-free
-deb https://deb.kaisenlinux.org/kaisen kaisen-testing main contrib non-free
-deb https://deb.kaisenlinux.org/kaisen kaisen-rolling-snapshot main contrib non-free
-deb-src https://deb.kaisenlinux.org/kaisen kaisen-rolling main contrib non-free
-deb-src https://deb/kaisenlinux.org/kaisen kaisen-devel main contrib non-free
-deb-src https://deb.kaisenlinux.org/kaisen kaisen-packages main contrib non-free
-deb-src https://deb.kaisenlinux.org/kaisen kaisen-testing main contrib non-free
-deb-src https://deb.kaisenlinux.org/kaisen kaisen-rolling-snapshot main contrib non-free
+deb https://deb.kaisenlinux.org/ kaisen-rolling main contrib non-free
+deb https://deb.kaisenlinux.org/ kaisen-devel main contrib non-free
+deb https://deb.kaisenlinux.org/ kaisen-packages main contrib non-free
+deb https://deb.kaisenlinux.org/ kaisen-testing main contrib non-free
+deb https://deb.kaisenlinux.org/ kaisen-rolling-snapshot main contrib non-free
+deb-src https://deb.kaisenlinux.org/ kaisen-rolling main contrib non-free
+deb-src https://deb/kaisenlinux.org/ kaisen-devel main contrib non-free
+deb-src https://deb.kaisenlinux.org/ kaisen-packages main contrib non-free
+deb-src https://deb.kaisenlinux.org/ kaisen-testing main contrib non-free
+deb-src https://deb.kaisenlinux.org/ kaisen-rolling-snapshot main contrib non-free
 ```
 ## APT repositories [OLD]
 
