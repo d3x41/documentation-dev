@@ -56,6 +56,7 @@ The documentation is splitted in 5 GUIDES on the left menu bar:
     - [Kaisen Terminal shortcuts](terminal-shortcuts.html)
     - [Advanced BTRFS utilisation](advanced-btrfs-utilisation.html)
     - [Create chroot](create-chroot.html)
+    - [Configure cryptsetup-nuke-password](configure-cryptsetup-nuke.html)
 - FAQ        
     - [What are the revisions of the rolling version ?](faq.html#what-are-the-revisions-of-the-rolling-version)
     - [Why are all additional services disabled by default ?](faq.html#why-are-all-additional-services-disabled-by-default)

@@ -40,6 +40,7 @@ defmodule KaisenDocumentation.MixProject do
           "md/tutorials/terminal-shortcuts.md": [ title: "Kaisen Terminal shortcuts"],
           "md/tutorials/advanced-btrfs-utilisation.md": [ title: "Advanced BTRFS utilisation"],
           "md/tutorials/create-chroot.md": [ title: "Create chroot"],
+          "md/tutorials/configure-cryptsetup-nuke.md": [ title: "Configure cryptsetup-nuke-password"],
           "md/infos/licence.md": [ title: "Kaisen Linux licence"],
           "md/infos/download.md": [ title: "Kaisen Linux downloads"],
           "md/infos/repo.md": [ title: "Kaisen Linux repositories"],
