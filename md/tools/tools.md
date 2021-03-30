@@ -25,7 +25,7 @@ dstat, file, memstat, pstree, qtop, rdfind, tree
 ### Cloning
 
 ```bash
-clonezilla, dcfldd, dd, fsarchiver, guymager, partclone, partimage, timeshift
+clonezilla, dcfldd, dd, fsarchiver, guymager, partclone, partimage
 ```
 
 ### Compress/Decompress
@@ -43,7 +43,7 @@ balenaetcher, dcfldd, dd
 ### Hardware
 
 ```bash
-cpulimit, discover, dmidecode, fio, flashrom, gfio, hardinfo, hwinfo, iozone, lshw, lspci, stress, stressant
+cpulimit, discover, dmidecode, fio, flashrom, gfio, hardinfo, hwinfo, iozone, lshw, lspci, stress, stressant, inxi
 ```
 
 ### Mount
@@ -79,19 +79,13 @@ fscrypt, lockfile-create, lockfile-remove, lockfile-touch, zulucrypt
 ### Data recovery
 
 ```bash
-ddrescuegui, ddrescueview, ddrutility, ext4magic, extundelete, foremost, gddrescue, hfsprescue, magicrescue, myrescue, photorec, recoverdm, recoverjpeg, safecopy, scalpel, scrounge-ntfs
-```
-
-### Remote maintenance
-
-```bash
-anydesk, teamviewer
+ddrescue, ddrescuegui, ddrescueview, ddrutility, ext4magic, extundelete, foremost, gddrescue, hfsprescue, magicrescue, myrescue, photorec, recoverdm, recoverjpeg, safecopy, scalpel, scrounge-ntfs
 ```
 
 ### Temperature analysis
 
 ```bash
-hddtemp, xsensors
+hddtemp, psensor, xsensors
 ```
 
 ## Administrators tools
@@ -159,7 +153,7 @@ bettercap, bettercap-caplets, bettercap-ui, driftnet, ettercap, hping3, lft, mtr
 ### SSL
 
 ```bash
-ssldump, sslsniff, sslsplit, sslscan
+ssldump, sslsniff, sslsplit, sslscan, sslyze
 ```
 
 ### TCP
@@ -225,7 +219,7 @@ cabextract, powershell, vscodium, bloodhound, ldapdomaindump
 ### SysOps
 
 ```bash
-vagrant, ansible, lxc, docker, jmeter, kubectl, awscli, packer, azure-cli, puppet
+vagrant, ansible, lxc, docker, jmeter, kubectl, awscli, packer, azure-cli, puppet, terraform
 ```
 
 ### Virtualization
@@ -237,19 +231,25 @@ virtualbox, virt-manager, qemu-system, qemu-system-x86, libvirt, xserver-xorg-vi
 ### Various system administrators tools
 
 ```bash
-ctop, cups, curl, hexedit, htop, lsof, scp, xca
+ctop, cups, curl, hexedit, htop, lsof, scp, xca, cryptsetup-nuke-password
+```
+
+### System snapshots
+
+```bash
+apt-btrfs-snapshots, btrbk, snapper, timeshift
 ```
 
 ## Filesystems tools
 
 ```bash
-xfsprofs, xfsdump, ocfs2-tools, f2fs-tools, hfsplus, hfsutils, hfsutils-tcltk, hfsprofs, gfs2utils, exfatprogs, cifs-utils, dosfstools, nilfs-tools, e2fsprogs, jfsutils, vmfs-tools (vmware esxi filesystem), btrfs-tools, fuseiso, squashfs-tools, ceph-fuse, zfs, zfs-fuse, zSpool, reiser4progs, reiserfs-progs, vmfs6-tools, sshfs, glusterfs, tmfs, udf, cifs-tools, apfs-fuse, apfsutil
+xfsprofs, xfsdump, ocfs2-tools, f2fs-tools, hfsplus, hfsutils, hfsutils-tcltk, hfsprofs, gfs2utils, exfatprogs, cifs-utils, dosfstools, nilfs-tools, e2fsprogs, jfsutils, vmfs-tools (vmware esxi filesystem), btrfs-tools, fuseiso, squashfs-tools, ceph-fuse, zfs, zfs-fuse, zSpool, reiser4progs, reiserfs-progs, vmfs6-tools, sshfs, glusterfs, tmfs, udf, cifs-tools, apfs-fuse, apfsutil, btrbk, apt-btrfs-snapshot, snapper
 ```
 
 ## Miscellaneous tools
 
 ```bash
-kaisen-update, kaisen-basemenu-purge, progress, pv, less, mlocate, dirmngr, gpg, gnupg, gnupg1, gnupg2, apt-transport-https, software-properties-common, dmraid, dmsetup, lvm2, cryptsetup, git, gpg-agent, irqbalance, libreoffice, live-build, live-tools, live-manual, mdadm, memtest86+, neofetch, open-vm-tools, open-vfirmware-iwlwifi,m-tools-desktop, qbittorrent, vlc, hexchat, thunderbird, gimp, lockdown, git-repair, img2pdf, mc, gtkhash, strace, ltrace, yamllint
+kaisen-update, kaisen-basemenu-purge, progress, pv, less, mlocate, dirmngr, gpg, gnupg, gnupg1, gnupg2, apt-transport-https, software-properties-common, dmraid, dmsetup, lvm2, cryptsetup, git, gpg-agent, irqbalance, libreoffice, live-build, live-tools, live-manual, mdadm, memtest86+, neofetch, open-vm-tools, open-vfirmware-iwlwifi,m-tools-desktop, qbittorrent, vlc, hexchat, thunderbird, gimp, lockdown, git-repair, img2pdf, mc, gtkhash, strace, ltrace, yamllint, cryptsetup-nuke-password, kaisen-documentation, kaisen-manpages
 ```
 
 ## Integrated firmwares

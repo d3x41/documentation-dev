@@ -1,4 +1,4 @@
-# Why KDE installed with lightdm by default ?
+# Why KDE installed with lightdm by default?
 
 ## Explanation
 KDE uses SDDM display manager by default.  

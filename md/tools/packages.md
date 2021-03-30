@@ -98,6 +98,12 @@ Forked to support the kaisen-calamares-settings package.
 ### plymouth
 Forked to define kaisen-theme by default for Plymouth.
 
+### partman-btrfs
+Forked to create BTRFS subvolumes
+
+### netcfg
+Forked to define kaisenlinux of hostname string
+
 ## Kaisen Linux packages
 
 ### kaisen-basemenu-purge
@@ -151,7 +157,10 @@ This package replaces the old kaisen-*-default-profile packages which installed 
 This package installs the kaisen-update-skel command.  
 
 ### kaisen-manpages
-This package is simply an offline implementation of the entire https://kaisenlinux.org/manpages/ domain in order to access the centralized manpages of the tools built into Kaisen Linux without requiring an internet connection. An Apache server is installed with this package to read HTML pages via localhost.
+This package is simply an offline implementation of the entire https://kaisenlinux.org/manpages/ domain in order to access the centralized manpages of the tools built into Kaisen Linux without requiring an internet connection.
+
+### kaisen-documentation
+This package is simply an offline implementation of the entire https://kaisenlinux.org/documentation/ domain in order to access the centralized documentation without requiring an internet connection.
 
 ### veracrypt
 Tool to HDD, SSD and system disks encryption.
@@ -183,9 +192,6 @@ Graph for everyone
 ### bettercap
 Tool to testing the possibility of MITM attacks on Bluetooth, Wi-Fi, Ethernet and more.
 
-### ldapdomaindump
-Tool to dump Active Directory informations dumper.
-
 ### hfsprescue
 Tool specialized in recovering data from HFS + partitions.
 
@@ -203,6 +209,33 @@ Packaged tool because is a dependency of certain features offered by Conkycolors
 
 ### python3-getdevinfo
 Repackaged to make it compatible with Kaisen Linux, is a dependency on ddrescue-gui.
+
+### btrbk
+Repackaged to fix bugs with conffiles, fix path binary on systemd service and update btrbk binary
+
+### sslyze
+SSL/TLS scanner
+
+### tls-parser
+Packaged because is a dependancy of sslyze
+
+### nassl
+Packaged because is a dependancy of sslyze
+
+### i3-gaps
+i3 fork with more features
+
+### ddrescue
+Data recovery and data protection tool
+
+### apt-btrfs-snapshot
+Tool to take snapshot when APT used
+
+### qbittorrent
+Rebuilt to update qbittorrent version
+
+### libtorrent-rasterbar
+Rebuilt to update libtorrent-rasterbar because qbittorrent compilation necessary use this version
 
 ## Source of packages
 All the sources of the packages can be found here:

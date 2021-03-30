@@ -1,7 +1,4 @@
-# Why no sources on some packages ?
-
-## Softwares non-free
-Software like TeamViewer, Anydesk for example do not have their sources open. We cannot therefore supply them via apt-get source.  
+# Why no sources on some packages?
 
 ## Free software
 Some software such as codium, balena-etcher-electron to name a few, are packages downloaded directly from official GitHub sources in the releases section. Software developers have already tampered with this software, so we don't have to package it ourselves.  

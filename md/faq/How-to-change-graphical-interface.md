@@ -23,7 +23,7 @@ The script will remove all packages installed by your current GUI, it will also 
 So I added as many checks as possible to limit the risk of losing the graphic interface during the process. I strongly advise against modifying the script yourself to modify checks or the like unless you know exactly what you are doing.  
 
 ## Working
-The script will automatically save the graphics settings and profile of all system users (except root) who have a home directory in /home, regardless of the UID number.  
+The script will automatically save the graphics settings and profile of all system users who have a home directory in /home, regardless of the UID number and root user.  
 The directories will be saved in `/usr/share/kaisen-interface-switcher/$users/INTERFACE_NAME` depending on the interface selected (and therefore the script launched, therefore MATE, KDE, LXDE or XFCE version).  
 The selected interface will be installed after uninstalling the initial interface.  
 Once the installation is complete, if automatic backups of the interface installed by the script exist in the dedicated directory, they will be copied to the users present on the system. In the event of an error (a user has been deleted in the meantime, as well as his home directory, or other reason), the content of the `/etc/skel` folder will be copied (only where it failed, if possible).

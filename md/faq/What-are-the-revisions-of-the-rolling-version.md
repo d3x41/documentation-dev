@@ -1,4 +1,4 @@
-# What are the revisions of the rolling version ?
+# What are the revisions of the rolling version?
 
 ## Explanation
 Revisions (eg 1.1, 1.2 and so on) are simply a "snapshot" of the project at one point in time.  

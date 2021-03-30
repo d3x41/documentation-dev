@@ -1,10 +1,10 @@
 # Kaisen Linux repositories
 
-- Default `sources.list` example in `/etc/apt/` :
+- Default `sources.list` in `/etc/apt/` :
 
 ```bash
-deb https://deb.kaisenlinux.org/ kaisen-rolling main contrib non-free
-#deb-src https://deb.kaisenlinux.org/ kaisen-rolling main contrib non-free
+deb https://deb.kaisenlinux.org kaisen-rolling main contrib non-free
+#deb-src https://deb.kaisenlinux.org kaisen-rolling main contrib non-free
 ```
 
 ## Referential lists
@@ -25,6 +25,9 @@ CAUTION: Installing packages from this repository can break certain parts of you
 ### kaisen-testing
 This repository is used during the development of new packages or experimental testing of some bundles (sometimes not often push to kaisen-rolling).  
 CAUTION: Installing packages from this repository can break certain parts of your system or even make it unstable or even unusable. Only use it if you know what you are doing.  
+
+### kaisen-rolling-snapshot
+This repository is a snapshot of the last official revision of the project. This keeps the packages preinstalled on Kaisen Linux which can be uninstalled on Debian.
 
 ## Which repository to use
 

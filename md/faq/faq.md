@@ -3,7 +3,7 @@
 - **FAQ** :       
     - [What are the revisions of the rolling version ?](#what-are-the-revisions-of-the-rolling-version)
     - [Why are all additional services disabled by default ?](#why-are-all-additional-services-disabled-by-default)
-    - [How to build a custom ISO ?](#how-to-build-a-custom-iso)
+    - [How to build a custom ISO ?](#how-to-build-custom-iso)
     - [Why no sources on some packages ?](#why-no-sources-on-some-packages)
     - [How to update GUI default profile ?](#how-to-update-gui-default-profile)
     - [Informations on the conky theme](#informations-on-the-conky-theme)
@@ -18,7 +18,7 @@
     - [How to create your own default profile for user configurations (skel) ?](#how-to-create-your-own-default-profile-for-user-configurations-skel)
     - [How do I go back to bash ?](#how-do-i-go-back-to-bash)
 
-## What are the revisions of the rolling version ?
+## What are the revisions of the rolling version?
 
 ### Explanation
 Revisions (eg 1.1, 1.2 and so on) are simply a "snapshot" of the project at one point in time.  
@@ -33,7 +33,7 @@ New ISOS are therefore created with each revision to fix any errors on the live 
 Even if you have downloaded Kaisen Linux 1.3 and installed the system, and ISOS 1.4 has just been released, you don't have to completely reinstall the system, using the kaisen-update command will suffice to change from revision 1.3 to 1.4 by updating the packages.
 
 ---
-## Why are all additional services disabled by default ?
+## Why are all additional services disabled by default?
 
 ### Explanation
 We call additional services, services installed by software provided in Kaisen Linux. The reason is simple. It is about optimizing the performance and resources used by the system.  
@@ -48,7 +48,7 @@ If you therefore have an error telling you that the service is not indicated or 
 If that doesn't solve your problem, contact support.
 
 ---
-## How to build a custom ISO ?
+## How to build custom ISO?
 
 ### kaisen-build
 A package called kaisen-build has been developed to allow you to build your custom ISO based on Kaisen Linux. It is also this package and the tools it installs that we use to build official releases. The main objective of building your own ISO is to create your own live system and have one more up to date while awaiting official publications from the Kaisen Linux team.
@@ -56,7 +56,7 @@ The second objective of doing this is to integrate into your live system tools w
 Note that creating a custom ISO also includes the Debian installer (default configuration provided by kaisen-build) customized by us (graphic theme, file systems, partitioning, preseed etc ...). Doing this is not useful for having a newer installable system, just do apt update && apt upgrade to have your system constantly updated and with your software installed.
 We advise you to use kaisen-build in order to create your own live system.
 
-#### The different variants
+### The different variants
 
 We have the following variants:
 
@@ -114,11 +114,11 @@ Version 1.0 is an example, but you can put whatever you want, I advise you not t
 
 ### Further information
 
-#### Support
+### Support
 
 Please be aware that **we will not provide support to users wishing to create their own ISO**. Not that we don't want to help you, but we are very busy professionally and on the constant development of Kaisen Linux.
 
-#### Warning on personal images
+### Warning on personal images
 
 One of the strengths of the GNU/Linux world, which we follow to give our users the choice to do what they want with the environment we provide them so that they can adapt it to their needs, is also a problem because the integration of malware, trackers or others can be facilitated.  
 To avoid this kind of inconvenience, do not download an ISO image outside the following two mirrors: https://iso.kaisenlinux.org and https://kaisen.lf.je/index.html  
@@ -138,10 +138,7 @@ You will just have to reinstall the package and you will be on the last pre-conf
 Be careful, this action will delete your settings from the CUSTOM branch (even the automated backups, so that they are not reapplied when the package is reinstalled). Be sure what you are doing, manually save your settings beforehand if you want to keep your settings.
 
 ---
-## Why no sources on some packages ?
-
-### Softwares non-free
-Software like TeamViewer, Anydesk for example do not have their sources open. We cannot therefore supply them via apt-get source.  
+## Why no sources on some packages?
 
 ### Free software
 Some software such as codium, balena-etcher-electron to name a few, are packages downloaded directly from official GitHub sources in the releases section. Software developers have already tampered with this software, so we don't have to package it ourselves.  
@@ -152,7 +149,7 @@ You can find the .deb files added for Kaisen Linux and the sha256, md5, and sha1
 https://kaisendeb.lf.je/dists/kaisen-devel/main/binary-amd64/Packages
 
 ---
-## How to update GUI default profile ?
+## How to update GUI default profile?
 
 ### In what cases?
 You might need to update the default profile as provided on the live CD if updating the kaisen-skeleton package.  
@@ -171,7 +168,7 @@ Note, however, that this method is the least simple, but the most refined, it is
 When the kaisen-skeleton package is updated, it means that the default GUI profile has been updated. The kaisen-update-skel command can be used to copy new content from /etc/skel to /home/* and /root.  
 
 ### Profile created in /etc/skel_user
-If you have created your default profile as mentioned [here](https://kaisenlinux.org/documentation/faq#how-to-create-your-own-default-profile-for-user-configurations-skel), you can run the `kaisen-update-skel-user` command to update your profile on all users present on the system.
+If you have created your default profile as mentioned [here](https://kaisenlinux.org/documentation/how-to-create-your-own-skel), you can run the `kaisen-update-skel-user` command to update your profile on all users present on the system.
 
 ---
 ## Informations on the conky theme
@@ -254,46 +251,12 @@ X-XFCE-Autostart-enabled=true
 When updating the kaisen-kde, kaisen-lxde, kaisen-mate or kaisen-xfce package, select the option "N" or "O" to keep your configurations.  
 
 ### Problems with KDE desktop
-#### Explanations
+
 I have seen some issues with KDE.  
-The conky is initially configured to be completely transparent and integrated into the wallpaper. KDE does not natively allow to do this, to make its integration possible, I used the software feh which via a script in `/usr/share/kaisen-kde` will read the file `~/.config/plasma-org.kde.plasma.desktop-appletsrc` to determine the wallpaper image and display it.  
-Unfortunately today, I have no way to completely correct this problem (unless you run the script all the time, which has a significant impact on performance), this section will aim to help you fully customize the KDE environment provided according to your settings.
-
-#### Problems
-However, this technique has a limit. Although the main problem is bypassed, the wallpapers in slideshow mode are not updated via the script, and would imply relaunching it at each image change. The user parameters being very personal, it is impossible for me to correctly determine the refresh sequence.  
-
-#### Resolution
-The problem of updating images in slideshow mode with Conky can be solved either by disabling Conky or by loading a custom configuration according to your settings.  
-Be careful however, the script to run feh consumes resources, running it constantly or too often can significantly reduce the performance of your machines.  
-
-Here are several examples of how to modify Conky for slideshow mode:
-The slideshow refreshes every minute, and Conky should do the same, so replace in the `.conkyrc`:
-
-```bash
-${texeci 999999 /usr/share/kaisen-kde/conkyfeh}
-```
-
-By:
-
-```bash
-${texeci 60 /usr/share/kaisen-kde/conkyfeh}
-```
-
-The slideshow refreshes every ten minutes, and Conky should do the same, so replace in the .conkyrc:
-
-```bash
-${texeci 999999 /usr/share/kaisen-kde/conkyfeh}
-```
-
-By:
-
-```bash
-${texeci 600 /usr/share/kaisen-kde/conkyfeh}
-```
-
-Once you have edited the file, copy the `~/.conkyrc` file to for example `~/.conkyrc_custom` and modify the `/etc/xdg/autostart/conky`.desktop file as mentioned [here](#launch-conky-with-a-custom-theme). When restarting the session, the new congiuration will be loaded.
-
-Alternatively, you can disable conky launch if you don't want to reconfigure the conky theme, as shown [here](#disable-conky-launch).
+The conky is initially configured to be completely transparent and integrated into the wallpaper. KDE is initially configured to start programs that were not closed from the previous session, and Conky is one of them.  
+Kaisen Linux's default profile disables this feature by default by opening an empty session each time the computer is started/restarted.  
+To turn off the restore from the previous session, do this:  
+Go to ```"System Settings" => "Startup and Shutdown" => "Desktop Session" after select "Start with an empty session".```
 
 ### Relaunch conky manually
 Sometimes, Conky may not automatically relaunch after a package update. To relaunch it, it is very simple. Open a terminal window, and type this command:  
@@ -302,6 +265,10 @@ Sometimes, Conky may not automatically relaunch after a package update. To relau
 conky&
 ```
 Next this command, press `ctrl +D` until closing the terminal. Conky is now relaunched.
+
+### Completely uninstall Conky
+Conky like almost all of the tools pre-integrated in Kaisen Linux can be uninstalled manually via an APT command.  
+For Conky, do this: ```sudo apt remove --purge conky-all```
 
 ---
 ## How do I know the number of the rolling version I use?
@@ -314,7 +281,7 @@ Just do the command `lsb_release -r` and read the number marked after Release to
 The `lsb-release -a` command give more informations at release.
 
 ---
-## Why root account is disabled by default ?
+## Why root account is disabled by default?
 
 ### The disable explanation
 Thanks to the preseed file used by the insllator, we deactivate the password request for the root user.  
@@ -325,22 +292,21 @@ We have therefore chosen to deactivate this possibility.
 ### So how do you get root rights?
 By default, when installing the system with a user and a password entered (which is not offered when we enter a password for root, because root becomes our current user), the installer puts default this user in the sudo group without any restriction on the machine, the sudo command gives you all access.  
 We have not, despite our attachment to system security, not disabled the possibility of putting a password on root after installation (sudo passwd root command) nor have we disabled the sudo su or su root.  
-We believe that as users, you are free to use the system as you see fit, without any particular constraints.
+We believe that as users, you are free to use the system as you see fit, without any particular constraints.  
 However, we always advise you to use sudo when you need root is to leave root disabled (without password), this can save you from some errors that can harm your system.
 
 ### Advice
 We do not recommend using the root account from a graphical session.  
 And this because increases the risk of making a false manipulation, creating directories with root rights when root is not necessary, and others.  
 Some scripts developed for Kaisen Linux are also developed only for regular user accounts (even without sudo rights), because root should not be used from a graphical session.  
-This will surely never change, admittedly I remove you by default the possibility to put a password on root, but you can entirely use it in command line via the commands sudo `su -` or `sudo -i`.  
-Using the root account from a graphical session is unnecessary, dangerous and stupid. It can also cause problems for some scripts developed for Kaisen like for example the kaisen-interface-switcher or any other script saving standard user configurations. You have been warned.  
+This will surely never change, admittedly I remove you by default the possibility to put a password on root, but you can entirely use it in command line via the commands sudo `su -` or `sudo -i`.
 
 ### Conclusion
 Use sudo when you need root.  
 Log in as root with the `sudo su -`, `sudo -i`, and su command (su command only works if you have set a root password with the passwd root command).
 
 ---
-## How to switch to root directly with the ZSH terminal ?
+## How to switch to root directly with the ZSH terminal?
 
 ### Explanation
 By default, the root user defaults to bash because it is not expected in good practice to be used for human operations, except in cases where there is no choice. It also allows us to be able to chroot at a specific location in the system without having any errors.
@@ -353,7 +319,7 @@ sudo zsh
 ```
 
 ---
-## How to change graphical interface ?
+## How to change graphical interface?
 
 ### To do what?
 The KDE, LXDE and XFCE interfaces arrived some time after the first versions, and migrating to a new graphical interface is not easy.
@@ -363,7 +329,6 @@ For this a tool has been created to do it simply and fully automated!
 This tool was also created so that the user does not come to reinstall his OS in the event of difficulties.
 
 ### kaisen-interface-switcher
-
 The script since Kaisen Linux revision 1.4 is designed when the script starts up (after all checks have been made), to update itself if a new, more recent version of the script (installed by the kaisen-kde package, kaisen-lxde, kaisen-mate, kaisen-xfce depending on your current GUI). This is intended if you do not update often, to be able to change your interface and update the list of packages to uninstall. The main purpose of this is to automate the task even more, saving you time.  
 The kaisen-interface-switcher script allows you to change your graphical interface by installing the one of your choice by removing your current graphical interface. It can be started by the `sudo kaisen-interface-switcher` command.  
 The first versions of this script reinstalled for each user the default profile of each interface (execution of the kaisen-interface-switcher command during the script) but this lost the personalization of the user if he wishes to reinstall his graphical interface. 'original (e.g. switching from MATE to KDE then from KDE to MATE).  
@@ -378,7 +343,7 @@ The script will remove all packages installed by your current GUI, it will also 
 So I added as many checks as possible to limit the risk of losing the graphic interface during the process. I strongly advise against modifying the script yourself to modify checks or the like unless you know exactly what you are doing.  
 
 ### Working
-The script will automatically save the graphics settings and profile of all system users (except root) who have a home directory in /home, regardless of the UID number.  
+The script will automatically save the graphics settings and profile of all system users who have a home directory in /home, regardless of the UID number and root user.  
 The directories will be saved in `/usr/share/kaisen-interface-switcher/$users/INTERFACE_NAME` depending on the interface selected (and therefore the script launched, therefore MATE, KDE, LXDE or XFCE version).  
 The selected interface will be installed after uninstalling the initial interface.  
 Once the installation is complete, if automatic backups of the interface installed by the script exist in the dedicated directory, they will be copied to the users present on the system. In the event of an error (a user has been deleted in the meantime, as well as his home directory, or other reason), the content of the `/etc/skel` folder will be copied (only where it failed, if possible).
@@ -407,7 +372,7 @@ sudo kaisen-update
 ```
 
 ---
-## How to change login wallpaper ?
+## How to change login wallpaper?
 
 ### Text edition method
 On MATE, LXDE, XFCE and KDE (defined by default by kaisen-kde postinst script), lightdm manages the login wallpaper. 
@@ -462,7 +427,7 @@ font-name = Cantarell 11
 The **lightdm-gtk-greeter-settings** tool is integrated by default on MATE, LXDE, XFCE and KDE to be able to easily change the lightdm settings. This will produce the same result as editing the `/etc/lightdm/lightdm-gtk-greeter.conf` file as the software will modify it to reflect your settings made.
 
 ---
-## Why create user accounts only on /home ?
+## Why create user accounts only on /home?
 
 ### Explanation
 By convention (FHS standard), users intended to be accounts for users must have their home directory on /home, as it is intended for that.  
@@ -471,7 +436,7 @@ The kaisen-update-skel scripts as well as the kaisen-interface-switcher, were de
 I am aware that I cannot cover all cases, I try to do it as much as possible, however this kind of scripts can only work correctly by respecting the standards, to avoid any additional problems.  
 
 ---
-## Why KDE installed with lightdm by default ?
+## Why KDE installed with lightdm by default?
 
 ### Explanation
 KDE uses SDDM display manager by default.  
@@ -479,14 +444,14 @@ I didn't have a problem with that until it started behaving strangely with the `
 For the sake of simplicity and standardization, I decided using the postinst script on kaisen-kde, to change SDDM to LIGHTDM only when installing the package. This will allow you to reset SDDM or other display manager to default, without updating the package or the entire system, modifying your settings.  
 
 ### Return to SDDM
-#### Universal method
+### Universal method
 The universal and potentially error-prone method is to modify the `/etc/X11/default-display-manager` file by hand and fill in the new display manager (for this example, replace `/usr/sbin/lightdm` by `/usr/bin/sddm`) and the changes will be visible the next time you start the computer.
 
 ### Debian method
 You just have to use the `sudo dpkg-reconfigure lightdm` command and select SDDM. This reconfiguration will be visible the next time you restart the computer. I advice this method, because is less error-prone.
 
 ---
-## How to create your own default profile for user configurations (skel) ?
+## How to create your own default profile for user configurations (skel)?
 
 ### What is that?
 The default profile (commonly called skel) is a folder in which we drop configuration files, for example the terminal configuration, location of icons on the desktop etc.  
@@ -499,10 +464,10 @@ All Kaisen Linux default profiles are installed by the kaisen-skeleton package. 
 ### Process
 I advise you to only use the `/etc/skel_user` folder because even when updating packages on the distribution, this folder will be backed up and restored automatically during the package update process so you don't lose your configurations.
 
-#### With useradd command only
+### With useradd command only
 If you only want to create one user, no need to modify the configuration files. With the useradd command, you can with the -k option specify the location of the skel folder. You need to do this: `sudo useradd -k /etc/skel_user username && sudo passwd username`.  
 
-#### Edit adduser configuration files
+### Edit adduser configuration files
 To make your change permanent, you can modify the adduser configuration files. 
 
 In the `/etc/adduser.conf` file modify the line:
@@ -520,7 +485,7 @@ SKEL=/etc/skel_user
 With this change, the default folder for the skel will now be /etc/skel_user.
 When updating the adduser package, select the option "N" or "O" to keep your configurations.
 
-#### Edit useradd configuration files
+### Edit useradd configuration files
 To make your change permanent, you can modify the adduser configuration files. 
 
 In the `/etc/default/useradd` file modify the line:
@@ -537,7 +502,7 @@ With this change, the default folder for the skel will now be `/etc/skel_user`.
 When updating the shadow package, select the option "N" or "O" to keep your configurations.
 
 ---
-## How do I go back to bash ?
+## How do I go back to bash?
 
 ### Simple user method
 Many users or others who have seen this have had a feeling of disgust over this choice which to them seems "amateur" and illogical. While this bothers me, I don't think bash will become the default terminal for users (non-root, root stayed in bash by default to allow the chroot command to work), and you can fall back on bash.  
@@ -552,14 +517,14 @@ The next time you reconnect to your session, you will be back in bash.
 
 ### Multiple user method
 
-#### Useradd command
+### Useradd command
 Type this when adding a user with the useradd command to give them the bash shell by default:
 
 ```bash
 sudo useradd -s /bin/bash user
 ```
 
-#### Modify useradd configuration
+### Modify useradd configuration
 
 In the file `/etc/default/useradd`, change the following line:
 
@@ -576,7 +541,7 @@ SHELL=/bin/bash
 After that, with the useradd command the bash shell will be set by default, and you will no longer need to specify -s option.  
 When updating the shadow package, select the option "N" or "O" to keep your configurations.
 
-#### Adduser command
+### Adduser command
 
 Type this when adding a user with the adduser command to give them the bash shell by default:
 
@@ -584,7 +549,7 @@ Type this when adding a user with the adduser command to give them the bash shel
 sudo adduser --shell /bin/bash user
 ```
 
-#### Modify adduser configuration
+### Modify adduser configuration
 
 In the file `/etc/adduser.conf`, change the following line:
 

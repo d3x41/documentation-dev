@@ -1,4 +1,4 @@
-# How to build custom ISO ?
+# How to build custom ISO?
 
 # kaisen-build
 A package called kaisen-build has been developed to allow you to build your custom ISO based on Kaisen Linux. It is also this package and the tools it installs that we use to build official releases. The main objective of building your own ISO is to create your own live system and have one more up to date while awaiting official publications from the Kaisen Linux team.

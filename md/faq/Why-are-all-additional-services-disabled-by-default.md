@@ -1,4 +1,4 @@
-# Why are all additional services disabled by default ?
+# Why are all additional services disabled by default?
 
 ## Explanation
 We call additional services, services installed by software provided in Kaisen Linux. The reason is simple. It is about optimizing the performance and resources used by the system.  

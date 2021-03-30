@@ -1,4 +1,4 @@
-# How to update GUI default profile ?
+# How to update GUI default profile?
 
 ## In what cases?
 You might need to update the default profile as provided on the live CD if updating the kaisen-skeleton package.  
