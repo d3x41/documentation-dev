@@ -104,6 +104,15 @@ Forked to create BTRFS subvolumes
 ### netcfg
 Forked to define kaisenlinux of hostname string
 
+### simple-cdd
+Forked to update default preseed
+
+### debian-cd
+Forked to adding kaisen-rolling repository
+
+### tasksel
+Forked to adding Kaisen Linux tasks
+
 ## Kaisen Linux packages
 
 ### kaisen-basemenu-purge
@@ -161,6 +170,14 @@ This package is simply an offline implementation of the entire https://kaisenlin
 
 ### kaisen-documentation
 This package is simply an offline implementation of the entire https://kaisenlinux.org/documentation/ domain in order to access the centralized documentation without requiring an internet connection.
+
+### kaisen-netinst-configurator
+This package can be considered as a hook that can be installed via the netinstaller. 
+This package installs a set of scripts allowing to automate for example the installation of packages, the complete installation of guests on virtual hosts etc... 
+This package is useless on a live ISO.
+
+### kaisen-cli-tools
+This metapackage was created to list the tools available directly via a terminal and is installed for the "CONSOLE only" ISO, allowing to have a fully console-based live, without X server or preinstalled GUI.
 
 ### veracrypt
 Tool to HDD, SSD and system disks encryption.

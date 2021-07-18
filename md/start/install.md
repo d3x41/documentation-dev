@@ -66,6 +66,7 @@ I also advise you to manage the partitioning of the disk yourself or to use LVM 
 ### Recommendations on filesystems
 Kaisen Linux uses the BTRFS file system by default on automatic partitioning because a [snapshot](advanced-btrfs-utilisation.html) feature has been integrated by default and allows you to take snapshots of its system.  
 If you are installing Kaisen Linux through manual partitioning, we recommend that you use BTRFS on all your partitions in order to take full advantage of the features offered by Kaisen Linux.
+You should also leave the default options provided with the BTRFS file system selection, these options are optimized for BTRFS and for Kaisen Linux.
 
 ## Preseed file
 
@@ -81,6 +82,8 @@ d-i netcfg/enable boolean false
 d-i hw-detect/load_firmware boolean false
 #Do not ask to create a root password to force the creation of a user with reduced privileges
 d-i passwd/root-login boolean false
+#Define default filesystem
+d-i partman/default_filesystem string btrfs
 #Do not activate volume wipe during encryption
 d-i partman-auto-crypto/erase_disks boolean false
 #Activate eatmydata to reduce space disk used
@@ -90,7 +93,7 @@ d-i apt-setup/use_mirror boolean false
 #Delete the message at end installation and automatic reboot after finish install
 d-i finish-install/reboot_in_progress note
 #Execute at command after system installation
-d-i preseed/late_command string in-target bash -c 'apt-mark showhold | while read kernel;do apt-mark unhold $kernel;done' || true
+#d-i preseed/late_command string in-target sh -c ''
 ```  
 
 It is thanks to this file that the Debian installer is customized and for this reason that certain processes, such as password request for root, network configuration and others do not exist on the ISO. The purpose of this file is to automate certain tasks (we can completely automate the installation using this file), as well as to customize the installer according to our needs.  

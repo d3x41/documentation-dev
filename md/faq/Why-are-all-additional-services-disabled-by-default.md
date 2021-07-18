@@ -9,5 +9,5 @@ We also have the vision, despite the wide range of tools provided by default, to
 So we have to list these services, as well as to facilitate their management (activation, deactivation) created the **"kaisen-services-management"** package which installs scripts which will be referenced on the menu in the **"Services"** tab which will allow activate and deactivate the services listed by sub-tabs for example **"zfs-fuse, avahi, cups etc ..."** as well as two scripts to activate or deactivate everything.
 
 ## Problem resolution
-If you therefore have an error telling you that the service is not indicated or certain programs (TeamViewer for example) start but are not functional, try to activate the service corresponding to this program (via the menu or simply by typing yourself systemd commands).
+If you therefore have an error telling you that the service is not indicated or certain programs (2ping for example) start but are not functional, try to activate the service corresponding to this program (via the menu or simply by typing yourself systemd commands).
 If that doesn't solve your problem, contact support.

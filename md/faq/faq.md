@@ -1,22 +1,23 @@
 # FAQ
 
 - **FAQ** :       
-    - [What are the revisions of the rolling version ?](#what-are-the-revisions-of-the-rolling-version)
-    - [Why are all additional services disabled by default ?](#why-are-all-additional-services-disabled-by-default)
+    - [What are the revisions of the rolling version?](#what-are-the-revisions-of-the-rolling-version)
+    - [Why are all additional services disabled by default?](#why-are-all-additional-services-disabled-by-default)
     - [How to build a custom ISO ?](#how-to-build-custom-iso)
     - [Why no sources on some packages ?](#why-no-sources-on-some-packages)
     - [How to update GUI default profile ?](#how-to-update-gui-default-profile)
     - [Informations on the conky theme](#informations-on-the-conky-theme)
     - [Informations on the rolling version](#how-do-i-know-the-number-of-the-rolling-version-i-use)
-    - [Why root account is disabled by default ?](#why-root-account-is-disabled-by-default)
-    - [How to switch to root directly with the ZSH terminal ?](#how-to-switch-to-root-directly-with-the-zsh-terminal)
+    - [Why root account is disabled by default?](#why-root-account-is-disabled-by-default)
+    - [How to switch to root directly with the ZSH terminal?](#how-to-switch-to-root-directly-with-the-zsh-terminal)
     - [How to change the graphical interface ?](#how-to-change-graphical-interface)
     - [How to update Kaisen Linux Rolling ?](#update-kaisen-linux-rolling)
     - [How to change login wallpaper ?](#how-to-change-login-wallpaper)
-    - [Why create user accounts only on /home ?](#why-create-user-accounts-only-on-home)
-    - [Why KDE installed with lightdm by default ?](#why-kde-installed-with-lightdm-by-default)
-    - [How to create your own default profile for user configurations (skel) ?](#how-to-create-your-own-default-profile-for-user-configurations-skel)
+    - [Why create user accounts only on /home?](#why-create-user-accounts-only-on-home)
+    - [Why KDE installed with lightdm by default?](#why-kde-installed-with-lightdm-by-default)
+    - [How to create your own default profile for user configurations (skel)?](#how-to-create-your-own-default-profile-for-user-configurations-skel)
     - [How do I go back to bash ?](#how-do-i-go-back-to-bash)
+    - [Where can I find documentation on the built-in tools or how certain settings work?](#where-can-i-find-documentation-on-the-built-in-tools-or-how-certain-settings-work)
 
 ## What are the revisions of the rolling version?
 
@@ -44,7 +45,7 @@ We also have the vision, despite the wide range of tools provided by default, to
 So we have to list these services, as well as to facilitate their management (activation, deactivation) created the **"kaisen-services-management"** package which installs scripts which will be referenced on the menu in the **"Services"** tab which will allow activate and deactivate the services listed by sub-tabs for example **"zfs-fuse, avahi, cups etc ..."** as well as two scripts to activate or deactivate everything.
 
 ### Problem resolution
-If you therefore have an error telling you that the service is not indicated or certain programs (TeamViewer for example) start but are not functional, try to activate the service corresponding to this program (via the menu or simply by typing yourself systemd commands).
+If you therefore have an error telling you that the service is not indicated or certain programs (2ping for example) start but are not functional, try to activate the service corresponding to this program (via the menu or simply by typing yourself systemd commands).
 If that doesn't solve your problem, contact support.
 
 ---
@@ -145,8 +146,8 @@ Some software such as codium, balena-etcher-electron to name a few, are packages
 
 ### Check the authenticity of the packages
 The safest and most efficient way to check the authenticity of the sourceless packages that we provide to you is to check via the official GitHub repository of the software (for example codium or balena-etcher-electron) the checksum in sha256, md5 or sha1 with sha256sum, md5sum or sha1sum the package we provide as well as the one on GitHub. The amounts are normally the same because the file has not been modified.  
-You can find the .deb files added for Kaisen Linux and the sha256, md5, and sha1 checksums of these packages (this also includes packages developed for distribution as well as packages recompiled for distribution) [here](https://kaisendeb.lf.je/dists/kaisen-devel/main/binary-amd64/Packages):  
-https://kaisendeb.lf.je/dists/kaisen-devel/main/binary-amd64/Packages
+You can find the .deb files added for Kaisen Linux and the sha256, md5, and sha1 checksums of these packages (this also includes packages developed for distribution as well as packages recompiled for distribution) [here](https://deb.kaisenlinux.org/dists/kaisen-devel/main/binary-amd64/Packages):  
+https://deb.kaisenlinux.org/dists/kaisen-devel/main/binary-amd64/Packages
 
 ---
 ## How to update GUI default profile?
@@ -566,3 +567,12 @@ DSHELL=/bin/bash
 After that, with the adduser command the bash shell will be set by default, and you will no longer need to specify --shell option.
 When updating the adduser package, select the option "N" or "O" to keep your configurations.
 
+## Where can I find documentation on the built-in tools or how certain settings work?
+
+### On the tools
+Documentation on the built-in tools and how to use them can easily be found on the editor's documentation or via the man pages provided with the default packages. 
+For this purpose, [centralized manpages](https://kaisenlinux.org/manpages/) have been created and managed by us.
+
+### About the functioning of a Debian or apt distribution for example
+There is no lack of documentation from Debian or others on the internet, and it can be a comprehensive source of documentation. 
+Overall, the man pages will suffice in most cases. In case this is not enough, even though we try to provide as much documentation as possible, the internet is still your best bet.

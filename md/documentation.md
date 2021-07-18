@@ -9,11 +9,13 @@ Since release 1.0 named, Kaisen Linux is a rolling release (continuous update) b
 ## Quick start
 
 1. Choose and download an iso :
-    - [Kaisen Linux MATE (default GUI)](https://iso.kaisenlinux.org/rolling/kaisenlinuxrolling1.6-amd64-MATE.iso)
-    - [Kaisen Linux KDE](https://iso.kaisenlinux.org/rolling/kaisenlinuxrolling1.6-amd64-KDE.iso)
-    - [Kaisen Linux XFCE](https://iso.kaisenlinux.org/rolling/kaisenlinuxrolling1.6-amd64-XFCE.iso)
-    - [Kaisen Linux LXDE](https://iso.kaisenlinux.org/rolling/kaisenlinuxrolling1.6-amd64-LXDE.iso)
-    - [Kaisen Linux System Rescue (no installer)](https://iso.kaisenlinux.org/rolling/kaisenlinuxrolling1.6-amd64-SR.iso)
+    - [Kaisen Linux MATE (default GUI)](https://iso.kaisenlinux.org/rolling/kaisenlinuxrolling1.7-amd64-MATE.iso)
+    - [Kaisen Linux KDE](https://iso.kaisenlinux.org/rolling/kaisenlinuxrolling1.7-amd64-KDE.iso)
+    - [Kaisen Linux XFCE](https://iso.kaisenlinux.org/rolling/kaisenlinuxrolling1.7-amd64-XFCE.iso)
+    - [Kaisen Linux LXDE](https://iso.kaisenlinux.org/rolling/kaisenlinuxrolling1.7-amd64-LXDE.iso)
+    - [Kaisen Linux System Rescue (no installer)](https://iso.kaisenlinux.org/rolling/kaisenlinuxrolling1.7-amd64-SR.iso)
+    - [Kaisen Linux CONSOLE only (no GUI)](https://iso.kaisenlinux.org/rolling/kaisenlinuxrolling1.7-amd64-CONSOLE.iso)
+    - [Kaisen Linux NETINST (network required)](https://iso.kaisenlinux.org/rolling/kaisenlinuxrolling1.7-amd64-NETINST.iso)
 2. Launch it in a VM
 3. Boot on the live mode or install Kaisen Linux
 4. Explore and test sysadmin and technicians tools
@@ -34,6 +36,7 @@ The documentation is splitted in 5 GUIDES on the left menu bar:
 - Start
     - [Official Kaisen Linux links](links.html)
     - [Why use Kaisen Linux ?](why.html)
+    - [ISO informations](variant.html)
     - [USB creation](usb.html)
     - [Hardware requirements](hardware.html)
     - [Live informations](live.html)
@@ -74,3 +77,4 @@ The documentation is splitted in 5 GUIDES on the left menu bar:
     - [Why KDE installed with lightdm by default ?](faq.html#why-kde-installed-with-lightdm-by-default)
     - [How to create your own default profile for user configurations (skel) ?](faq.html#how-to-create-your-own-default-profile-for-user-configurations-skel)
     - [How do I go back to bash ?](faq.html#how-do-i-go-back-to-bash)
+    - [Where can I find documentation on the built-in tools or how certain settings work?](faq.html#where-can-i-find-documentation-on-the-built-in-tools-or-how-certain-settings-work)

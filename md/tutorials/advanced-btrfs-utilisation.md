@@ -50,6 +50,12 @@ We want to restore the snapshot with the name mentioned above. For that, we will
 ```sudo apt-btrfs-snapshot set-default @apt-snapshot-2021-03-30_10:54:37```  
 At the next restart, all changes made to the packages will be reverted.
 
+To delete all snapshots taken by apt-btrfs-snapshot, you must type this command as root or via sudo:
+```sudo apt-btrfs-snapshot delete-older-than 0d```
+
+To delete snapshots that are for example 10 days old or more, type this command:
+```sudo apt-btrfs-snapshot delete-older-than 10d```
+
 This can also be done via the live Kaisen.
 Your installed system is crashed, you can restore your APT snapshot by [chrooting](create-chroot.html) your installed system and running the command given above.
 This is a convenient and efficient way to restore your broken system.
@@ -60,3 +66,9 @@ This functionality can also be completely removed by fully uninstalling the pack
 ### Snapshots with Timeshift
 Snapshots with Timeshift, software available in CLI or GUI, the snapshots can be taken much more easily that with btrfs-progs commands.
 We recommend the use of Timeshift to take and restore snapshot of your system.
+
+### Recommendations for BTRFS
+This is not enabled by default for performance reasons as well as to avoid premature wear, automated defragmentation is disabled.
+It is advisable to defragment BTRFS volumes at least every 6 months (CoW can create significant fragmentation), even on SSDs.
+Delete the snapshots first, and then type the command (in case you have BTRFS installed on the root):
+```sudo btrfs filesystem defragment -rv /```

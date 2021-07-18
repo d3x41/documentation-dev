@@ -13,6 +13,7 @@ This section lists all existing official links for the project.
 ## Officials ISO downloads mirrors
 
 - Official mirror: https://iso.kaisenlinux.org
+- Alternative mirror: https://iso.kaisenlinux.xyz
 - Alternative mirror: https://kaisen.lf.je/index.html
 
 ## APT repositories
@@ -32,8 +33,10 @@ deb-src https://deb.kaisenlinux.org kaisen-rolling-snapshot main contrib non-fre
 
 ## Social medias
 
-- Twitter: https://twitter.com/KaisenLinuxOS
+- Twitter: https://twitter.com/KaisenLinux
 - LinkedIn: https://linkedin.com/company/kaisenlinux
+- Mastodon: https://mastodon.social/@KaisenLinux
+- Distrowatch: https://distrowatch.com/kaisen
 
 ## Distribution sources
 
@@ -43,5 +46,5 @@ deb-src https://deb.kaisenlinux.org kaisen-rolling-snapshot main contrib non-fre
 
 ## Feedback and discussions
 
-- Feedback & contact: contact@kaisenlinux.org
+- Feedback & contact: team@kaisenlinux.org
 - Forum : https://forum.kaisenlinux.org

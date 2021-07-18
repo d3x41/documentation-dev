@@ -4,7 +4,7 @@ defmodule KaisenDocumentation.MixProject do
   def project do
     [
       app: :kaisen_documentation,
-      version: "1.6.0",
+      version: "1.7.0",
       elixir: "~> 1.11",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
@@ -25,6 +25,7 @@ defmodule KaisenDocumentation.MixProject do
           "md/documentation.md": [ title: "Kaisen Linux | Documentation"],
           "md/start/links.md": [ title: "Official Kaisen Linux links"],
           "md/start/why.md": [ title: "Why use Kaisen Linux ?"],
+          "md/start/variant.md": [title: "List of the differents ISO"],
           "md/start/usb.md": [ title: "USB creation"],
           "md/start/hardware.md": [ title: "Hardware requirements"],
           "md/start/live.md": [ title: "Live informations"],
