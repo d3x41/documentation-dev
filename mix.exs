@@ -4,7 +4,7 @@ defmodule KaisenDocumentation.MixProject do
   def project do
     [
       app: :kaisen_documentation,
-      version: "1.7.0",
+      version: "1.8.0",
       elixir: "~> 1.11",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
@@ -29,6 +29,7 @@ defmodule KaisenDocumentation.MixProject do
           "md/start/usb.md": [ title: "USB creation"],
           "md/start/hardware.md": [ title: "Hardware requirements"],
           "md/start/live.md": [ title: "Live informations"],
+          "md/start/netinst.md": [ title: "NETINST informations"],
           "md/start/install.md": [ title: "Install OS"],
           "md/start/virtualisation.md": [ title: "Using Virtualisation"],
           "md/start/menu.md": [ title: "Menu and Tools overview"],
