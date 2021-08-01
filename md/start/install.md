@@ -1,7 +1,4 @@
-# Install with lives ISO
-
-## Prerequisites
-No need to have internet for installation via ISO lives.
+# Install OS
 
 ## Modes
 
@@ -68,7 +65,7 @@ I also advise you to manage the partitioning of the disk yourself or to use LVM 
 
 ### Recommendations on filesystems
 Kaisen Linux uses the BTRFS file system by default on automatic partitioning because a [snapshot](advanced-btrfs-utilisation.html) feature has been integrated by default and allows you to take snapshots of its system.  
-If you are installing Kaisen Linux through manual partitioning, we recommend that you use BTRFS on all your partitions in order to take full advantage of the features offered by Kaisen Linux.  
+If you are installing Kaisen Linux through manual partitioning, we recommend that you use BTRFS on all your partitions in order to take full advantage of the features offered by Kaisen Linux.
 You should also leave the default options provided with the BTRFS file system selection, these options are optimized for BTRFS and for Kaisen Linux.
 
 ## Preseed file
