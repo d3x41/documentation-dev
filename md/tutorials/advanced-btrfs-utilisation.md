@@ -4,13 +4,13 @@
 
 ### Explanations
 A subvolume is a branch of the file system that behaves like a file subsystem. it appears as a directory.  
-It is thanks to these sub-volumes that the creation of snapshots of a directory is possible.
+It is thanks to these sub-volumes that the creation of snapshots of a directory is possible.  
 
 ### Manual creation
-To manually create subvolumes to use the snapshost system, we will proceed like this.  
-Here, the subvolumes that will be created are the same as those created by installing Kaisen Linux with an ISO of revision 1.6.  
+To manually create subvolumes to use the snapshost system, we will proceed like this.
+Here, the subvolumes that will be created are the same as those created by installing Kaisen Linux with an ISO of revision 1.6.
 
-Subvolumes can be created using commands installed via the btrfs-progs package. This package is installed by default in Kaisen Linux.  
+Subvolumes can be created using commands installed via the btrfs-progs package. This package is installed by default in Kaisen Linux.
 
 This command can be used to create BTRFS subvolume:
 
@@ -27,7 +27,7 @@ To delete a BTRFS subvolume, can you proceed like this:
 ### Explanations
 A snapshot, or restore point, is an image of the file system or one of its subvolumes that you back up at a specific point in time, so that you can access or restore it later. The main goal is to restore a system that has become unstable.
 
-Once created, a snapshot behaves like an ordinary folder on your file system: you can copy it, move it to external media, rename it...
+Once created, a snapshot behaves like an ordinary folder on your file system: you can copy it, move it to external media, rename it ...
 
 ### Snapshots with BTRFS commands
 To take a snapshot of the entire system from the command line:  
@@ -39,7 +39,7 @@ To restore the snapshot taken previously, the following command can be used:
 ```sudo btrfs subvolume get-default /```  
 
 ### APT snapshots
-APT snapshots are handled by the apt-btrfs-snapshot package. Whenever APT is used for a package update or installation, a snapshot will be automatically taken.  
+APT snapshots are handled by the apt-btrfs-snapshot package. Whenever APT is used for a package update or installation, a snapshot will be automatically taken.
 If an upgrade or a package installation goes wrong it is easy to go back with these commands:
 ```sudo apt-btrfs-snapshot list```  
 This command will list all snapshots taken by apt-btrfs-snapshot.  
@@ -56,19 +56,19 @@ To delete all snapshots taken by apt-btrfs-snapshot, you must type this command 
 To delete snapshots that are for example 10 days old or more, type this command:
 ```sudo apt-btrfs-snapshot delete-older-than 10d```
 
-This can also be done via the live Kaisen.  
+This can also be done via the live Kaisen.
 Your installed system is crashed, you can restore your APT snapshot by [chrooting](create-chroot.html) your installed system and running the command given above.
-This is a convenient and efficient way to restore your broken system.  
+This is a convenient and efficient way to restore your broken system.
 
 This functionality can also be completely removed by fully uninstalling the package. In this case, you have to run this command:
 ```sudo apt remove --purge apt-btrfs-snapshot```
 
 ### Snapshots with Timeshift
-Snapshots with Timeshift, software available in CLI or GUI, the snapshots can be taken much more easily that with btrfs-progs commands.  
+Snapshots with Timeshift, software available in CLI or GUI, the snapshots can be taken much more easily that with btrfs-progs commands.
 We recommend the use of Timeshift to take and restore snapshot of your system.
 
 ### Recommendations for BTRFS
-This is not enabled by default for performance reasons as well as to avoid premature wear, automated defragmentation is disabled.  
-It is advisable to defragment BTRFS volumes at least every 6 months (CoW can create significant fragmentation), even on SSDs.  
+This is not enabled by default for performance reasons as well as to avoid premature wear, automated defragmentation is disabled.
+It is advisable to defragment BTRFS volumes at least every 6 months (CoW can create significant fragmentation), even on SSDs.
 Delete the snapshots first, and then type the command (in case you have BTRFS installed on the root):
 ```sudo btrfs filesystem defragment -rv /```

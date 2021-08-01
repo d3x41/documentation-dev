@@ -3,7 +3,6 @@
 **This section presents the different metapackages created to install several packages via one.**
 
 ## Kaisen Linux metapackages
-
 ### kaisen-technicians-tools
 This metapackage installs the following Kaisen Linux metapackages:
 
@@ -45,7 +44,7 @@ This metapackage installs the following Kaisen Linux metapackages:
 * kaisen-wifi-tools
 ```
 
-### kaisen-sysadmin-tools
+### kaisen-sysadmins-tools
 This metapackage installs the following Kaisen Linux metapackages:
 ```bash
 * kaisen-sysadmin-uncategorized
@@ -185,7 +184,7 @@ This metapackage install all tools listed [here](tools.html#miscellaneous-tools)
 This metapackage install all tools listed [here](tools.html#all-cli-tools).
 
 ## Remove packages installed by metapackages
-All the packages installed by the metapackages listed above are configured so as not to be dependent on each other to install and can therefore be uninstalled manually without risk of breaking anything (tightly, the packages dependent on the package that is uninstalled will also be uninstalled).  
+All the packages installed by the metapackages listed above are configured so as not to be dependent on each other to install and can therefore be uninstalled manually without risk of breaking anything (tightly, the packages dependent on the package that is uninstalled will also be uninstalled).
 To easily uninstall a preinstalled package, for example ddrescue package, just type the command:  
 ```sudo apt remove --purge ddrescue```
 
