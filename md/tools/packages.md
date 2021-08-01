@@ -36,8 +36,10 @@ The package has therefore been recompiled to formalize the name of the distribut
 
 The kernel has been recompiled to generate .udeb files (used by the Debian installer) as well as .deb files needed to install it via apt or dpkg.  
 The Kaisen Linux kernel has its own lean configuration.
-The kernel is also recompiled to disable signing modules because signing modules breaks GRUB
-with Kaisen Linux configuration.
+
+### cron
+
+The package has been modified to automatically add the "kaisen-basemenu-purge" package to automatically clean up duplicate icons on the menu.
 
 ### debian-installer
 
@@ -81,10 +83,6 @@ This package was forked to integrate the kaisen-grub-configuration package as a 
 
 It is the official Debian tool for building system images. It was forked to add support for the "kaisen-rolling" repository.
 
-### live-config
-
-This package contains all live configurations. Forked to add components/0031-kaisen-password script. This script add a password for live system.
-
 ### win32-loader
 
 This package allows you to start the installation of a Debian system directly from a Windows system. The package was forked to simply add the Kaisen Linux logo.
@@ -95,7 +93,7 @@ This package was forked because the /etc/default/useradd file was modified to su
 The number of users to add to the system has also been changed. Maximum 100 users can be added (by default, 58999 users can be added).
 
 ### live-installer
-Forked to add 61kaisen script to launch this script after the system installation.
+Forked to support the kaisen-calamares-settings package.
 
 ### plymouth
 Forked to define kaisen-theme by default for Plymouth.
@@ -107,20 +105,13 @@ Forked to create BTRFS subvolumes
 Forked to define kaisenlinux of hostname string
 
 ### simple-cdd
-Forked to add kaisen profile. The kaisen profile add a custom preseed for NETINST ISO,
-and add a postinst script to exec a few actions after the installation.
+Forked to update default preseed
 
 ### debian-cd
 Forked to adding kaisen-rolling repository
 
 ### tasksel
 Forked to adding Kaisen Linux tasks
-
-### lightdm-gtk-greeter
-Forked to add Kaisen Linux lightdm settings
-
-### net-retriever
-Forked to add kaisen-archive-keyring-udeb package
 
 ## Kaisen Linux packages
 
@@ -131,7 +122,7 @@ This package therefore removes the original launchers contained in `/usr/share/a
 
 ### kaisen-grub-configuration
 
-The GRUB package has been recompiled to change the configuration of the /etc/default/grub file to add support for the default splash screen for the user on the installed system (graphical boot) and also allow in case the command lsb_release -i -s cannot be executed because the lsb-release script is not present, you can still display Kaisen and not Debian in the GRUB entries.  
+The GRUB package has been recompiled to change the configuration of the /etc/default/grub file to add support for the default splash screen for the user on the installed system (graphical boot) and also allow in case the command lsb_release -i -s cannot be executed because the lsb-release script is not present, you can still display Kaisen and not Debian in the GRUB entries.
 
 The kaisen-grub-configuration package is installed automatically during system installation and automates this customization.
 
@@ -180,11 +171,13 @@ This package is simply an offline implementation of the entire https://kaisenlin
 ### kaisen-documentation
 This package is simply an offline implementation of the entire https://kaisenlinux.org/documentation/ domain in order to access the centralized documentation without requiring an internet connection.
 
+### kaisen-netinst-configurator
+This package can be considered as a hook that can be installed via the netinstaller. 
+This package installs a set of scripts allowing to automate for example the installation of packages, the complete installation of guests on virtual hosts etc... 
+This package is useless on a live ISO.
+
 ### kaisen-cli-tools
 This metapackage was created to list the tools available directly via a terminal and is installed for the "CONSOLE only" ISO, allowing to have a fully console-based live, without X server or preinstalled GUI.
-
-### kaisen-design
-This package contains all themes and icons for Kaisen Linux
 
 ### veracrypt
 Tool to HDD, SSD and system disks encryption.
@@ -260,12 +253,6 @@ Rebuilt to update qbittorrent version
 
 ### libtorrent-rasterbar
 Rebuilt to update libtorrent-rasterbar because qbittorrent compilation necessary use this version
-
-### bloodhound
-Tool to check Active Directory configurations
-
-### ddrescue-gui
-Tool to add a GUI for ddrescue tool
 
 ## Source of packages
 All the sources of the packages can be found here:
