@@ -9,18 +9,18 @@ Since release 1.0 named, Kaisen Linux is a rolling release (continuous update) b
 ## Quick start
 
 1. Choose and download an iso :
-    - [Kaisen Linux MATE (default GUI)](https://iso.kaisenlinux.org/rolling/kaisenlinuxrolling1.7-amd64-MATE.iso)
-    - [Kaisen Linux KDE](https://iso.kaisenlinux.org/rolling/kaisenlinuxrolling1.7-amd64-KDE.iso)
-    - [Kaisen Linux XFCE](https://iso.kaisenlinux.org/rolling/kaisenlinuxrolling1.7-amd64-XFCE.iso)
-    - [Kaisen Linux LXDE](https://iso.kaisenlinux.org/rolling/kaisenlinuxrolling1.7-amd64-LXDE.iso)
-    - [Kaisen Linux System Rescue (no installer)](https://iso.kaisenlinux.org/rolling/kaisenlinuxrolling1.7-amd64-SR.iso)
-    - [Kaisen Linux CONSOLE only (no GUI)](https://iso.kaisenlinux.org/rolling/kaisenlinuxrolling1.7-amd64-CONSOLE.iso)
-    - [Kaisen Linux NETINST (network required)](https://iso.kaisenlinux.org/rolling/kaisenlinuxrolling1.7-amd64-NETINST.iso)
+    - [Kaisen Linux MATE (default GUI)](https://iso.kaisenlinux.org/rolling/kaisenlinuxrolling1.8-amd64-MATE.iso)
+    - [Kaisen Linux KDE](https://iso.kaisenlinux.org/rolling/kaisenlinuxrolling1.8-amd64-KDE.iso)
+    - [Kaisen Linux XFCE](https://iso.kaisenlinux.org/rolling/kaisenlinuxrolling1.8-amd64-XFCE.iso)
+    - [Kaisen Linux LXDE](https://iso.kaisenlinux.org/rolling/kaisenlinuxrolling1.8-amd64-LXDE.iso)
+    - [Kaisen Linux System Rescue (no installer)](https://iso.kaisenlinux.org/rolling/kaisenlinuxrolling1.8-amd64-SR.iso)
+    - [Kaisen Linux CONSOLE only (no GUI)](https://iso.kaisenlinux.org/rolling/kaisenlinuxrolling1.8-amd64-CONSOLE.iso)
+    - [Kaisen Linux NETINST (network required)](https://iso.kaisenlinux.org/rolling/kaisenlinuxrolling1.8-amd64-NETINST.iso)
 2. Launch it in a VM
 3. Boot on the live mode or install Kaisen Linux
 4. Explore and test sysadmin and technicians tools
 5. Read Kaisen Linux documentation or [Kaisen Linux manpages](https://kaisenlinux.org/manpages/) for help
-6. Join our [community forum](https://forum.kaisenlinux.org) ;-)
+6. Join our [community forum](https://forum.kaisenlinux.org)
 
 ## Documentation guides
 
@@ -40,6 +40,7 @@ The documentation is splitted in 5 GUIDES on the left menu bar:
     - [USB creation](usb.html)
     - [Hardware requirements](hardware.html)
     - [Live informations](live.html)
+    - [NETINST informations](netinst.html)
     - [Install OS](install.html)
     - [Using Virtualisation](virtualisation.html)
     - [Menu and Tools overview](menu.html)
@@ -61,6 +62,7 @@ The documentation is splitted in 5 GUIDES on the left menu bar:
     - [Create chroot](create-chroot.html)
     - [Configure cryptsetup-nuke-password](configure-cryptsetup-nuke.html)
 - FAQ        
+    - [Where can I find more documentation?](#where-can-I-find-more-documentation?)
     - [What are the revisions of the rolling version ?](faq.html#what-are-the-revisions-of-the-rolling-version)
     - [Why are all additional services disabled by default ?](faq.html#why-are-all-additional-services-disabled-by-default)
     - [How to build a custom ISO ?](faq.html#how-to-build-a-custom-iso)
