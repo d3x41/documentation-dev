@@ -14,6 +14,7 @@ This section lists all existing official links for the project.
 
 - Official mirror: https://iso.kaisenlinux.org
 - Alternative mirror: https://iso.kaisenlinux.xyz
+- Alternative mirror: https://kaisen.lf.je/index.html
 
 ## APT repositories
 
@@ -22,10 +23,12 @@ deb https://deb.kaisenlinux.org kaisen-rolling main contrib non-free
 deb https://deb.kaisenlinux.org kaisen-devel main contrib non-free
 deb https://deb.kaisenlinux.org kaisen-packages main contrib non-free
 deb https://deb.kaisenlinux.org kaisen-testing main contrib non-free
+deb https://deb.kaisenlinux.org kaisen-rolling-snapshot main contrib non-free
 deb-src https://deb.kaisenlinux.org kaisen-rolling main contrib non-free
 deb-src https://deb/kaisenlinux.org kaisen-devel main contrib non-free
 deb-src https://deb.kaisenlinux.org kaisen-packages main contrib non-free
 deb-src https://deb.kaisenlinux.org kaisen-testing main contrib non-free
+deb-src https://deb.kaisenlinux.org kaisen-rolling-snapshot main contrib non-free
 ```
 
 ## Social medias
