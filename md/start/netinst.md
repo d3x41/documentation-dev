@@ -33,65 +33,66 @@ Here is this menu:
 ```
 - MATE
 - KDE
-- LXDE
 - XFCE
+- LXQT
 ```
-You must choose one of the 4. It is possible, but not recommended to install two or more simultaneously. You will get an error if you install multiple GUIs because the packages will install the same script and cause this error.  
+You must choose one of the 4. It is possible, but not recommended to install two or more simultaneously.  
 If you want to change the GUI, you will have to use the kaisen-interface-switcher script.  
 
 Network tools:    
 
 The entry **Install all network tools** will install this [metapackage](metapackages.html#kaisen-network-tools). Select this option if you want to install all network tools. This will avoid selecting all categories of network metapackages.  
-The entry **Install only network monitoring tools** will install only these [tools](tools.html#monitoring)  
-The entry **Install only network scanners tools** will install only these [tools](tools.html#network-scanners)  
-The entry **Install only network PCAP tools** will install only these [tools](tools.html#pcap)  
-The entry **Install only console port tools** will install only these [tools](tools.html#console-port)  
-The entry **Install only SSL/TLS tools** will install only these [tools](tools.html#ssl-tls)  
-The entry **Install only VPN clients** will install only these [tools](tools.html#vpn)  
-The entry **Install only Wi-Fi tools** will install only these [tools](tools.html#wi-fi)  
-The entry **Install only network miscellaneous** will install only these [tools](tools.html#various-network-administrators-tools)  
-The entry **Install only DHCP tools** will install only these [tools](tools.html#dhcp)  
-The entry **Install only DNS tools** will install only these [tools](tools.html#dns)  
 The entry **Install only ethernet tools** will install only these [tools](tools.html#ethernet)  
-The entry **Install only firewall tools** will install only these [tools](tools.html#firewall)  
 The entry **Install only GNS3 tools** will install only these [tools](tools.html#gns3)  
 The entry **Install only OSI layer 2 tools** will install only these [tools](tools.html#mac)  
 The entry **Install only OSI layer 3 tools** will install only these [tools](tools.html#ip)  
 The entry **Install only OSI layer 4 tools** will install only these [tools](tools.html#tcp-udp)  
+The entry **Install only network monitoring tools** will install only these [tools](tools.html#monitoring)  
+The entry **Install only network PCAP tools** will install only these [tools](tools.html#pcap)  
+The entry **Install only console port tools** will install only these [tools](tools.html#console-port)  
+The entry **Install only network scanners tools** will install only these [tools](tools.html#network-scanners)  
+The entry **Install only VPN clients** will install only these [tools](tools.html#vpn)  
+The entry **Install only Wi-Fi tools** will install only these [tools](tools.html#wi-fi)  
+The entry **Install only network miscellaneous** will install only these [tools](tools.html#various-network-administrators-tools)  
 
 Sysadmin tools:    
 
 The entry **Install all sysadmin tools** will install this [metapackage](metapackages.html#kaisen-sysadmin-tools). Select this option if you want to install all sysadmin tools. This will avoid selecting all categories of sysadmin metapackages.  
-The entry **Install only sysadmin miscellaneous tools** will install only these [tools](tools.html#various-system-administrators-tools)  
-The entry **Install only backup tools** will install only these [tools](tools.html#backup-tools)  
-The entry **Install only BTRFS snapshots tools** will install only these [tools](tools.html#system-snapshots)  
+The entry **Install only backup tools** will install only these [tools](tools.html#backup-tools)   
+The entry **Install only DHCP tools** will install only these [tools](tools.html#dhcp)  
+The entry **Install only DNS tools** will install only these [tools](tools.html#dns)  
 The entry **Install only FTP clients** will install only these [tools](tools.html#ftp)  
 The entry **Install only Microsoft AD analyze** will install only these [tools](tools.html#microsoft)  
 The entry **Install only remote administration tools** will install only these [tools](tools.html#remote-administration)  
-The entry **Install only SysOps tools** will install only these [tools](tools.html#sysops)   
+The entry **Install only SSL/TLS tools** will install only these [tools](tools.html#ssl-tls)  
 The entry **Install only virtualization tools** will install only these [tools](tools.html#virtualization)  
+The entry **Install only firewalling tools** will install only these [tools](tools.html#firewalling)  
+The entry **Install only AppArmor profiles and tools** will install only these [tools](tools.html#apparmor-tools-and-profiles)  
+The entry **Install only databases clients tools** will install only these [tools](tools.html#databases-clients)  
+The entry **Install only sysadmin miscellaneous tools** will install only these [tools](tools.html#various-system-administrators-tools)  
 
 Technicians tools:  
 
 The entry **Install all technicians tools** will install this [metapackage](metapackages.html#kaisen-technicians-tools). Select this option if you want to install all technicians tools. This will avoid selecting all categories of technicians metapackages.  
-The entry **Install only partitioning and erasing tools** will install only these [tools](tools.html#partionning-and-delete-tools)  
+The entry **Install only partitioning and erasing tools** will install only these [tools](tools.html#partitioning-and-delete-tools)  
 The entry **Install only password tools** will install only these [tools](tools.html#password-tools)  
 The entry **Install only PST tools** will install only these [tools](tools.html#outlook-pst)  
 The entry **Install only temperature tools** will install only these [tools](tools.html#temperature-analysis)  
 The entry **Install only make bootable USB tools** will install only these [tools](tools.html#usb-boot)  
-The entry **Install only various analysis tools** will install only these [tools](tools.html#various-analysis)  
 The entry **Install only virus analysis tools** will install only these [tools](tools.html#virus-analysis)  
-The entry **Install only compress/decompress tools** will install only these [tools](tools.html#compress-decompress)  
 The entry **Install only cloning tools** will install only these [tools](tools.html#cloning)  
 The entry **Install only data protection tools** will install only these [tools](tools.html#data-protection)  
 The entry **Install only data recovery tools** will install only these [tools](tools.html#data-recovery)  
 The entry **Install only disks analysis tools** will install only these [tools](tools.html#disks-analysis)  
 The entry **Install only hardware tools** will install only these [tools](tools.html#hardware)  
-The entry **Install only mount disks tools** will install only these [tools](tools.html#mount)  
+
+The entry **Install DevOps and Cloud tools** will install only these [tools](tools.html#sysops-tools)  
 
 The entry **Install miscellaneous tools** will install only these [tools](tools.html#miscellaneous-tools)  
 
 The entry **Install scripts and the menu services** will install only [this](menu.html#services). You should install this to more easily manage the pre-installed services, via automated scripts, if you don't install it, it won't affect the use of Kaisen.  
+
+The entry **Install the kaisen-update command** will install only these [tools](packages.html#kaisen-update)  
 
 The entry **Adding more filesystems support** will install only these [tools](tools.html#filesystems-tools) You should combine this metapackage with tools for technicians, e.g. disk analysis tools, file system mounting. This will give you more software support.  
 

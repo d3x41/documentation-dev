@@ -38,9 +38,10 @@ The Kaisen Linux submenus are composed like this:
 
 ### Tools for administrators
 
-This category is split into two categories, network tools and system tools.  
-Network tools are divided into several categories such as DNS (DNS diagnostic tools), PCAP (frame capture tools), SSL (TLS certificate analysis) and many others. The tools present in the network tools section are mainly diagnostic and troubleshooting tools on almost all layers of the OSI model. Some security tools such as Nmap or Wireshark are integrated, even if they are used a lot in offensive security, they can also be major assets when securing an IS.  
-The system tools are mainly remote administration, backup and virtualization (level 2), containerization, automation tools. It is therefore a category purely focused on the administration of Windows and Linux systems. Tools like Ansible, Docker, parallel-ssh, rsync, zsync to name a few are classified into this category and subcategories.
+This category is divided into three: network, system and DevOps/cloud tools.  
+Network tools are divided into several categories such as PCAP (frame capture tools), GNS3, Port Console, VPN and many others. The tools in the network tools section are mainly diagnostic and troubleshooting tools mainly on layers 1 to 4 of the OSI model. Some security tools like Nmap or Wireshark are integrated, even if they are used a lot in offensive security, they can also be major assets to secure an IS.  
+The system tools are mainly remote administration, backup and virtualization tools (type 2 hypervisors), DNS (DNS diagnostic tools), SSL/TLS (TLS certificate analysis) and many others. This category is therefore purely focused on the administration of Windows and Linux systems. Tools like parallel-ssh, rsync, zsync, ab, xca to name a few are classified in this category and its subcategories.  
+Cloud and DevOps tools are a collection of tools for cloud engineers such as trivy, terraform, k6, k9s and others!
 
 ### Tools for technicians
 

@@ -51,7 +51,7 @@ When switching to a "new version", the base-files package is updated and the / e
 
 ### New ISOS
 New ISOS are therefore created with each revision to fix any errors on the live system, improvements on the start-up entries, support for a new language, integration of new tools integrated over time on the live etc ...  
-Even if you have downloaded Kaisen Linux 1.3 and installed the system, and ISOS 1.4 has just been released, you don't have to completely reinstall the system, using the kaisen-update command will suffice to change from revision 1.3 to 1.4 by updating the packages.
+Even if you have downloaded Kaisen Linux 2.0 and installed the system, and ISOS 2.1 has just been released, you don't have to completely reinstall the system, using the kaisen-update command will suffice to change from revision 2.0 to 2.1 by updating the packages.
 
 ---
 ## Why are all additional services disabled by default?
@@ -71,7 +71,7 @@ If that doesn't solve your problem, contact support.
 ---
 ## How to build custom ISO?
 
-### kaisen-build
+## kaisen-build
 A package called kaisen-build has been developed to allow you to build your custom ISO based on Kaisen Linux. It is also this package and the tools it installs that we use to build official releases. The main objective of building your own ISO is to create your own live system and have one more up to date while awaiting official publications from the Kaisen Linux team.
 The second objective of doing this is to integrate into your live system tools which are not integrated by default in Kaisen Linux and which need to use them on a live system.  
 Note that creating a custom ISO also includes the Debian installer (default configuration provided by kaisen-build) customized by us (graphic theme, file systems, partitioning, preseed etc ...). Doing this is not useful for having a newer installable system, just do apt update && apt upgrade to have your system constantly updated and with your software installed.
@@ -83,7 +83,7 @@ We have the following variants:
 
 ```bash
 KDE
-LXDE
+LXQT
 MATE
 XFCE
 SR
@@ -94,10 +94,11 @@ ISO image type:
 
 ```bash
 KDE = Live system ISO and included installer with KDE GUI only
-LXDE = Live system ISO and included installer with LXDE/Openbox GUI only (LXDE by default)
+LXQT = Live system ISO and included installer with LXQT GUI only
 MATE = Live system ISO and included installer with MATE GUI only
-XFCE = Live system ISO and included installer with MATE GUI only
-SR = Live system ISO and not installer included with LXDE/Openbox GUI only (LXDE by default)
+XFCE = Live system ISO and included installer with XFCE GUI only
+SR = Live system ISO and not installer included with XFCE GUI only
+NETINST = Create NETINSTALLER ISO
 CUSTOM = Live system ISO and included installer for user ISO settings
 ```
 
@@ -105,9 +106,10 @@ These variants include tools:
 
 ```bash
 KDE = All metapackages are included on this variant
-LXDE = All metapackages are included on this variant
+LXQT = All metapackages are included on this variant
 MATE = All metapackages are included on this variant
 XFCE = All metapackages are included on this variant
+NETINST = Base system and metapackages installed by users
 SR = All technicians, filesystems, miscellaneous, firmwares are included on this variant
 CUSTOM = Variant pre-configured, but no integrated tool. Variant reserved for the user, the user parameters will be kept.
 ```
@@ -133,7 +135,7 @@ sudo ./kaisen-build build CUSTOM 1.0
 
 Version 1.0 is an example, but you can put whatever you want, I advise you not to put too many letters and numbers because if the name of the ISO volume exceeds 32 characters, the compilation will crash. The name of the ISO volume is "Kaisen Linux Rolling $variant $version" ($variant corresponds here to CUSTOM and $version corresponds here to 1.0), in the example, the name of the ISO volume will be Kaisen Linux Rolling CUSTOM 1.0.
 
-### Further information
+## Further information
 
 ### Support
 
@@ -210,7 +212,7 @@ Exec=/usr/bin/conky
 Hidden=false
 Type=Application
 X-KDE-Autostart-enabled=true
-X-LXDE-Autostart-enabled=true
+X-LXQT-Autostart-enabled=true
 X-MATE-Autostart-enabled=true
 X-XFCE-Autostart-enabled=true
 ```
@@ -226,13 +228,13 @@ Exec=/usr/bin/conky --config ~/.conkyconf
 Hidden=false
 Type=Application
 X-KDE-Autostart-enabled=true
-X-LXDE-Autostart-enabled=true
+X-LXQT-Autostart-enabled=true
 X-MATE-Autostart-enabled=true
 X-XFCE-Autostart-enabled=true
 ```
 
 The next time you start conky, your own configuration will be executed. If it does not perform as you expect, it could probably be an error in your configurations.  
-When updating the kaisen-kde, kaisen-lxde, kaisen-mate or kaisen-xfce package, select the option "N" or "O" to keep your configurations.
+When updating the kaisen-kde, kaisen-lxqt, kaisen-mate or kaisen-xfce package, select the option "N" or "O" to keep your configurations.
 
 ### Disable conky launch
 You cannot therefore remove the conky-all package, otherwise you risk removing your entire GUI.  
@@ -248,7 +250,7 @@ Exec=/usr/bin/conky
 Hidden=false
 Type=Application
 X-KDE-Autostart-enabled=true
-X-LXDE-Autostart-enabled=true
+X-LXQT-Autostart-enabled=true
 X-MATE-Autostart-enabled=true
 X-XFCE-Autostart-enabled=true
 ```
@@ -264,12 +266,12 @@ Exec=/usr/bin/conky
 Hidden=true
 Type=Application
 X-KDE-Autostart-enabled=true
-X-LXDE-Autostart-enabled=true
+X-LXQT-Autostart-enabled=true
 X-MATE-Autostart-enabled=true
 X-XFCE-Autostart-enabled=true
 ```
 
-When updating the kaisen-kde, kaisen-lxde, kaisen-mate or kaisen-xfce package, select the option "N" or "O" to keep your configurations.  
+When updating the kaisen-kde, kaisen-lxqt, kaisen-mate or kaisen-xfce package, select the option "N" or "O" to keep your configurations.  
 
 ### Problems with KDE desktop
 
@@ -378,7 +380,7 @@ With Kaisen Linux now in rolling mode, the entire system can be updated without 
 The classic method is to use the following command:
 
 ```bash
-sudo apt update;sudo apt -y full-upgrade
+sudo apt update && sudo apt -y full-upgrade
 ```
 
 This method is the update method used on Debian and other derivatives.
@@ -408,27 +410,26 @@ You should find this:
 
 ```bash
 [greeter]
-background = /usr/share/backgrounds/dna-left/1920x1080.png
+background = /usr/share/backgrounds/line-white/3840x2160.png
 theme-name = Kaisen-Dark-Material
-default-user-background = /usr/share/backgrounds/dna-left/1920x1080.png
 icon-theme-name = Kaisen
 default-user-image = /usr/share/icons/Kaisen/kaisen.png
 user-background = false
 font-name = Cantarell 11
+clock-format = %A %d %B %Y : %H:%M:%S
+indicators = ~spacer;~spacer;~host;~spacer;~session;~clock;~power
 ```
 
 Change these lines:
 
 ```bash
-background = /usr/share/backgrounds/dna-left/1920x1080.png
-default-user-background = /usr/share/backgrounds/dna-left/1920x1080.png
+background = /usr/share/backgrounds/line-white/3840x2160.png
 ```
 
 For example in:
 
 ```bash
 background = /home/user/Pictures/image.png
-default-user-background = /usr/share/backgrounds/dna-left/1920x1080.png
 ```
 
 Which will give:
@@ -437,11 +438,12 @@ Which will give:
 [greeter]
 background = /home/user/Pictures/image.png
 theme-name = Kaisen-Dark-Material
-default-user-background = /home/user/Pictures/image.png
 icon-theme-name = Kaisen
 default-user-image = /usr/share/icons/Kaisen/kaisen.png
 user-background = false
 font-name = Cantarell 11
+clock-format = %A %d %B %Y : %H:%M:%S
+indicators = ~spacer;~spacer;~host;~spacer;~session;~clock;~power
 ```
 
 ### Graphic method

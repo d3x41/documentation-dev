@@ -54,7 +54,7 @@ Since the Kaisen Linux installer is configured to request no network configurati
 
 ### choose-mirror
 
-This package configures the mirrors to be used to download packages. This package has been forked in anticipation of the future, an ISO netinstall is planned.
+This package configures the mirrors to be used to download packages.
 
 ### partman-auto
 
@@ -122,6 +122,12 @@ Forked to add Kaisen Linux lightdm settings
 ### net-retriever
 Forked to add kaisen-archive-keyring-udeb package
 
+### neofetch
+Forked to add Kaisen Linux ASCII logo
+
+### virtualbox-ext-pack
+Forked to change default debconf ask
+
 ## Kaisen Linux packages
 
 ### kaisen-basemenu-purge
@@ -157,16 +163,14 @@ This package contains all configurations for build Kaisen Linux ISO.
 
 ### kaisen-interfaces
 All Kaisen Linux MATE Desktop Environment configurations (themes, icons etc). This package also installs the default Firefox configurations for Kaisen Linux as well as its translations, terminator, vim and others.
-This package installs the kaisen-interface-switcher command (MATE version).
 
 All Kaisen Linux KDE Desktop Environment configurations (themes, icons etc). This package also installs the default Firefox configurations for Kaisen Linux as well as its translations, terminator, vim and others.
-This package installs the kaisen-interface-switcher command (KDE version).
 
-All Kaisen Linux LXDE Desktop Environment configurations (themes, icons etc). This package also installs the default Firefox configurations for Kaisen Linux as well as its translations, terminator, vim and others.
-This package installs the kaisen-interface-switcher command.
+All Kaisen Linux LXQT Desktop Environment configurations (themes, icons etc). This package also installs the default Firefox configurations for Kaisen Linux as well as its translations, terminator, vim and others.
 
 All Kaisen Linux XFCE Desktop Environment configurations (themes, icons etc). This package also installs the default Firefox configurations for Kaisen Linux as well as its translations, terminator, vim and others.
-This package installs the kaisen-interface-switcher command.
+
+The package kaisen-interface-common package installs conky theme and the kaisen-interface-switcher command.
 
 ### kaisen-skeleton
 
@@ -180,9 +184,6 @@ This package is simply an offline implementation of the entire https://kaisenlin
 ### kaisen-documentation
 This package is simply an offline implementation of the entire https://kaisenlinux.org/documentation/ domain in order to access the centralized documentation without requiring an internet connection.
 
-### kaisen-cli-tools
-This metapackage was created to list the tools available directly via a terminal and is installed for the "CONSOLE only" ISO, allowing to have a fully console-based live, without X server or preinstalled GUI.
-
 ### kaisen-design
 This package contains all themes and icons for Kaisen Linux
 
@@ -190,7 +191,10 @@ This package contains all themes and icons for Kaisen Linux
 Tool to HDD, SSD and system disks encryption.
 
 ### woeusb
-Tool to create Windows USB bootable key.
+Tool to create Windows USB bootable key (written in Bash).
+
+### woeusb-ng
+Tool to create Windows USB bootable key (written in Python)
 
 ### gns3-server
 Tool to network simulator (server package)
@@ -216,11 +220,53 @@ Graph for everyone
 ### bettercap
 Tool to testing the possibility of MITM attacks on Bluetooth, Wi-Fi, Ethernet and more.
 
+### bettercap-caplets
+Caplets and proxy modules.
+
+### bettercap-ui
+Bettercap's web UI
+
 ### hfsprescue
 Tool specialized in recovering data from HFS + partitions.
 
 ### conkycolors
 Tool developed with the aim of simplifying the configuration of the Conky theme. Some contributions have been made on the official GitHub repository of the software to facilitate its integration into Kaisen Linux.
+
+### ctop
+Tool to obtain container metrics (Docker or containerd)
+
+### eksctl
+The official CLI for Amazon EKS
+
+### gtkhash
+A cross-platform desktop utility for computing message digests or checksums
+
+### helm
+The Kubernetes package manager
+
+### iptstate
+IP Tables state
+
+### k6
+A modern load testing tool, using Go and JavaScript
+
+### k9s
+Kubernetes CLI To Manage Your Clusters In Style!
+
+### kubernetes
+Production-Grade Container Scheduling and Management
+
+### minikube
+Run Kubernetes locally
+
+### psensor
+Graphical hardware temperature monitor for Linux
+
+### terraform
+Infrastructure as code tool to provisioning cloud infrastructures.
+
+### trivy
+Vulnerabilities scanner for containers
 
 ### sentry-python
 Updated tool for integrating GNS3 tools in Kaisen Linux.
@@ -256,10 +302,10 @@ Data recovery and data protection tool
 Tool to take snapshot when APT used
 
 ### qbittorrent
-Rebuilt to update qbittorrent version
+BitTorrent client
 
 ### libtorrent-rasterbar
-Rebuilt to update libtorrent-rasterbar because qbittorrent compilation necessary use this version
+An efficient feature complete C++ bittorrent implementation
 
 ### bloodhound
 Tool to check Active Directory configurations

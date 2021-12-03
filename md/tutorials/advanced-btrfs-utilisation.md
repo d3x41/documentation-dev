@@ -10,7 +10,7 @@ It is thanks to these sub-volumes that the creation of snapshots of a directory 
 To manually create subvolumes to use the snapshost system, we will proceed like this.  
 Here, the subvolumes that will be created are the same as those created by installing Kaisen Linux with an ISO of revision 1.6.  
 
-Subvolumes can be created using commands installed via the btrfs-progs package. This package is installed by default in Kaisen Linux.  
+Subvolumes can be created using commands installed via the btrfs-progs package. This package is installed by default in Kaisen Linux if the kaisen-filesystems package is installed, or if BTRFS is the file system used when installing the system.  
 
 This command can be used to create BTRFS subvolume:
 
@@ -53,8 +53,8 @@ At the next restart, all changes made to the packages will be reverted.
 To delete all snapshots taken by apt-btrfs-snapshot, you must type this command as root or via sudo:
 ```sudo apt-btrfs-snapshot delete-older-than 0d```
 
-To delete snapshots that are for example 10 days old or more, type this command:
-```sudo apt-btrfs-snapshot delete-older-than 10d```
+To delete snapshots that are for example 3 days old or more, type this command:
+```sudo apt-btrfs-snapshot delete-older-than 3d```
 
 This can also be done via the live Kaisen.  
 Your installed system is crashed, you can restore your APT snapshot by [chrooting](create-chroot.html) your installed system and running the command given above.
@@ -67,7 +67,7 @@ This functionality can also be completely removed by fully uninstalling the pack
 Snapshots with Timeshift, software available in CLI or GUI, the snapshots can be taken much more easily that with btrfs-progs commands.  
 We recommend the use of Timeshift to take and restore snapshot of your system.
 
-### Recommendations for BTRFS
+## Recommendations for BTRFS
 This is not enabled by default for performance reasons as well as to avoid premature wear, automated defragmentation is disabled.  
 It is advisable to defragment BTRFS volumes at least every 6 months (CoW can create significant fragmentation), even on SSDs.  
 Delete the snapshots first, and then type the command (in case you have BTRFS installed on the root):

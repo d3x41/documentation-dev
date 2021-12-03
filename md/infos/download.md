@@ -11,7 +11,7 @@ The officials mirrors:
 
 ```bash
 https://iso.kaisenlinux.org
-https://kaisen.lf.je/index.html
+https://iso.kaisenlinux.xyz
 ```
 
 **Download a Kaisen Linux ISO only via the links mentioned above.**  

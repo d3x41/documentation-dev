@@ -6,7 +6,7 @@ With Kaisen Linux now in rolling mode, the entire system can be updated without 
 The classic method is to use the following command:
 
 ```bash
-sudo apt update;sudo apt -y full-upgrade
+sudo apt update && sudo apt -y full-upgrade
 ```
 
 This method is the update method used on Debian and other derivatives.

@@ -2,18 +2,16 @@
 
 **This section presents the different metapackages created to install several packages via one.**
 
-## Kaisen Linux metapackages
+## Kaisen Linux metapackages for tools
 
 ### kaisen-technicians-tools
 This metapackage installs the following Kaisen Linux metapackages:
-
 ```bash
 * kaisen-cloning
 * kaisen-data-protection
 * kaisen-data-recovery
 * kaisen-disks-analysis
 * kaisen-hardware
-* kaisen-mount
 * kaisen-partitioning-erase
 * kaisen-password-tools
 * kaisen-pst-tools
@@ -21,17 +19,13 @@ This metapackage installs the following Kaisen Linux metapackages:
 * kaisen-usb-boot
 * kaisen-various-analysis
 * kaisen-virus-analysis
-* kaisen-zip
 ```
 
 ### kaisen-network-tools
 This metapackage installs the following Kaisen Linux metapackages:
 ```bash
 * kaisen-network-uncategorized
-* kaisen-dhcp-tools
-* kaisen-dns-tools
 * kaisen-ethernet-tools
-* kaisen-firewall-tools
 * kaisen-gns3
 * kaisen-layer4-tools
 * kaisen-layer3-tools
@@ -40,7 +34,6 @@ This metapackage installs the following Kaisen Linux metapackages:
 * kaisen-pcap-tools
 * kaisen-portconsole-tools
 * kaisen-network-scanners
-* kaisen-tls-tools
 * kaisen-vpn-tools
 * kaisen-wifi-tools
 ```
@@ -52,9 +45,13 @@ This metapackage installs the following Kaisen Linux metapackages:
 * kaisen-remote-administration
 * kaisen-backup-tools
 * kaisen-ftp-clients
-* kaisen-btrfs-snapshots
+* kaisen-dhcp-tools
+* kaisen-dns-tools
+* kaisen-tls-tools
+* kaisen-apparmor
+* kaisen-databases-tools
+* kaisen-firewalling
 * kaisen-microsoft-tools
-* kaisen-sysops-tools
 * kaisen-virtualization-tools
 ```
 
@@ -64,23 +61,14 @@ This metapackage install all tools listed [here](tools.html#disks-analysis).
 ### kaisen-virus-analysis
 This metapackage install all tools listed [here](tools.html#virus-analysis).
 
-### kaisen-various-analysis
-This metapackage install all tools listed [here](tools.html#various-analysis).
-
 ### kaisen-cloning
 This metapackage install all tools listed [here](tools.html#cloning).
-
-### kaisen-zip
-This metapackage install all tools listed [here](tools.html#compress/decompress).
 
 ### kaisen-usb-boot
 This metapackage install all tools listed [here](tools.html#usb-boot).
 
 ### kaisen-hardware
 This metapackage install all tools listed [here](tools.html#hardware).
-
-### kaisen-mount
-This metapackage install all tools listed [here](tools.html#mount).
 
 ### kaisen-pst-tools
 This metapackage install all tools listed [here](tools.html#outlook-pst).
@@ -89,7 +77,7 @@ This metapackage install all tools listed [here](tools.html#outlook-pst).
 This metapackage install all tools listed [here](tools.html#password-tools).
 
 ### kaisen-partitioning-erase
-This metapackage install all tools listed [here](tools.html#partionning-and-delete-tools).
+This metapackage install all tools listed [here](tools.html#partitioning-and-delete-tools).
 
 ### kaisen-data-protection
 This metapackage install all tools listed [here](tools.html#data-protection).
@@ -111,9 +99,6 @@ This metapackage install all tools listed [here](tools.html#dns).
 
 ### kaisen-ethernet-tools
 This metapackage install all tools listed [here](tools.html#ethernet).
-
-### kaisen-firewall-tools
-This metapackage install all tools listed [here](tools.html#firewall).
 
 ### kaisen-gns3
 This metapackage install all tools listed [here](tools.html#gns3).
@@ -149,7 +134,7 @@ This metapackage install all tools listed [here](tools.html#vpn).
 This metapackage install all tools listed [here](tools.html#wi-fi).
 
 ### kaisen-sysadmin-uncategorized
-This metapackage install all tools listed [here](tools.html#sysadmin-uncategorized).
+This metapackage install all tools listed [here](tools.html#various-system-administrators-tools).
 
 ### kaisen-remote-administration
 This metapackage install all tools listed [here](tools.html#remote-administration).
@@ -166,11 +151,20 @@ This metapackage install all tools listed [here](tools.html#system-snapshots).
 ### kaisen-microsoft-tools
 This metapackage install all tools listed [here](tools.html#microsoft).
 
-### kaisen-sysops-tools
-This metapackage install all tools listed [here](tools.html#sysops).
-
 ### kaisen-virtualization-tools
 This metapackage install all tools listed [here](tools.html#virtualization).
+
+### kaisen-apparmor
+This metapackage install all tools listed [here](tools.html#apparmor-tools-and-profiles).
+
+### kaisen-firewalling
+This metapackage install all tools listed [here](tools.html#firewalling).
+
+### kaisen-databases-tools
+This metapackage install all tools listed [here](tools.html#databases-clients).
+
+### kaisen-sysops-tools
+This metapackage install all tools listed [here](tools.html#devops-and-cloud).
 
 ### kaisen-firmwares
 This metapackage install all tools listed [here](tools.html#integrated-firmwares).
@@ -181,8 +175,19 @@ This metapackage install all tools listed [here](tools.html#filesystems-tools).
 ### kaisen-miscellaneous
 This metapackage install all tools listed [here](tools.html#miscellaneous-tools).
 
-### kaisen-cli-tools
-This metapackage install all tools listed [here](tools.html#all-cli-tools).
+## Kaisen Linux metapackages for graphical interfaces
+
+### kaisen-kde
+This metapackage install all tools listed [here](tools.html#kde).
+
+### kaisen-lxqt
+This metapackage install all tools listed [here](tools.html#lxqt).
+
+### kaisen-mate
+This metapackage install all tools listed [here](tools.html#mate).
+
+### kaisen-xfce
+This metapackage install all tools listed [here](tools.html#xfce).
 
 ## Remove packages installed by metapackages
 All the packages installed by the metapackages listed above are configured so as not to be dependent on each other to install and can therefore be uninstalled manually without risk of breaking anything (tightly, the packages dependent on the package that is uninstalled will also be uninstalled).  

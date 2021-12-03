@@ -13,27 +13,26 @@ You should find this:
 
 ```bash
 [greeter]
-background = /usr/share/backgrounds/dna-left/1920x1080.png
+background = /usr/share/backgrounds/line-white/3840x2160.png
 theme-name = Kaisen-Dark-Material
-default-user-background = /usr/share/backgrounds/dna-left/1920x1080.png
 icon-theme-name = Kaisen
 default-user-image = /usr/share/icons/Kaisen/kaisen.png
 user-background = false
 font-name = Cantarell 11
+clock-format = %A %d %B %Y : %H:%M:%S
+indicators = ~spacer;~spacer;~host;~spacer;~session;~clock;~power
 ```
 
 Change these lines:
 
 ```bash
-background = /usr/share/backgrounds/dna-left/1920x1080.png
-default-user-background = /usr/share/backgrounds/dna-left/1920x1080.png
+background = /usr/share/backgrounds/line-white/3840x2160.png
 ```
 
 For example in:
 
 ```bash
 background = /home/user/Pictures/image.png
-default-user-background = /usr/share/backgrounds/dna-left/1920x1080.png
 ```
 
 Which will give:
@@ -42,11 +41,12 @@ Which will give:
 [greeter]
 background = /home/user/Pictures/image.png
 theme-name = Kaisen-Dark-Material
-default-user-background = /home/user/Pictures/image.png
 icon-theme-name = Kaisen
 default-user-image = /usr/share/icons/Kaisen/kaisen.png
 user-background = false
 font-name = Cantarell 11
+clock-format = %A %d %B %Y : %H:%M:%S
+indicators = ~spacer;~spacer;~host;~spacer;~session;~clock;~power
 ```
 
 ## Graphic method

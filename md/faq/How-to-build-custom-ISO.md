@@ -12,7 +12,7 @@ We have the following variants:
 
 ```bash
 KDE
-LXDE
+LXQT
 MATE
 XFCE
 SR
@@ -23,10 +23,11 @@ ISO image type:
 
 ```bash
 KDE = Live system ISO and included installer with KDE GUI only
-LXDE = Live system ISO and included installer with LXDE/Openbox GUI only (LXDE by default)
+LXQT = Live system ISO and included installer with LXQT GUI only
 MATE = Live system ISO and included installer with MATE GUI only
-XFCE = Live system ISO and included installer with MATE GUI only
-SR = Live system ISO and not installer included with LXDE/Openbox GUI only (LXDE by default)
+XFCE = Live system ISO and included installer with XFCE GUI only
+SR = Live system ISO and not installer included with XFCE GUI only
+NETINST = Create NETINSTALLER ISO
 CUSTOM = Live system ISO and included installer for user ISO settings
 ```
 
@@ -34,9 +35,10 @@ These variants include tools:
 
 ```bash
 KDE = All metapackages are included on this variant
-LXDE = All metapackages are included on this variant
+LXQT = All metapackages are included on this variant
 MATE = All metapackages are included on this variant
 XFCE = All metapackages are included on this variant
+NETINST = Base system and metapackages installed by users
 SR = All technicians, filesystems, miscellaneous, firmwares are included on this variant
 CUSTOM = Variant pre-configured, but no integrated tool. Variant reserved for the user, the user parameters will be kept.
 ```

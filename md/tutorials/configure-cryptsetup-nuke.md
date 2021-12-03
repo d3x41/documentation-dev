@@ -5,7 +5,7 @@ The software cryptsetup-nuke password is a software developed by Offensive Secur
 It allows to define an additional password which can also be typed in the cryptsetup password prompt, but allows to destroy the decryption key of the cryptsetup volumes in order to prevent its unlocking.
 
 ## How to configure cryptsetup-nuke-password
-In the menu of miscellaneous tools and tools for system administrators, there is an entry for the command ```sudo dpkg-reconfigure cryptsetup-nuke-password```.  
+In the menu of miscellaneous tools, there is an entry for the command ```sudo dpkg-reconfigure cryptsetup-nuke-password```.  
 This command will open an ncurses window and allow you to set a password, keep the current one or simply delete it.  
 Once a password is set, it can be typed at the cryptsetup password prompt when the computer starts up. This typed password will indicate invalid password, but will also indicate on the password defined during the encryption with cryptsetup as invalid because the decryption keys will have been destroyed.  
 Use only with full knowledge of the facts and consequences associated with this functionality. We will not be responsible for damage to your systems in the event of improper handling.  

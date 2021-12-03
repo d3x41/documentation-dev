@@ -10,8 +10,8 @@ The name of the ISO ending with KDE (mentioned KDE on the download page), is an 
 A live bootable system and an installer are integrated. This ISO does not require the Internet to be used live or to install, but updates may be available after installation.
 This ISO is suitable for a majority of use cases.
 
-## LXDE
-The name of the ISO ending with LXDE (mentioned as LXDE on the download page), is an ISO with all tools built in by default.  
+## LXQT
+The name of the ISO ending with LXQT (mentioned as LXQT on the download page), is an ISO with all tools built in by default.  
 A live bootable system and an installer are integrated. This ISO does not require the Internet to be used live or to install, but updates may be available after installation.
 This ISO is suitable for a majority of use cases.
 
@@ -22,16 +22,11 @@ This ISO is suitable for a majority of use cases.
 
 ## SR
 The name of the ISO ending with SR stands for System Rescue.  
-It is a light ISO, containing only the maintenance tools. These tools are used to diagnose the various components of a computer as well as the operating systems. This configuration makes the system lighter and is recommended for less powerful computers.  
+It is a lightweight ISO, containing only maintenance tools. These tools are used to diagnose the various components of a computer as well as the operating systems. This configuration makes the system lighter and is recommended for less powerful computers.  
 This ISO does not include an installer, it is only usable as a live system.  
-The live system does not require Internet to operate.  
-LXDE is the default GUI used for ISO SR.
-
-## CONSOLE
-The name of the ISO ending with CONSOLE means CONSOLE only.  
-It is a light ISO, containing only the maintenance tools and having no pre-installed GUI or X server. This configuration makes the system lighter and is recommended for less powerful computers with very little RAM, and can be used if the operations you want to perform require access only to command line tools.  
-This ISO does not include an installer, it is only usable as a live system.  
-The live system does not require Internet to operate.
+The live system does not need the Internet to run.  
+XFCE is the default GUI used for the SR ISO.  
+By default it is designed to boot without a GUI, however the GUI can be enabled with the startx command, if you need to use the GUI for some reason.
 
 ## NETINST
 The name of the ISO ending with NETINST means NETINSTALLER.  

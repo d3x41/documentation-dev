@@ -16,7 +16,7 @@ Exec=/usr/bin/conky
 Hidden=false
 Type=Application
 X-KDE-Autostart-enabled=true
-X-LXDE-Autostart-enabled=true
+X-LXQT-Autostart-enabled=true
 X-MATE-Autostart-enabled=true
 X-XFCE-Autostart-enabled=true
 ```
@@ -32,13 +32,13 @@ Exec=/usr/bin/conky --config ~/.conkyconf
 Hidden=false
 Type=Application
 X-KDE-Autostart-enabled=true
-X-LXDE-Autostart-enabled=true
+X-LXQT-Autostart-enabled=true
 X-MATE-Autostart-enabled=true
 X-XFCE-Autostart-enabled=true
 ```
 
 The next time you start conky, your own configuration will be executed. If it does not perform as you expect, it could probably be an error in your configurations.  
-When updating the kaisen-kde, kaisen-lxde, kaisen-mate or kaisen-xfce package, select the option "N" or "O" to keep your configurations.
+When updating the kaisen-kde, kaisen-lxqt, kaisen-mate or kaisen-xfce package, select the option "N" or "O" to keep your configurations.
 
 ## Disable conky launch
 You cannot therefore remove the conky-all package, otherwise you risk removing your entire GUI.  
@@ -54,7 +54,7 @@ Exec=/usr/bin/conky
 Hidden=false
 Type=Application
 X-KDE-Autostart-enabled=true
-X-LXDE-Autostart-enabled=true
+X-LXQT-Autostart-enabled=true
 X-MATE-Autostart-enabled=true
 X-XFCE-Autostart-enabled=true
 ```
@@ -70,12 +70,12 @@ Exec=/usr/bin/conky
 Hidden=true
 Type=Application
 X-KDE-Autostart-enabled=true
-X-LXDE-Autostart-enabled=true
+X-LXQT-Autostart-enabled=true
 X-MATE-Autostart-enabled=true
 X-XFCE-Autostart-enabled=true
 ```
 
-When updating the kaisen-kde, kaisen-lxde, kaisen-mate or kaisen-xfce package, select the option "N" or "O" to keep your configurations.  
+When updating the kaisen-kde, kaisen-lxqt, kaisen-mate or kaisen-xfce package, select the option "N" or "O" to keep your configurations.  
 
 ## Problems with KDE desktop
 

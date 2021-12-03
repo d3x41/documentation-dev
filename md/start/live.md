@@ -70,80 +70,29 @@ The forensic mode allows you to automatically deactivate Nvidia graphics cards a
 ## Create live USB key with persistence
 ### **Prerequisite**  
 
-WARNING: A USB key configured to support live persistent will not work with Apple hardware, surely due to their specific BIOS.
+WARNING: A USB flash drive configured to support live persistent will not work with Apple hardware, probably due to their specific BIOS.
 
-We recommend that you have at least a 64GB USB key to take full advantage of this feature. Delete your current partition entirely with Gparted and create a partition table in GPT, dd will do the rest for you. You don't need to format the partition with any file system.
-Check with the command `sudo fdisk -l` what your key is called. Here we will assume that our USB drive is `/dev/sdb`.
+We recommend that you have at least a 64GB USB drive to take full advantage of this feature. 
+Check with the command `sudo fdisk -l` what your key is called. Here we will assume that our USB stick is `/dev/sdb`.
 
-### **USB creation**
-This documentation was made with the live MATE ISO but also works with KDE, LXDE and XFCE and SR (System Rescue).
-Make sure you are in the same folder as the ISO to do all this !!
+### USB key with persistence creation
+This documentation was made with ISO MATE but also works with KDE, LXQT and XFCE and SR (System Rescue).  
+Make sure you are in the same folder as the ISO to do all this!!! The dd command will erase your entire device, make sure you have backed up the important content.  
 
 - Create a bootable Kaisen USB drive with the following command:
 
 ```bash
-sudo dd if=kaisenlinuxrolling1.5-amd64-MATE.iso of=/dev/sdb bs=4M
+sudo dd if=kaisenlinuxrolling2.0-amd64-MATE.iso of=/dev/sdb bs=4M
 ```
 Normally two partitions were created by dd. You can check this with the sudo fdisk -l command. You need to create a third to add persistence to it.
 
 - To do this, type the following commands (always in the same folder where the ISO is):
 
 ```bash
-end=55gb (if key is 64gb, for security we will put the key ending at 55gb plus the size of the ISO so 3gb)
-read start _ <<(du -bcm kaisenlinuxrolling1.5-amd64-MATE.iso | tail -1); echo $start
-sudo parted /dev/sdb mkpart primary $start $end
+end=55GiB (if key is 64gb, for security we will put the key ending at 55gb plus the size of the ISO so 4GB)
+read start _ <<(du -bcm kaisenlinuxrolling2.0-amd64-MATE.iso | tail -1); echo $start
+sudo parted /dev/sdb mkpart primary ${start}MiB $end
 ```
-
-- Here is what to answer with parted:
-
-```bash
-Warning: Not all of the space available to /dev/sdb1 appears to be used, you can fix the GPT to use all of the space (an extra
-117235328 blocks) or continue with the current setting?
-Fix/Ignore?
-```
-Answer: Fix
-
-```bash
-Error: Can't have overlapping partitions.
-Ignore/Cancel?
-```
-Answer: Ignore
-
-```bash
-Partition name?  []?
-```
-Answer: persistence
-
-```bash
-File system type?  [ext2]?
-```
-Answer: ext4
-
-```bash
-Start?
-```
-Answer $start value (I get 3577 just after echo $start with MATE ISO)
-
-```bash
-End?
-```
-Answer: 55gb
-
-- You may be asked the questions below. Just ignore the messages.
-
-```bash
-Error: Error informing the kernel about modifications to partition /dev/sdb1 -- Device or resource busy.  This means Linux won't know about any changes you made to /dev/sdb1 until you reboot -- so you shouldn't mount it or use it in any way before rebooting.
-Ignore/Cancel?
-```
-Answer: Ignore
-
-```bash
-Error: Partition(s) 3 on /dev/sdb have been written, but we have been unable to inform the kernel of the change, probably because it/they are in use.  As a result, the old partition(s) will remain in use.  You should reboot now before making further changes.
-Ignore/Cancel?
-```
-Answer: Ignore
-
-**To initialize /etc/mtab, disconnect then reconnect your key!!**
 
 You should now have 3 partitions on your `/dev/sdb` device.
 
@@ -171,17 +120,19 @@ Restart a live Kaisen with the persistence option enabled. To test that the pers
 
 ## Create live USB key with encrypted persistence
 ### **Prerequisite**
-WARNING: A USB key configured to support live persistent will not work with Apple hardware, surely due to their specific BIOS.
+WARNING: A USB flash drive configured to support live persistent will not work with Apple hardware, probably due to their specific BIOS.
 
-We recommend that you have at least a 64GB USB key to take full advantage of this feature. Delete your current partition entirely with Gparted and create a partition table in GPT, dd will do the rest for you. You don't need to format the partition with any file system.
-Check with the command `sudo fdisk -l` what your key is called. Here we will assume that our USB drive is `/dev/sdb`.
+We recommend that you have at least a 64GB USB drive to take full advantage of this feature. 
+Check with the command `sudo fdisk -l` what your key is called. Here we will assume that our USB stick is `/dev/sdb`.
 
-## USB creation
-This documentation was made with the live MATE ISO but also works with KDE, LXDE and XFCE and SR (System Rescue).
-Make sure you are in the same folder as the ISO to do all this !! Create a bootable Kaisen USB drive with the following command:
+### USB key with encrypted persistence creation
+This documentation was made with ISO MATE but also works with KDE, LXQT and XFCE and SR (System Rescue).  
+Make sure you are in the same folder as the ISO to do all this!!! The dd command will erase your entire device, make sure you have backed up the important content.  
+
+- Create a bootable Kaisen USB drive with the following command:
 
 ```bash
-sudo dd if=kaisenlinuxrolling1.5-amd64-MATE.iso of=/dev/sdb bs=4M
+sudo dd if=kaisenlinuxrolling2.0-amd64-MATE.iso of=/dev/sdb bs=4M
 ```
 
 Normally two partitions were created by dd. You can check this with the `sudo fdisk -l` command. You need to create a third to add persistence to it.
@@ -189,61 +140,10 @@ Normally two partitions were created by dd. You can check this with the `sudo fd
 - To do this, type the following commands (always in the same folder where the ISO is):
 
 ```bash
-end=55gb (if key is 55gb, for security we will put the key ending at 10gb plus the size of the ISO so 3gb)
-read start _ <<(du -bcm kaisenlinuxrolling1.5-amd64-MATE.iso | tail -1); echo $start
-sudo parted /dev/sdb mkpart primary $start $end
+end=55GiB (if key is 55gb, for security we will put the key ending at 10gb plus the size of the ISO so 4GB)
+read start _ <<(du -bcm kaisenlinuxrolling2.0-amd64-MATE.iso | tail -1); echo $start
+sudo parted /dev/sdb mkpart primary ${start}MiB $end
 ```
-
-- Here is what to answer with parted:
-
-```bash
-Warning: Not all of the space available to /dev/sdb1 appears to be used, you can fix the GPT to use all of the space (an extra
-117235328 blocks) or continue with the current setting?
-Fix/Ignore?
-```
-Answer: Fix
-
-```bash
-Error: Can't have overlapping partitions.
-Ignore/Cancel?
-```
-Answer: Ignore
-
-```bash
-Partition name?  []?
-```
-Answer: persistence
-
-```bash
-File system type?  [ext2]?
-```
-Answer: ext4
-
-```bash
-Start?
-```
-Answer $start value (I get 3577 just after echo $start with MATE ISO)
-
-```bash
-End?
-```
-Answer: 55gb
-
-- You may be asked the questions below. Just ignore the messages.
-
-```bash
-Error: Error informing the kernel about modifications to partition /dev/sdb1 -- Device or resource busy.  This means Linux won't know about any changes you made to /dev/sdb1 until you reboot -- so you shouldn't mount it or use it in any way before rebooting.
-Ignore/Cancel?
-```
-Answer: Ignore
-
-```bash
-Error: Partition(s) 3 on /dev/sdb have been written, but we have been unable to inform the kernel of the change, probably because it/they are in use.  As a result, the old partition(s) will remain in use.  You should reboot now before making further changes.
-Ignore/Cancel?
-```
-Answer: Ignore
-
-**To initialize /etc/mtab, disconnect then reconnect your key!!**
 
 You should now have 3 partitions on your `/dev/sdb` device.  
 WARNING: do not forget the passphrase to unlock the partition, otherwise you will have to completely redo your key and your data cannot be recovered. You have been warned.
