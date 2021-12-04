@@ -47,16 +47,10 @@ CUSTOM = Variant pre-configured, but no integrated tool. Variant reserved for th
 
 Install kaisen-build with the `sudo apt install kaisen-build` command. The package will install live-build (a set of scripts used by Debian to build their official ISO images, which we also use), live-manual and live-doc which will help you get started with the live-build configuration and customize your ISO, live-boot to start your live.  
 Once the package is installed, in `/home/*` you will have a folder named **kaisen-build**.  
-In the `kaisen-build/variant/` folder, there is the folder named **CUSTOM**. This folder is reserved for you so that you can make your ISO live and installable (these options are by default in the live-build configuration file that I do not recommend that you modify), this file is complete and some options are already preconfigured like official Kaisen Linux packages, GUIs, as well as the Debian Installer [preseed LINK TO ADD](#) file.  
+In the `kaisen-build/variant/` folder, there is the folder named **CUSTOM**. This folder is reserved for you so that you can make your ISO live and installable (these options are by default in the live-build configuration file that I do not recommend that you modify), this file is complete and some options are already preconfigured like official Kaisen Linux packages, GUIs, as well as the Debian Installer [preseed](install.html#example-of-preseed-file) file.  
 In the event of an update, or even in the event of accidental deletion of the package and after a reinstallation, all the modifications made on the custom branch will be kept, thanks to an automated backup and automatic restoration of the CUSTOM branch in the installation process of the package.  
 This is why I strongly advise you not to create your ISO by customizing another variant than CUSTOM because your modifications will be lost in the event of an update of kaisen-build.  
 Once your branch is fully configured, you can run a compilation at the root of the kaisen-build folder, with the command:
-
-```bash
-sudo ./kaisen-build build CUSTOM 
-```
-
-If you want to put a version number to your ISO, put this:  
 
 ```bash
 sudo ./kaisen-build build CUSTOM 1.0
@@ -71,7 +65,7 @@ Please be aware that **we will not provide support to users wishing to create th
 ## Warning on personal images
 
 One of the strengths of the GNU/Linux world, which we follow to give our users the choice to do what they want with the environment we provide them so that they can adapt it to their needs, is also a problem because the integration of malware, trackers or others can be facilitated.  
-To avoid this kind of inconvenience, do not download an ISO image outside the following two mirrors: https://iso.kaisenlinux.org and https://kaisen.lf.je/index.html  
+To avoid this kind of inconvenience, do not download an ISO image outside the following two mirrors: https://iso.kaisenlinux.org and https://iso.kaisenlinux.xyz    
 Also check the SHA256 checksums indicated on the official website.
 So keep your images created by yourself for yourself, and do not use ISOS images whose origin thereof is not a certainty (check the checksums on the site to be sure).
 
