@@ -1,6 +1,6 @@
 # How to build custom ISO?
 
-# kaisen-build
+## kaisen-build
 A package called kaisen-build has been developed to allow you to build your custom ISO based on Kaisen Linux. It is also this package and the tools it installs that we use to build official releases. The main objective of building your own ISO is to create your own live system and have one more up to date while awaiting official publications from the Kaisen Linux team.
 The second objective of doing this is to integrate into your live system tools which are not integrated by default in Kaisen Linux and which need to use them on a live system.  
 Note that creating a custom ISO also includes the Debian installer (default configuration provided by kaisen-build) customized by us (graphic theme, file systems, partitioning, preseed etc ...). Doing this is not useful for having a newer installable system, just do apt update && apt upgrade to have your system constantly updated and with your software installed.
@@ -64,13 +64,11 @@ sudo ./kaisen-build build CUSTOM 1.0
 
 Version 1.0 is an example, but you can put whatever you want, I advise you not to put too many letters and numbers because if the name of the ISO volume exceeds 32 characters, the compilation will crash. The name of the ISO volume is "Kaisen Linux Rolling $variant $version" ($variant corresponds here to CUSTOM and $version corresponds here to 1.0), in the example, the name of the ISO volume will be Kaisen Linux Rolling CUSTOM 1.0.
 
-## Further information
-
-### Support
+## Support
 
 Please be aware that **we will not provide support to users wishing to create their own ISO**. Not that we don't want to help you, but we are very busy professionally and on the constant development of Kaisen Linux.
 
-### Warning on personal images
+## Warning on personal images
 
 One of the strengths of the GNU/Linux world, which we follow to give our users the choice to do what they want with the environment we provide them so that they can adapt it to their needs, is also a problem because the integration of malware, trackers or others can be facilitated.  
 To avoid this kind of inconvenience, do not download an ISO image outside the following two mirrors: https://iso.kaisenlinux.org and https://kaisen.lf.je/index.html  
