@@ -61,14 +61,30 @@ Your installed system is crashed, you can restore your APT snapshot by [chrootin
 This is a convenient and efficient way to restore your broken system.  
 
 This functionality can also be completely removed by fully uninstalling the package. In this case, you have to run this command:
-```sudo apt remove --purge apt-btrfs-snapshot```
+```sudo apt remove --purge apt-btrfs-snapshot```  
+
+Remember to regularly delete your BTRFS snapshots taken with apt-btrfs-snapshot, they can take up considerable space on your storage device.
 
 ### Snapshots with Timeshift
 Snapshots with Timeshift, software available in CLI or GUI, the snapshots can be taken much more easily that with btrfs-progs commands.  
-We recommend the use of Timeshift to take and restore snapshot of your system.
+We recommend the use of Timeshift to take and restore snapshot of your system.  
+
+Remember to regularly delete your BTRFS snapshots taken with Timeshift, they can take up considerable space on your storage device.
+
+## Docker BTRFS volumes
+When the Docker daemon is enabled, if you use BTRFS on your / partition, BTRFS automatically mounts a mount point of your partition in /var/lib/docker/btrfs in order to take advantage of BTRFS features on Docker containers and images, such as snapshots, Copy On Write...  
+This can consume a lot of space, especially when snapshots have been taken on disk.  
+To delete the data created by Docker, you must already stop the Docker service:  
+```sudo systemctl stop docker```  
+Then you just have to execute this command:  
+```sudo rm -rf /var/lib/docker/btrfs```
 
 ## Recommendations for BTRFS
 This is not enabled by default for performance reasons as well as to avoid premature wear, automated defragmentation is disabled.  
 It is advisable to defragment BTRFS volumes at least every 6 months (CoW can create significant fragmentation), even on SSDs.  
 Delete the snapshots first, and then type the command (in case you have BTRFS installed on the root):
-```sudo btrfs filesystem defragment -rv /```
+```sudo btrfs filesystem defragment -rv /```  
+
+You can also use the btrfs-balance-least-used command to rebalance unbalanced pieces of data. Running this command can potentially allow for the recovery of space on the disk. Try it after deleting snapshots and mount points created on /var/lib/docker/btrfs.  
+Example for the / partition :
+```btrfs-balance-least-used /```
