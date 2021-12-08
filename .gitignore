@@ -31,3 +31,6 @@ kaisen_documentation-*.tar
 
 # Ignore mix.lock file
 mix.lock
+
+# Ignore mix.log file
+mix.log
