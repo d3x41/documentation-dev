@@ -5,7 +5,7 @@ defmodule KaisenDocumentation.MixProject do
     [
       app: :kaisen_documentation,
       version: "2.0.0",
-      elixir: "~> 1.11",
+      elixir: "~> 1.13",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
 
@@ -75,7 +75,7 @@ defmodule KaisenDocumentation.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:ex_doc, "~> 0.23", only: :dev, runtime: false},
+      {:ex_doc, "~> 0.26", only: :dev, runtime: false},
     ]
   end
 
