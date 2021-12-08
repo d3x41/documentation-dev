@@ -28,3 +28,6 @@ kaisen_documentation-*.tar
 
 # Ignore elixir ls
 /.elixir_ls/
+
+# Ignore mix.lock file
+mix.lock
