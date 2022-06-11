@@ -9,12 +9,12 @@ Since release 1.0 named, Kaisen Linux is a rolling release (continuous update) b
 ## Quick start
 
 1. Choose and download an iso :
-    - [Kaisen Linux MATE (default GUI)](https://iso.kaisenlinux.org/rolling/kaisenlinuxrolling2.0-amd64-MATE.iso)
-    - [Kaisen Linux KDE](https://iso.kaisenlinux.org/rolling/kaisenlinuxrolling2.0-amd64-KDE.iso)
-    - [Kaisen Linux XFCE](https://iso.kaisenlinux.org/rolling/kaisenlinuxrolling2.0-amd64-XFCE.iso)
-    - [Kaisen Linux LXQT](https://iso.kaisenlinux.org/rolling/kaisenlinuxrolling2.0-amd64-LXQT.iso)
-    - [Kaisen Linux System Rescue (no installer)](https://iso.kaisenlinux.org/rolling/kaisenlinuxrolling2.0-amd64-SR.iso)
-    - [Kaisen Linux NETINST (network required)](https://iso.kaisenlinux.org/rolling/kaisenlinuxrolling2.0-amd64-NETINST.iso)
+    - [Kaisen Linux MATE (default GUI)](https://iso.kaisenlinux.org/rolling/kaisenlinuxrolling2.1-amd64-MATE.iso)
+    - [Kaisen Linux KDE](https://iso.kaisenlinux.org/rolling/kaisenlinuxrolling2.1-amd64-KDE.iso)
+    - [Kaisen Linux XFCE](https://iso.kaisenlinux.org/rolling/kaisenlinuxrolling2.1-amd64-XFCE.iso)
+    - [Kaisen Linux LXQT](https://iso.kaisenlinux.org/rolling/kaisenlinuxrolling2.1-amd64-LXQT.iso)
+    - [Kaisen Linux System Rescue (no installer)](https://iso.kaisenlinux.org/rolling/kaisenlinuxrolling2.1-amd64-SR.iso)
+    - [Kaisen Linux NETINST (network required)](https://iso.kaisenlinux.org/rolling/kaisenlinuxrolling2.1-amd64-NETINST.iso)
 2. Launch it in a VM
 3. Boot on the live mode or install Kaisen Linux
 4. Explore and test sysadmin and technicians tools
@@ -23,11 +23,12 @@ Since release 1.0 named, Kaisen Linux is a rolling release (continuous update) b
 
 ## Documentation guides
 
-The documentation is splitted in 5 GUIDES on the left menu bar:
+The documentation is splitted in 6 GUIDES on the left menu bar:
 - START
 - TOOLS & PACKAGES
 - INFOS
 - TUTORIALS
+- GOODIES
 - FAQ
 
 ## Help Summary 
@@ -60,6 +61,10 @@ The documentation is splitted in 5 GUIDES on the left menu bar:
     - [Advanced BTRFS utilisation](advanced-btrfs-utilisation.html)
     - [Create chroot](create-chroot.html)
     - [Configure cryptsetup-nuke-password](configure-cryptsetup-nuke.html)
+- Goodies
+    - [Conky theme](kaisen-conky.html)
+    - [LUKS hardening](cryptsetup-nuke-password.html)
+    - [ZSH](zsh.html)
 - FAQ        
     - [Where can I find more documentation?](faq.html#where-can-i-find-more-documentation)
     - [What are the revisions of the rolling version ?](faq.html#what-are-the-revisions-of-the-rolling-version)
@@ -67,7 +72,6 @@ The documentation is splitted in 5 GUIDES on the left menu bar:
     - [How to build a custom ISO ?](faq.html#how-to-build-a-custom-iso)
     - [Why no sources on some packages ?](faq.html#why-no-sources-on-some-packages)
     - [How to update GUI default profile ?](faq.html#how-to-update-gui-default-profile)
-    - [Informations on the conky theme](faq.html#informations-on-the-conky-theme)
     - [Informations on the rolling version](faq.html#how-do-i-know-the-number-of-the-rolling-version-i-use)
     - [Why root account is disabled by default ?](faq.html#why-root-account-is-disabled-by-default)
     - [How to switch to root directly with the ZSH terminal ?](faq.html#how-to-switch-to-root-directly-with-the-zsh-terminal)
@@ -77,5 +81,4 @@ The documentation is splitted in 5 GUIDES on the left menu bar:
     - [Why create user accounts only on /home ?](faq.html#why-create-user-accounts-only-on-home)
     - [Why KDE installed with lightdm by default ?](faq.html#why-kde-installed-with-lightdm-by-default)
     - [How to create your own default profile for user configurations (skel) ?](faq.html#how-to-create-your-own-default-profile-for-user-configurations-skel)
-    - [How do I go back to bash ?](faq.html#how-do-i-go-back-to-bash)
     - [Where can I find documentation on the built-in tools or how certain settings work?](faq.html#where-can-i-find-documentation-on-the-built-in-tools-or-how-certain-settings-work)

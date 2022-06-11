@@ -1,4 +1,4 @@
-# Configure cryptsetup-nuke-password
+# Cryptsetup-nuke-password
 
 ## What cryptsetup-nuke-password
 The software cryptsetup-nuke password is a software developed by Offensive Security and publish under GPLv3 licence. This software provides additional security at cryptsetup.  

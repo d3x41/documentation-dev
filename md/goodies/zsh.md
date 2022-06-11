@@ -1,23 +1,25 @@
-# How do I go back to bash?
+# ZSH
 
-## Simple user method
-Many users or others who have seen this have had a feeling of disgust over this choice which to them seems "amateur" and illogical. While this bothers me, I don't think bash will become the default terminal for users (non-root, root stayed in bash by default to allow the chroot command to work), and you can fall back on bash.  
-Kaisen Linux's default terminal is ZSH installed with the oh-my-zsh framework.  
+## ZSH on Kaisen Linux
+On Kaisen Linux, ZSH is preinstalled by default with the oh-my-zsh framework. This allows for improved completion, many plugins and so much more!
+
+## Use ZSH for simple user
+Kaisen Linux's default terminal is Bash. Bash is suitable for the majority of users and it is for this reason that it has become the default terminal since Kaisen 2.1.  
 You are only one user and you only have one account installed, use the following command (as your user and not as root):  
 
 ```bash
-chsh -s /bin/bash
+chsh -s /bin/zsh
 ```
 
-The next time you reconnect to your session, you will be back in bash.
+The next time you reconnect to your session, you will be back in ZSH.
 
 ## Multiple user method
 
 ### Useradd command
-Type this when adding a user with the useradd command to give them the bash shell by default:
+Type this when adding a user with the useradd command to give them the ZSH shell by default:
 
 ```bash
-sudo useradd -s /bin/bash user
+sudo useradd -s /bin/zsh user
 ```
 
 ### Modify useradd configuration
@@ -25,13 +27,13 @@ sudo useradd -s /bin/bash user
 In the file `/etc/default/useradd`, change the following line:
 
 ```bash
-SHELL=/bin/zsh
+SHELL=/bin/bash
 ```
 
 In:
 
 ```bash
-SHELL=/bin/bash
+SHELL=/bin/zsh
 ```
 
 After that, with the useradd command the bash shell will be set by default, and you will no longer need to specify -s option.  
@@ -42,7 +44,7 @@ When updating the shadow package, select the option "N" or "O" to keep your conf
 Type this when adding a user with the adduser command to give them the bash shell by default:
 
 ```bash
-sudo adduser --shell /bin/bash user
+sudo adduser --shell /bin/zsh user
 ```
 
 ### Modify adduser configuration
@@ -50,13 +52,13 @@ sudo adduser --shell /bin/bash user
 In the file `/etc/adduser.conf`, change the following line:
 
 ```bash
-DSHELL=/bin/zsh
+DSHELL=/bin/bash
 ```
 
 In:
 
 ```bash
-DSHELL=/bin/bash
+DSHELL=/bin/zsh
 ```
 
 After that, with the adduser command the bash shell will be set by default, and you will no longer need to specify --shell option.

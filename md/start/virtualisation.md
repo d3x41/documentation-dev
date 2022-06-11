@@ -66,7 +66,7 @@ Kaisen Linux => Services => Virtualization => virtualbox-guest-enable
 
 ### Install guest additions from a host system other than Kaisen Linux
 
-To install the VirtualBox Guest Additions from a host system other than Kaisen Linux, you must use the Guest Additions ISO provided by Oracle which can be downloaded here: https://download.virtualbox.org/virtualbox/6.1.18/VBoxGuestAdditions_6.1.18.iso (Version 6.1.18 is the latest version as of this writing).
+To install the VirtualBox Guest Additions from a host system other than Kaisen Linux, you must use the Guest Additions ISO provided by Oracle which can be downloaded here: https://download.virtualbox.org/virtualbox/6.1.34/VBoxGuestAdditions_6.1.34.iso (Version 6.1.34 is the latest version as of this writing).
 Once the CD is inserted into the VM, run these commands:
 ```bash
 sudo mkdir /tmp/vboxguests

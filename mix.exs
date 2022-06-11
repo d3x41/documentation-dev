@@ -4,8 +4,8 @@ defmodule KaisenDocumentation.MixProject do
   def project do
     [
       app: :kaisen_documentation,
-      version: "2.0.0",
-      elixir: "~> 1.13",
+      version: "2.1.0",
+      elixir: "~> 1.13.4",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
 
@@ -42,12 +42,13 @@ defmodule KaisenDocumentation.MixProject do
           "md/tutorials/terminal-shortcuts.md": [ title: "Kaisen Terminal shortcuts"],
           "md/tutorials/advanced-btrfs-utilisation.md": [ title: "Advanced BTRFS utilisation"],
           "md/tutorials/create-chroot.md": [ title: "Create chroot"],
-          "md/tutorials/configure-cryptsetup-nuke.md": [ title: "Configure cryptsetup-nuke-password"],
-          "md/tutorials/autoload-virtualbox-module.md": [ title: "Autoload VirtualBox module at boot"],
           "md/infos/licence.md": [ title: "Kaisen Linux licence"],
           "md/infos/download.md": [ title: "Kaisen Linux downloads"],
           "md/infos/repo.md": [ title: "Kaisen Linux repositories"],
           "md/infos/update.md": [ title: "Kaisen Linux updates"],
+	  "md/goodies/kaisen-conky.md": [ title: "Kaisen Conky"],
+	  "md/goodies/zsh.md": [ title: "ZSH"],
+	  "md/goodies/cryptsetup-nuke-password.md": [ title: "Cryptsetup nuke password"],
           "md/faq/faq.md": [title: "Frequently asked Questions" ]
 
         ],
@@ -55,6 +56,7 @@ defmodule KaisenDocumentation.MixProject do
           "START": Path.wildcard("md/start/*.md"),
           "TOOLS & PACKAGES": Path.wildcard("md/tools/*.md"),
           "INFOS": Path.wildcard("md/infos/*.md"),
+	  "GOODIES": Path.wildcard("md/goodies/*.md"),
           "TUTORIALS": Path.wildcard("md/tutorials/*.md"),
           "FAQ": Path.wildcard("md/faq/faq.md")
           # only one file is read for faq category

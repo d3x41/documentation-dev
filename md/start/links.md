@@ -34,6 +34,7 @@ deb-src https://deb.kaisenlinux.org kaisen-testing main contrib non-free
 - LinkedIn: https://linkedin.com/company/kaisenlinux
 - Mastodon: https://mastodon.social/@KaisenLinux
 - Distrowatch: https://distrowatch.com/kaisen
+- Ko-Fi: https://ko-fi.com/kaisenlinux
 
 ## Distribution sources
 

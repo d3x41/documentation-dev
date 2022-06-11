@@ -10,4 +10,4 @@ When switching to a "new version", the base-files package is updated and the / e
 
 ## New ISOS
 New ISOS are therefore created with each revision to fix any errors on the live system, improvements on the start-up entries, support for a new language, integration of new tools integrated over time on the live etc ...  
-Even if you have downloaded Kaisen Linux 2.0 and installed the system, and ISOS 2.1 has just been released, you don't have to completely reinstall the system, using the kaisen-update command will suffice to change from revision 2.0 to 2.1 by updating the packages.
+Even if you have downloaded Kaisen Linux 2.1 and installed the system, and ISOS 2.2 has just been released, you don't have to completely reinstall the system, using the kaisen-update command will suffice to change from revision 2.1 to 2.2 by updating the packages.

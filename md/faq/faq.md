@@ -7,7 +7,6 @@
     - [How to build a custom ISO ?](#how-to-build-custom-iso)
     - [Why no sources on some packages ?](#why-no-sources-on-some-packages)
     - [How to update GUI default profile ?](#how-to-update-gui-default-profile)
-    - [Informations on the conky theme](#informations-on-the-conky-theme)
     - [Informations on the rolling version](#how-do-i-know-the-number-of-the-rolling-version-i-use)
     - [Why root account is disabled by default?](#why-root-account-is-disabled-by-default)
     - [How to switch to root directly with the ZSH terminal?](#how-to-switch-to-root-directly-with-the-zsh-terminal)
@@ -17,7 +16,6 @@
     - [Why create user accounts only on /home?](#why-create-user-accounts-only-on-home)
     - [Why KDE installed with lightdm by default?](#why-kde-installed-with-lightdm-by-default)
     - [How to create your own default profile for user configurations (skel)?](#how-to-create-your-own-default-profile-for-user-configurations-skel)
-    - [How do I go back to bash ?](#how-do-i-go-back-to-bash)
     - [Where can I find documentation on the built-in tools or how certain settings work?](#where-can-i-find-documentation-on-the-built-in-tools-or-how-certain-settings-work)
 
 ## Where can I find more documentation?
@@ -124,7 +122,7 @@ This is why I strongly advise you not to create your ISO by customizing another 
 Once your branch is fully configured, you can run a compilation at the root of the kaisen-build folder, with the command:
 
 ```bash
-sudo ./kaisen-build build CUSTOM 1.0
+sudo ./kaisen-build -v CUSTOM -r 1.0
 ```
 
 Version 1.0 is an example, but you can put whatever you want, I advise you not to put too many letters and numbers because if the name of the ISO volume exceeds 32 characters, the compilation will crash. The name of the ISO volume is "Kaisen Linux Rolling $variant $version" ($variant corresponds here to CUSTOM and $version corresponds here to 1.0), in the example, the name of the ISO volume will be Kaisen Linux Rolling CUSTOM 1.0.
@@ -184,106 +182,6 @@ When the kaisen-skeleton package is updated, it means that the default GUI profi
 
 ### Profile created in /etc/skel_user
 If you have created your default profile as mentioned [here](faq.html#how-to-create-your-own-default-profile-for-user-configurations-skel), you can run the `kaisen-update-skel-user` command to update your profile on all users present on the system.
-
----
-## Informations on the conky theme
-
-### How is conky installed?
-Conky is installed as a dependency of the package associated with your GUI. The conky configuration is then copied to `/etc/skel` and this automatically copied to the `/home/$USER` directory of all users on the system.  
-
-### How to update conky?
-In case you are using the default conky theme provided by your GUI, you don't have to do anything. For example, if you are using MATE, when the kaisen-mate package is updated, the conky theme will also be updated automatically!
-
-### Launch conky with a custom theme
-It's easy to run your own conky setup. You must modify the conffile `/etc/xdg/autostart/conky.desktop` This file contains this by default:
-
-```bash
-[Desktop Entry]
-Name=Kaisen Linux Conky
-Exec=/usr/bin/conky
-Hidden=false
-Type=Application
-X-KDE-Autostart-enabled=true
-X-LXQT-Autostart-enabled=true
-X-MATE-Autostart-enabled=true
-X-XFCE-Autostart-enabled=true
-```
-
-In this example, your conky configuration file will be called: `.myconkyconf`
-
-You will simply have to replace the file like this:
-
-```bash
-[Desktop Entry]
-Name=Kaisen Linux Conky
-Exec=/usr/bin/conky --config ~/.conkyconf
-Hidden=false
-Type=Application
-X-KDE-Autostart-enabled=true
-X-LXQT-Autostart-enabled=true
-X-MATE-Autostart-enabled=true
-X-XFCE-Autostart-enabled=true
-```
-
-The next time you start conky, your own configuration will be executed. If it does not perform as you expect, it could probably be an error in your configurations.  
-When updating the kaisen-kde, kaisen-lxqt, kaisen-mate or kaisen-xfce package, select the option "N" or "O" to keep your configurations.
-
-### Disable conky launch
-You cannot therefore remove the conky-all package, otherwise you risk removing your entire GUI.  
-But do not panic ! You have a very easy way to not start conky even if it is installed.  
-You must go and modify the file: `/etc/xdg/autostart/conky.desktop`.  
-
-This file contains this by default:
-
-```bash
-[Desktop Entry]
-Name=Kaisen Linux Conky
-Exec=/usr/bin/conky
-Hidden=false
-Type=Application
-X-KDE-Autostart-enabled=true
-X-LXQT-Autostart-enabled=true
-X-MATE-Autostart-enabled=true
-X-XFCE-Autostart-enabled=true
-```
-
-Just replace the line `Hidden=false` with `Hidden=true` to completely disable launching Conky (the process won't even be started, conky, so it won't consume any resources.)  
-
-So the file will look like:
-
-```bash
-[Desktop Entry]
-Name=Kaisen Linux Conky
-Exec=/usr/bin/conky
-Hidden=true
-Type=Application
-X-KDE-Autostart-enabled=true
-X-LXQT-Autostart-enabled=true
-X-MATE-Autostart-enabled=true
-X-XFCE-Autostart-enabled=true
-```
-
-When updating the kaisen-kde, kaisen-lxqt, kaisen-mate or kaisen-xfce package, select the option "N" or "O" to keep your configurations.  
-
-### Problems with KDE desktop
-
-I have seen some issues with KDE.  
-The conky is initially configured to be completely transparent and integrated into the wallpaper. KDE is initially configured to start programs that were not closed from the previous session, and Conky is one of them.  
-Kaisen Linux's default profile disables this feature by default by opening an empty session each time the computer is started/restarted.  
-To turn off the restore from the previous session, do this:  
-Go to ```"System Settings" => "Startup and Shutdown" => "Desktop Session" after select "Start with an empty session".```
-
-### Relaunch conky manually
-Sometimes, Conky may not automatically relaunch after a package update. To relaunch it, it is very simple. Open a terminal window, and type this command:  
-
-```bash
-conky&
-```
-Next this command, press `ctrl +D` until closing the terminal. Conky is now relaunched.
-
-### Completely uninstall Conky
-Conky like almost all of the tools pre-integrated in Kaisen Linux can be uninstalled manually via an APT command.  
-For Conky, do this: ```sudo apt remove --purge conky-all```
 
 ---
 ## How do I know the number of the rolling version I use?
@@ -402,10 +300,10 @@ You should find this:
 
 ```bash
 [greeter]
-background = /usr/share/backgrounds/line-white/3840x2160.png
+background = /usr/share/backgrounds/kaisen-lightdm-theme.png
 theme-name = Kaisen-Dark-Material
 icon-theme-name = Kaisen
-default-user-image = /usr/share/icons/Kaisen/kaisen.png
+default-user-image = /usr/share/pixmaps/kaisen-logos/kaisen.png
 user-background = false
 font-name = Cantarell 11
 clock-format = %A %d %B %Y : %H:%M:%S
@@ -415,7 +313,7 @@ indicators = ~spacer;~spacer;~host;~spacer;~session;~clock;~power
 Change these lines:
 
 ```bash
-background = /usr/share/backgrounds/line-white/3840x2160.png
+background = /usr/share/backgrounds/kaisen-lightdm-theme.png
 ```
 
 For example in:
@@ -431,7 +329,7 @@ Which will give:
 background = /home/user/Pictures/image.png
 theme-name = Kaisen-Dark-Material
 icon-theme-name = Kaisen
-default-user-image = /usr/share/icons/Kaisen/kaisen.png
+default-user-image = /usr/share/pixmaps/kaisen-logos/kaisen.png
 user-background = false
 font-name = Cantarell 11
 clock-format = %A %d %B %Y : %H:%M:%S
@@ -517,70 +415,6 @@ With this change, the default folder for the skel will now be `/etc/skel_user`.
 When updating the shadow package, select the option "N" or "O" to keep your configurations.
 
 ---
-## How do I go back to bash?
-
-### Simple user method
-Many users or others who have seen this have had a feeling of disgust over this choice which to them seems "amateur" and illogical. While this bothers me, I don't think bash will become the default terminal for users (non-root, root stayed in bash by default to allow the chroot command to work), and you can fall back on bash.  
-Kaisen Linux's default terminal is ZSH installed with the oh-my-zsh framework.  
-You are only one user and you only have one account installed, use the following command (as your user and not as root):  
-
-```bash
-chsh -s /bin/bash
-```
-
-The next time you reconnect to your session, you will be back in bash.
-
-### Multiple user method
-
-### Useradd command
-Type this when adding a user with the useradd command to give them the bash shell by default:
-
-```bash
-sudo useradd -s /bin/bash user
-```
-
-### Modify useradd configuration
-
-In the file `/etc/default/useradd`, change the following line:
-
-```bash
-SHELL=/bin/zsh
-```
-
-In:
-
-```bash
-SHELL=/bin/bash
-```
-
-After that, with the useradd command the bash shell will be set by default, and you will no longer need to specify -s option.  
-When updating the shadow package, select the option "N" or "O" to keep your configurations.
-
-### Adduser command
-
-Type this when adding a user with the adduser command to give them the bash shell by default:
-
-```bash
-sudo adduser --shell /bin/bash user
-```
-
-### Modify adduser configuration
-
-In the file `/etc/adduser.conf`, change the following line:
-
-```bash
-DSHELL=/bin/zsh
-```
-
-In:
-
-```bash
-DSHELL=/bin/bash
-```
-
-After that, with the adduser command the bash shell will be set by default, and you will no longer need to specify --shell option.
-When updating the adduser package, select the option "N" or "O" to keep your configurations.
-
 ## Where can I find documentation on the built-in tools or how certain settings work?
 
 ### On the tools

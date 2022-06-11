@@ -1,13 +1,19 @@
-# Informations on the conky theme
+# Kaisen Conky
 
-## How is conky installed?
-Conky is installed as a dependency of the package associated with your GUI. The conky configuration is then copied to `/etc/skel` and this automatically copied to the `/home/$USER` directory of all users on the system.  
+## What is Kaisen Conky?
 
-## How to update conky?
-In case you are using the default conky theme provided by your GUI, you don't have to do anything. For example, if you are using MATE, when the kaisen-mate package is updated, the conky theme will also be updated automatically!
+Kaisen Conky is a package created for Kaisen Linux installing the Conky software and the theme created for Kaisen Linux. Conky is a desktop widget that displays information about processes in use, battery percentage, network connection status, disk space used, and more!
 
-## Launch conky with a custom theme
-It's easy to run your own conky setup. You must modify the conffile `/etc/xdg/autostart/conky.desktop` This file contains this by default:
+## Informations on the conky theme
+
+### How install Conky?
+Conky can be installed with the kaisen-conky package. This package will install the Conky and conkycolors software and their dependencies. The conky configuration is then copied to `/etc/skel` and this automatically copied to the `/home/$USER` directory of all users on the system.  
+
+### How to update conky?
+When the kaisen-conky package is updated, the theme will be automatically updated in all user directories having their directory in /home.
+
+### Launch conky with a custom theme
+It's easy to run your own conky setup. You must modify the conffile `/etc/xdg/autostart/kaisen-conky.desktop` This file contains this by default:
 
 ```bash
 [Desktop Entry]
@@ -40,7 +46,7 @@ X-XFCE-Autostart-enabled=true
 The next time you start conky, your own configuration will be executed. If it does not perform as you expect, it could probably be an error in your configurations.  
 When updating the kaisen-kde, kaisen-lxqt, kaisen-mate or kaisen-xfce package, select the option "N" or "O" to keep your configurations.
 
-## Disable conky launch
+### Disable conky launch
 You cannot therefore remove the conky-all package, otherwise you risk removing your entire GUI.  
 But do not panic ! You have a very easy way to not start conky even if it is installed.  
 You must go and modify the file: `/etc/xdg/autostart/conky.desktop`.  
@@ -77,7 +83,7 @@ X-XFCE-Autostart-enabled=true
 
 When updating the kaisen-kde, kaisen-lxqt, kaisen-mate or kaisen-xfce package, select the option "N" or "O" to keep your configurations.  
 
-## Problems with KDE desktop
+### Problems with KDE desktop
 
 I have seen some issues with KDE.  
 The conky is initially configured to be completely transparent and integrated into the wallpaper. KDE is initially configured to start programs that were not closed from the previous session, and Conky is one of them.  
@@ -85,7 +91,7 @@ Kaisen Linux's default profile disables this feature by default by opening an em
 To turn off the restore from the previous session, do this:  
 Go to ```"System Settings" => "Startup and Shutdown" => "Desktop Session" after select "Start with an empty session".```
 
-## Relaunch conky manually
+### Relaunch conky manually
 Sometimes, Conky may not automatically relaunch after a package update. To relaunch it, it is very simple. Open a terminal window, and type this command:  
 
 ```bash
@@ -93,6 +99,6 @@ conky&
 ```
 Next this command, press `ctrl +D` until closing the terminal. Conky is now relaunched.
 
-## Completely uninstall Conky
+### Completely uninstall Conky
 Conky like almost all of the tools pre-integrated in Kaisen Linux can be uninstalled manually via an APT command.  
-For Conky, do this: ```sudo apt remove --purge conky-all```
+For Conky, do this: ```sudo apt remove --purge kaisen-conky```

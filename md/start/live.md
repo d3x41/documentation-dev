@@ -82,7 +82,7 @@ Make sure you are in the same folder as the ISO to do all this!!! The dd command
 - Create a bootable Kaisen USB drive with the following command:
 
 ```bash
-sudo dd if=kaisenlinuxrolling2.0-amd64-MATE.iso of=/dev/sdb bs=4M
+sudo dd if=kaisenlinuxrolling2.1-amd64-MATE.iso of=/dev/sdb bs=4M
 ```
 Normally two partitions were created by dd. You can check this with the sudo fdisk -l command. You need to create a third to add persistence to it.
 
@@ -90,7 +90,7 @@ Normally two partitions were created by dd. You can check this with the sudo fdi
 
 ```bash
 end=55GiB (if key is 64gb, for security we will put the key ending at 55gb plus the size of the ISO so 4GB)
-read start _ <<(du -bcm kaisenlinuxrolling2.0-amd64-MATE.iso | tail -1); echo $start
+read start _ <<(du -bcm kaisenlinuxrolling2.1-amd64-MATE.iso | tail -1); echo $start
 sudo parted /dev/sdb mkpart primary ${start}MiB $end
 ```
 
@@ -132,7 +132,7 @@ Make sure you are in the same folder as the ISO to do all this!!! The dd command
 - Create a bootable Kaisen USB drive with the following command:
 
 ```bash
-sudo dd if=kaisenlinuxrolling2.0-amd64-MATE.iso of=/dev/sdb bs=4M
+sudo dd if=kaisenlinuxrolling2.1-amd64-MATE.iso of=/dev/sdb bs=4M
 ```
 
 Normally two partitions were created by dd. You can check this with the `sudo fdisk -l` command. You need to create a third to add persistence to it.
@@ -141,7 +141,7 @@ Normally two partitions were created by dd. You can check this with the `sudo fd
 
 ```bash
 end=55GiB (if key is 55gb, for security we will put the key ending at 10gb plus the size of the ISO so 4GB)
-read start _ <<(du -bcm kaisenlinuxrolling2.0-amd64-MATE.iso | tail -1); echo $start
+read start _ <<(du -bcm kaisenlinuxrolling2.1-amd64-MATE.iso | tail -1); echo $start
 sudo parted /dev/sdb mkpart primary ${start}MiB $end
 ```
 

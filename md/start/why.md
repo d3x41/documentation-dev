@@ -18,7 +18,7 @@ Kaisen Linux is designed to be as simple as possible, which is part of why the M
 Kaisen Linux offers a live system with several options such as persistence, RAM loading and forensic mode. Examples of usage and their purposes can be found in the Live informations section.
 
 ## Improved terminal
-The terminal of Kaisen Linux is based on zsh and has been modified using many scripts to improve for example the auto-completion such as for example the correction of case errors, allows to navigate in the directories with the tab key, list the packages to install when ordering **apt-get install** and many others!
+The terminal of Kaisen Linux is based on bash-completion and zsh and has been modified using many scripts to improve for example the auto-completion such as for example the correction of case errors, allows to navigate in the directories with the tab key, list the packages to install when ordering **apt-get install** and many others!
 
 ## Installable
 Kaisen Linux has the functionality of being installed on a hard drive for daily use or to create machines dedicated to certain tasks that can be performed with Kaisen Linux. The installation is possible even in UEFI and certain tasks during the installation have been automated to facilitate the installation of the distribution, automate it a little, and customize the installation. The textual installation (reduced graphics) of classic Debian as well as the installation in graphical mode are incorporated to meet a maximum of tastes.  

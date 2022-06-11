@@ -6,7 +6,7 @@
 
 ### Disks analysis
 ```bash
-e2fsprogs, baobab, bonnie++, diskscan, disktype, gpart, gsmartcontrol, hdparm, ioping, testdisk, ncdu, smartmontools, di, util-linux, util-linux-locales
+e2fsprogs, baobab, bonnie++, diskscan, disktype, gpart, gsmartcontrol, hdparm, ioping, testdisk, ncdu, smartmontools, di, util-linux, util-linux-locales, iotop, iozone3, nvme-cli, wxfixboot, whdd, dstat
 ```
 
 ### Virus analysis
@@ -16,17 +16,17 @@ chkrootkit, clamdscan, clamtk, rkhunter, clamassassin, clamav-base, clamav-daemo
 
 ### Cloning
 ```bash
-clonezilla, dcfldd, fsarchiver, guymager, partclone, partimage
+clonezilla, dcfldd, dc3dd, fsarchiver, qt-fsarchiver, guymager, partclone, partimage
 ```
 
 ### USB boot
 ```bash
-balena-etcher-electron, dcfldd
+balena-etcher-electron, dcfldd, dc3dd
 ```
 
 ### Hardware
 ```bash
-cpulimit, discover, discover-data, dmidecode, fio, hardinfo, hwinfo, iozone3, lshw, stress, stress-ng, stressant, lshw-gtk, flashbench, hw-probe, memtester, gfio, flashrom, inxi, cpu-x, sysstat
+kaisen-winkey-recovery, cpulimit, discover, discover-data, dmidecode, fio, hardinfo, hwinfo, lshw, stress, stress-ng, stressant, lshw-gtk, flashbench, hw-probe, memtester, gfio, flashrom, inxi, cpu-x, sysstat, hwdata, gtkstresstesting, stressapptest, dstat
 ```
 
 ### Outlook PST
@@ -41,7 +41,7 @@ apg, bruteforce-luks, chntpw, cmospwd, crack, fcrackzip, hashcat, hydra, john, k
 
 ### Partitioning and delete tools
 ```bash
-dcfldd, fatresize, fdisk, gdisk, gparted, nwipe, parted, secure-delete, wipe, zerofree, bleachbit, scrub
+dcfldd, dc3dd, fatresize, fdisk, gdisk, gparted, nwipe, parted, secure-delete, wipe, zerofree, bleachbit, scrub, wipefreespace, util-linux, util-linux-locales
 ```
 
 ### Data protection
@@ -59,6 +59,11 @@ ddrescue-gui, ddrescueview, ddrutility, ext4magic, extundelete, foremost, ddresc
 hddtemp, xsensors, lm-sensors, psensor, psensor-common
 ```
 
+### Duplicates files
+```bash
+czkawka, dupeguru, fdupes, rdfind
+```
+
 ## Administrators tools
 
 ### DHCP
@@ -68,7 +73,7 @@ isc-dhcp-client, isc-dhcp-common, dhcpdump, dhcping
 
 ### DNS
 ```bash
-dnsenum, dnstop, mdns-scan, whois, dnsutils
+dnsenum, dnstop, mdns-scan, whois, bind9-dnsutils
 ```
 
 ### Ethernet
@@ -83,12 +88,12 @@ iptables-persistent, iptstate
 
 ### IP
 ```bash
-net-tools, ipcalc, sipcalc, iproute2, iptraf-ng, iptraf, ipv6calc, traceroute, iputils-tracepath
+net-tools, ipcalc, sipcalc, iproute2, iptraf-ng, iptraf, ipv6calc, traceroute, iputils-tracepath, ndisc6
 ```
 
 ### GNS3
 ```bash
-gns3-gui, gns3-server, dynamips, vpcs, ubridge, nvram_export
+gns3-gui, gns3-server, dynamips, vpcs, ubridge
 ```
 
 ### MAC
@@ -98,17 +103,17 @@ arp-scan, arpalert, iputils-arping, arptables, arpwatch, macchanger
 
 ### Monitoring
 ```bash
-cbm, etherape, ifstat, iftop, iperf, iperf3, nethogs, netperfmeter, sockstat, tcpstat
+cbm, etherape, ifstat, iftop, iperf, iperf3, nethogs, netperfmeter, sockstat, tcpstat, dstat
 ```
 
 ### PCAP
 ```bash
-darkstat, hunt, netsed, ngrep, pcapfix, scapy, tcpdump, tcpreplay, tcpxtract, tshark, wireshark
+darkstat, hunt, netsed, ngrep, pcapfix, scapy, python3-scapy, tcpdump, tcpreplay, tcpxtract, tshark, wireshark, notwireshark
 ```
 
 ### Console port
 ```bash
-cu, minicom, picocom, screen, setserial, statserial
+cu, minicom, picocom, screen, setserial, statserial, gtkterm
 ```
 
 ### Network scanners
@@ -128,27 +133,27 @@ netcat, netcat-openbsd, tcpreplay, tcpflow, tcptrace, tcptraceroute, packetsende
 
 ### Wi-Fi
 ```bash
-aircrack-ng, hostapd, iw, rfkill
+aircrack-ng, hostapd, iw, rfkill, linssid
 ```
 
 ### VPN
 ```bash
-openvpn, wireguard
+openvpn, wireguard, openfortivpn, network-manager-openvpn, network-manager-fortisslvpn, network-manager-openconnect, network-manager-openvpn-gnome, network-manager-fortisslvpn-gnome, network-manager-openconnect-gnome
 ```
 
 ### Various network administrators tools
 ```bash
-2ping, atftp, cdpr, comgt, ndisc6, ntpdate, socat, ssmping, wakeonlan, wondershaper, ifenslave
+2ping, atftp, cdpr, comgt, socat, ssmping, wakeonlan, wondershaper, ifenslave, bridge-utils
 ```
 
 ### Remote administration
 ```bash
-virt-viewer, rdesktop, grdesktop, freerdp2-x11, ssh, sshfs, pssh, clusterssh, tmux, zssh, remmina, remmina-plugin-exec, remmina-plugin-kwallet, remmina-plugin-spice, remmina-plugin-www
+virt-viewer, rdesktop, grdesktop, freerdp2-x11, ssh, sshfs, pssh, clusterssh, tmux, zssh, remmina, remmina-plugin-exec, remmina-plugin-kwallet, remmina-plugin-spice, remmina-plugin-www, smbclient, ssh-askpass, sshpass
 ```
 
 ### Backup tools
 ```bash
-dirvish, automysqlbackup, autopostgresqlbackup, bacula-bscan, bacula-client, bacula-common, bacula-common-sqlite3, bacula-console, bacula-console-qt, bacula-fd, bacula-sd, dump, duplicity, restic, rsbackup, rsync, backup2l, zsync, vbackup, duply, grsync, zbackup
+dirvish, automysqlbackup, autopostgresqlbackup, bacula-bscan, bacula-client, bacula-common, bacula-common-sqlite3, bacula-console, bacula-console-qt, bacula-fd, bacula-sd, dump, duplicity, restic, rsbackup, rsync, backup2l, zsync, vbackup, duply, grsync, zbackup, rdiff, rdiff-backup, rdiff-backup-fs, borgbackup, rclone
 ```
 
 ### FTP
@@ -158,7 +163,7 @@ filezilla, gftp, lftp
 
 ### Microsoft
 ```bash
-bloodhound, ldapdomaindump, cabextract, powershell
+bloodhound, powershell
 ```
 
 ### Virtualization
@@ -168,7 +173,7 @@ virtualbox, virtualbox-qt, virtualbox-dkms, virtualbox-source, virtualbox-guest-
 
 ### Various system administrators tools
 ```bash
-xca, krb5-config, krb5-pkinit, krb5-user, krb5-locales, ctop, apache2-utils, ssh-askpass, sshpass
+xca, krb5-config, krb5-pkinit, krb5-user, krb5-locales, ctop, apache2-utils, ntpsec, ntpsec-ntpdate, python3-ldapdomaindump
 ```
 
 ### Apparmor tools and profiles
@@ -183,7 +188,7 @@ mariadb-client, etcd-client, postgresql-client
 
 ## DevOps and Cloud
 ```bash
-vagrant, ansible, lxc, docker, docker-compose, docker.io, jmeter, kubectl, kubectl-convert, kubemark, awscli, packer, azure-cli, puppet, terraform, s3fs, eksctl, buildah, helm, k6, k9s, minikube, podman, trivy
+docker-compose, docker.io, ansible, lxc, lxctl, kubernetes-client, vagrant, vagrant-lxc, vagrant-sshfs, jmeter, awscli, azure-cli, packer, puppet-agent, pdk, terraform, s3fs, k6, k9s, helm, podman, buildah, minikube, eksctl, trivy, kustomize, kind, krew, kubectx, kyverno, popeye, tfsec, vault, velero, terragrunt
 ```
 
 ## System snapshots
@@ -193,12 +198,12 @@ apt-btrfs-snapshot, btrbk, snapper, timeshift
 
 ## Filesystems tools
 ```bash
-cryptsetup, dmraid, dmsetup, mdadm, lvm2, dosfstools, f2fs-tools, nilfs-tools, ocfs2-tools, btrfs-compsize, btrfs-heatmap, btrfs-progs, btrfsmaintenance, gfs2-utils, hfsplus, hfsprogs, hfsutils, hfsutils-tcltk, jfsutils, reiserfsprogs, vmfs-tools, xfsdump, xfsprogs, zfs-fuse, zfsnap, exfatprogs, exfat-fuse, ceph-fuse, fuse3, fuse-zip, fuseiso, squashfuse, glusterfs-client, udfclient, udftools, reiser4progs, vmfs6-tools, xmount, archivemount, tmfs, cifs-utils, apfs-fuse, apfsutil, ecryptfs-utils, libbde-utils, dislocker, libfvde-utils, libvhdi-utils, libvmdk-utils, libfsntfs-utils
+cryptsetup, dmraid, dmsetup, mdadm, lvm2, dosfstools, f2fs-tools, nilfs-tools, ocfs2-tools, btrfs-compsize, btrfs-heatmap, btrfs-progs, btrfsmaintenance, gfs2-utils, hfsplus, hfsprogs, hfsutils, hfsutils-tcltk, jfsutils, reiserfsprogs, vmfs-tools, xfsdump, xfsprogs, zfs-fuse, zfsnap, exfatprogs, exfat-fuse, ceph-fuse, fuse3, glusterfs-client, udfclient, udftools, reiser4progs, vmfs6-tools, xmount, archivemount, tmfs, cifs-utils, apfs-fuse, apfsutil, ecryptfs-utils, libbde-utils, dislocker, libfvde-utils, libvhdi-utils, libvmdk-utils, libfsntfs-utils, gvfs-fuse, gvfs, ntfs-3g, wimtools
 ```
 
 ## Miscellaneous tools
 ```bash
-progress, pv, less, mlocate, dirmngr, gpg, gnupg2, curl, wget, git, gpg-agent, neofetch, git-repair, img2pdf, mc, strace, yamllint, ltrace, irqbalance, tree, vim, codium, cups, hexedit, dstat, file, memstat, psmisc, htop, qtop, lsof, rdfind, fdupes, lzop, p7zip-full, pigz, unp, unar, unrar-free, unzip, zip, bzip2, tar, unrar, zstd, gtkhash
+progress, pv, less, plocate, dirmngr, gpa, gpg, gnupg2, curl, wget, git, gpg-agent, neofetch, git-repair, img2pdf, mc, strace, yamllint, ltrace, tree, vim, codium, cups, hexedit, file, psmisc, htop, lsof, lzop, p7zip-full, pigz, unp, unar, unrar-free, unzip, zip, bzip2, tar, unrar, zstd, gtkhash, keepassxc, apg, pwgen, isomaster, fred, cabextract, btop
 ```
 
 ## Integrated firmwares
@@ -208,20 +213,25 @@ firmware-amd-graphics, firmware-ast, firmware-ath9k-htc, firmware-atheros, firmw
 
 ## KDE
 ```bash
-kaisen-interfaces-common, kde-standard, firefox, firefox-l10n-fr, firefox-l10n-es-es, firefox-l10n-pt-pt, firefox-l10n-it, firefox-l10n-de, sudo, plymouth, kaisen-menu, lightdm, lightdm-gtk-greeter, lightdm-gtk-greeter-settings, sddm, sddm-theme-breeze, terminator, kaisen-skeleton, kaisen-design, fonts-cantarell, fonts-powerline, conky-all, conkycolors, fonts-liberation, fonts-noto-color-emoji, locales-all, libreoffice, libreoffice-help-fr, libreoffice-help-en-us, libreoffice-help-es, libreoffice-help-pt, libreoffice-help-it, libreoffice-help-de, libreoffice-l10n-fr, libreoffice-l10n-es, libreoffice-l10n-pt, libreoffice-l10n-it, libreoffice-l10n-de, thunderbird, thunderbird-l10n-es-es, thunderbird-l10n-fr, thunderbird-l10n-it, thunderbird-l10n-pt-pt, thunderbird-l10n-de, vlc, gimp, qbittorrent, hexchat
+kaisen-interfaces-common, kde-standard, sddm, sddm-theme-breeze, network-manager
 ```
 
 ## LXQT
 ```bash
-kaisen-interfaces-common, lxqt, lxqt-archiver, cmst, lightdm, lightdm-gtk-greeter, firefox, firefox-l10n-fr, firefox-l10n-es-es, firefox-l10n-pt-pt, firefox-l10n-it, firefox-l10n-de, sudo, kaisen-menu, plymouth, xcursor-themes, terminator, kaisen-skeleton, fonts-cantarell, fonts-powerline, kaisen-design, lightdm-gtk-greeter-settings, conky-all, conkycolors, fonts-liberation, fonts-noto-color-emoji, locales-all, libreoffice, libreoffice-help-fr, libreoffice-help-en-us, libreoffice-help-es, libreoffice-help-pt, libreoffice-help-it, libreoffice-help-de, libreoffice-l10n-fr, libreoffice-l10n-es, libreoffice-l10n-pt, libreoffice-l10n-it, libreoffice-l10n-de, thunderbird, thunderbird-l10n-es-es, thunderbird-l10n-fr, thunderbird-l10n-it, thunderbird-l10n-pt-pt, thunderbird-l10n-de, vlc, gimp, qbittorrent, hexchat, gnome-calculator
+kaisen-interfaces-common, lxqt, lxqt-archiver, cmst, gnome-calculator
 ```
 
 ## MATE
 ```bash
-kaisen-interfaces-common, mate-desktop-environment, lightdm, lightdm-gtk-greeter, network-manager, network-manager-gnome, firefox, firefox-l10n-fr, firefox-l10n-es-es, firefox-l10n-pt-pt, firefox-l10n-it, firefox-l10n-de, sudo, kaisen-menu, plymouth, xcursor-themes, terminator, kaisen-skeleton, fonts-cantarell, fonts-powerline, kaisen-design, lightdm-gtk-greeter-settings, conky-all, conkycolors, fonts-liberation, fonts-noto-color-emoji, locales-all, libreoffice, libreoffice-help-fr, libreoffice-help-en-us, libreoffice-help-es, libreoffice-help-pt, libreoffice-help-it, libreoffice-help-de, libreoffice-l10n-fr, libreoffice-l10n-es, libreoffice-l10n-pt, libreoffice-l10n-it, libreoffice-l10n-de, thunderbird, thunderbird-l10n-es-es, thunderbird-l10n-fr, thunderbird-l10n-it, thunderbird-l10n-pt-pt, thunderbird-l10n-de, vlc, gimp, qbittorrent, hexchat
+kaisen-interfaces-common, mate-desktop-environment, mate-tweak, network-manager-gnome
 ```
 
 ## XFCE
 ```bash
-kaisen-interfaces-common, xfce4, xfce4-panel, xfce4-power-manager, xfce4-power-manager-data, xfce4-power-manager-plugins, xfce4-pulseaudio-plugin, xfce4-screenshooter, xfce4-session, xfce4-settings, xfce4-terminal, xfce4-whiskermenu-plugin, gedit, lightdm, lightdm-gtk-greeter, network-manager, network-manager-gnome, firefox, firefox-l10n-fr, firefox-l10n-es-es, firefox-l10n-pt-pt, firefox-l10n-it, firefox-l10n-de, sudo, kaisen-menu, plymouth, xcursor-themes, terminator, kaisen-skeleton, fonts-cantarell, fonts-powerline, kaisen-design, lightdm-gtk-greeter-settings, conky-all, conkycolors, fonts-liberation, fonts-noto-color-emoji, locales-all, libreoffice, libreoffice-help-fr, libreoffice-help-en-us, libreoffice-help-es, libreoffice-help-pt, libreoffice-help-it, libreoffice-help-de, libreoffice-l10n-fr, libreoffice-l10n-es, libreoffice-l10n-pt, libreoffice-l10n-it, libreoffice-l10n-de, thunderbird, thunderbird-l10n-es-es, thunderbird-l10n-fr, thunderbird-l10n-it, thunderbird-l10n-pt-pt, thunderbird-l10n-de, vlc, gimp, qbittorrent, hexchat, gnome-calculator
+kaisen-interfaces-common, xfce4, xfce4-panel, xfce4-power-manager, xfce4-power-manager-data, xfce4-power-manager-plugins, xfce4-pulseaudio-plugin, xfce4-screenshooter, xfce4-session, xfce4-settings, xfce4-terminal, xfce4-whiskermenu-plugin, gedit, network-manager, thunar-archive-plugin, xarchiver, gnome-calculator
+```
+
+### Interfaces common
+```bash
+firefox, plymouth, kaisen-menu, lightdm, lightdm-gtk-greeter, kaisen-skeleton, kaisen-design, fonts-cantarell, terminator, lightdm-gtk-greeter-settings, fonts-liberation, fonts-noto-color-emoji, thunderbird, libreoffice, qbittorrent, vlc, gimp, breeze-cursor-theme
 ```

@@ -85,10 +85,6 @@ It is the official Debian tool for building system images. It was forked to add 
 
 This package contains all live configurations. Forked to add components/0031-kaisen-password script. This script add a password for live system.
 
-### win32-loader
-
-This package allows you to start the installation of a Debian system directly from a Windows system. The package was forked to simply add the Kaisen Linux logo.
-
 ### shadow
 
 This package was forked because the /etc/default/useradd file was modified to support /bin/zsh as the default terminal when adding a user.  
@@ -102,9 +98,6 @@ Forked to define kaisen-theme by default for Plymouth.
 
 ### partman-btrfs
 Forked to create BTRFS subvolumes
-
-### netcfg
-Forked to define kaisenlinux of hostname string
 
 ### simple-cdd
 Forked to add kaisen profile. The kaisen profile add a custom preseed for NETINST ISO,
@@ -125,8 +118,24 @@ Forked to add kaisen-archive-keyring-udeb package
 ### neofetch
 Forked to add Kaisen Linux ASCII logo
 
+### docker.io
+Forked to add a conffile to change the default storage driver will be used by Docker
+
+### virtualbox
+Forked to add a conffile to load automatically vbox modules at boot
+
 ### virtualbox-ext-pack
-Forked to change default debconf ask
+Forked to change the default response provided by debconf
+
+### virtualbox-guest-additions
+Forked to adapt the dependencies to the rest of the VirtualBox packages
+
+### virtualbox-ext-pack
+Forked to change default debconf 
+
+### python-async-timeout
+Forked to adapt the distributed version to the version required by GNS3
+
 
 ## Kaisen Linux packages
 
@@ -162,15 +171,15 @@ This package just provides a script to perform an apt update && apt upgrade in o
 This package contains all configurations for build Kaisen Linux ISO.
 
 ### kaisen-interfaces
-All Kaisen Linux MATE Desktop Environment configurations (themes, icons etc). This package also installs the default Firefox configurations for Kaisen Linux as well as its translations, terminator, vim and others.
+All Kaisen Linux MATE Desktop Environment configurations (themes, icons etc). 
 
-All Kaisen Linux KDE Desktop Environment configurations (themes, icons etc). This package also installs the default Firefox configurations for Kaisen Linux as well as its translations, terminator, vim and others.
+All Kaisen Linux KDE Desktop Environment configurations (themes, icons etc). 
 
-All Kaisen Linux LXQT Desktop Environment configurations (themes, icons etc). This package also installs the default Firefox configurations for Kaisen Linux as well as its translations, terminator, vim and others.
+All Kaisen Linux LXQT Desktop Environment configurations (themes, icons etc). 
 
-All Kaisen Linux XFCE Desktop Environment configurations (themes, icons etc). This package also installs the default Firefox configurations for Kaisen Linux as well as its translations, terminator, vim and others.
+All Kaisen Linux XFCE Desktop Environment configurations (themes, icons etc). 
 
-The package kaisen-interface-common package installs conky theme and the kaisen-interface-switcher command.
+The package kaisen-interface-common package installs the kaisen-interface-switcher command and commons packages for all interfaces.
 
 ### kaisen-skeleton
 
@@ -186,6 +195,12 @@ This package is simply an offline implementation of the entire https://kaisenlin
 
 ### kaisen-design
 This package contains all themes and icons for Kaisen Linux
+
+### kaisen-conky
+Conky theme for Kaisen Linux
+
+### kaisen-winkey-recovery
+Official Kaisen Linux tool to recover OEM Windows key
 
 ### veracrypt
 Tool to HDD, SSD and system disks encryption.
@@ -301,17 +316,95 @@ Data recovery and data protection tool
 ### apt-btrfs-snapshot
 Tool to take snapshot when APT used
 
-### qbittorrent
-BitTorrent client
-
-### libtorrent-rasterbar
-An efficient feature complete C++ bittorrent implementation
-
 ### bloodhound
 Tool to check Active Directory configurations
 
 ### ddrescue-gui
 Tool to add a GUI for ddrescue tool
+
+### tfsec
+Security scanner for your Terraform code
+
+### terragrunt
+Wrapper for Terraform
+
+### notwireshark
+A packet analyzer like tshark but developped in python
+
+### kyverno
+Kubernetes Native Policy Management
+
+### vault
+Hashicorp tool to for secrets management, encryption as a service, and privileged access management
+
+### ssldump
+SSL and TLS analyser
+
+### packer
+Tool for creating identical machine images for multiple platforms from a single source configuration
+
+### kustomize
+Customization of Kubernetes YAML configurations
+
+### kind
+Kubernetes IN Docker - local clusters for testing Kubernetes
+
+### velero
+Tool to backup and migrate Kubernetes applications and their persistent volumes
+
+### sslscan
+SSL/TLS scanner
+
+### rclone
+Rclone - "rsync for cloud storage"
+
+### popeye
+A Kubernetes cluster resource sanitizer
+
+### gtkstresstest
+System utility designed to stress and monitor various hardware components
+
+### dupeguru
+Tool to find duplicate files
+
+### gox
+A dead simple, no frills Go cross compile tool
+
+### wipefreespace
+WipeFreeSpace is a program which will securely wipe (clean, shred, fill, overwrite) the free space
+
+### jmeter
+Load testing and performance measurement application
+
+### qt-fsarchiver
+Program to back up and restore partitions, directories and the MBR/GPT.
+
+### testdisk
+Partition scanner and disk recovery tool, PhotoRec and qPhotoRec file recovery tools
+
+### kubectx
+Faster way to switch between clusters and namespaces in kubectl
+
+### krew
+Find and install kubectl plugins
+
+### czkawka
+Multi functional app to find duplicates, empty folders, similar images etc
+
+### hsaudiotag
+Pure-python library that reads audio file metadata
+
+### whdd
+HDD diagnostic and data recovery tool for Linux
+
+### fred
+MicrosoFt Registry EDitor
+
+### stressapptest
+Stress test application for simulating high load situations
+
+### wxfixboot
+Utility to assist with fixing the bootloader on a computer quickly
 
 ## Source of packages
 All the sources of the packages can be found here:

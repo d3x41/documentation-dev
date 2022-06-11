@@ -22,3 +22,8 @@ To do this, right click on your Windows 10 ISO, and do 'Extract here' and you wi
 Open this folder and copy and paste all the content of the latter on your ntfs formatted USB key.  
 
 Once the process is complete, you should be able to start on your USB drive.  
+
+## WoeUSB method
+The WoeUSB tool integrated by default in the SR version of Kaisen Linux and which can be installed via APT on the installed system, allows to install a Windows bootable USB key with UEFI and classic BIOS support. 
+In this example, the USB stick is /dev/sdb as device file. To use WoeUSB to create a bootable key:
+```woeusb --device Windows10_x64.iso /dev/sdb```

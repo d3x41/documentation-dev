@@ -11,6 +11,7 @@ This metapackage installs the following Kaisen Linux metapackages:
 * kaisen-data-protection
 * kaisen-data-recovery
 * kaisen-disks-analysis
+* kaisen-duplicates-files
 * kaisen-hardware
 * kaisen-partitioning-erase
 * kaisen-password-tools
@@ -90,6 +91,9 @@ This metapackage install all tools listed [here](tools.html#temperature-analysis
 
 ### kaisen-network-uncategorized
 This metapackage install all tools listed [here](tools.html#various-network-administrators-tools).
+
+### kaisen-duplicates-files
+This metapackage install all tools listed [here](tools.html#duplicates-files).
 
 ### kaisen-dhcp-tools
 This metapackage install all tools listed [here](tools.html#dhcp).
@@ -188,6 +192,9 @@ This metapackage install all tools listed [here](tools.html#mate).
 
 ### kaisen-xfce
 This metapackage install all tools listed [here](tools.html#xfce).
+
+### kaisen-interfaces-common
+This metapackage install all tools listed [here](tools.html#interfaces-common).
 
 ## Remove packages installed by metapackages
 All the packages installed by the metapackages listed above are configured so as not to be dependent on each other to install and can therefore be uninstalled manually without risk of breaking anything (tightly, the packages dependent on the package that is uninstalled will also be uninstalled).  

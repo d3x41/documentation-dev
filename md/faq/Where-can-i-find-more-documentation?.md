@@ -8,10 +8,7 @@ You can find here information where to look if you want more documentation or re
 
 ## Softwares
 
-If you are looking for more documentation about the built-in tools and how they work and 
-their use cases, you can refer to the built-in manpages in the packages delivering the 
-tools or to the centralized manpages we make at https://kaisenlinux.org/manpages/ or via 
-the kaisen-manpages package.
+If you are looking for more documentation about the built-in tools and how they work and their use cases, you can refer to the built-in manpages in the packages delivering the tools or to the centralized manpages we make at https://kaisenlinux.org/manpages/ or via the kaisen-manpages package.
 
 ## Using Kaisen
 

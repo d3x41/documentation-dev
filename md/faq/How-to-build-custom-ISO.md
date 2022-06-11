@@ -53,7 +53,7 @@ This is why I strongly advise you not to create your ISO by customizing another 
 Once your branch is fully configured, you can run a compilation at the root of the kaisen-build folder, with the command:
 
 ```bash
-sudo ./kaisen-build build CUSTOM 1.0
+sudo ./kaisen-build -v CUSTOM -r 1.0
 ```
 
 Version 1.0 is an example, but you can put whatever you want, I advise you not to put too many letters and numbers because if the name of the ISO volume exceeds 32 characters, the compilation will crash. The name of the ISO volume is "Kaisen Linux Rolling $variant $version" ($variant corresponds here to CUSTOM and $version corresponds here to 1.0), in the example, the name of the ISO volume will be Kaisen Linux Rolling CUSTOM 1.0.

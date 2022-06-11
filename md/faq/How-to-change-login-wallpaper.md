@@ -13,10 +13,10 @@ You should find this:
 
 ```bash
 [greeter]
-background = /usr/share/backgrounds/line-white/3840x2160.png
+background = /usr/share/backgrounds/kaisen-lightdm-theme.png
 theme-name = Kaisen-Dark-Material
 icon-theme-name = Kaisen
-default-user-image = /usr/share/icons/Kaisen/kaisen.png
+default-user-image = /usr/share/pixmaps/kaisen-logos/kaisen.png
 user-background = false
 font-name = Cantarell 11
 clock-format = %A %d %B %Y : %H:%M:%S
@@ -26,7 +26,7 @@ indicators = ~spacer;~spacer;~host;~spacer;~session;~clock;~power
 Change these lines:
 
 ```bash
-background = /usr/share/backgrounds/line-white/3840x2160.png
+background = /usr/share/backgrounds/kaisen-lightdm-theme.png
 ```
 
 For example in:
@@ -42,7 +42,7 @@ Which will give:
 background = /home/user/Pictures/image.png
 theme-name = Kaisen-Dark-Material
 icon-theme-name = Kaisen
-default-user-image = /usr/share/icons/Kaisen/kaisen.png
+default-user-image = /usr/share/pixmaps/kaisen-logos/kaisen.png
 user-background = false
 font-name = Cantarell 11
 clock-format = %A %d %B %Y : %H:%M:%S

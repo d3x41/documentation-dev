@@ -82,8 +82,7 @@ If we integrate a preseed file, it will be taken into account instead of the one
 Here are the configurations of the preseed file used to customize the Kaisen Linux installer:
 
 ```bash
-# Default repository information (don't include codename data, d-i figures it
-# out from what's available in the ISO)
+#Default repository information (don't include codename data, d-i figures it out from what's available in the ISO)
 d-i mirror/protocol string https
 d-i mirror/country string FR
 d-i mirror/https/hostname string deb.kaisenlinux.org
@@ -95,17 +94,29 @@ d-i mirror/udeb/suite string kaisen-rolling
 #Disable network configuration on the installer
 d-i netcfg/enable boolean false
 
+#Force define kaisenlinux as default hostname (priority on DHCP)
+d-i netcfg/hostname string kaisenlinux
+d-i netcfg/get_hostname string kaisenlinux
+d-i netcfg/get_hostname seen false
+
 #Disable missing firmware message during network configuration
 d-i hw-detect/load_firmware boolean false
+
+#Disable missing ethernet message during network configuration
+d-i ethdetect/prompt_missing_firmware boolean false
+d-i ethdetect/module_select select no ethernet card
 
 #Do not ask to create a root password to force the creation of a user with reduced privileges
 d-i passwd/root-login boolean false
 
-# Controls whether or not the hardware clock is set to UTC.
+#Controls whether or not the hardware clock is set to UTC.
 d-i clock-setup/utc boolean false
 
-# Controls whether to use NTP to set the clock during the install
+#Controls whether to use NTP to set the clock during the install
 d-i clock-setup/ntp boolean false
+
+#Automatically enable force UEFI installation
+d-i partman-efi/non_efi_system boolean true
 
 #Define default filesystem
 d-i partman/default_filesystem string btrfs
@@ -113,29 +124,32 @@ d-i partman/default_filesystem string btrfs
 #Do not activate volume wipe during encryption
 d-i partman-auto-crypto/erase_disks boolean false
 
+#Disable warning when no swap partition was created
+d-i partman-basicfilesystems/no_swap boolean false
+
 #Activate eatmydata to reduce space disk used
 d-i preseed/early_command string anna-install eatmydata-udeb
 
-# Disable question about automatic security updates
+#Disable question about automatic security updates
 d-i pkgsel/update-policy select none
 
-# Disable popularity-contest
+#Disable popularity-contest
 popularity-contest popularity-contest/participate boolean false
 
-# Disable question about extra media
+#Disable question about extra media
 d-i apt-setup/cdrom/set-first boolean false
 
 #Do not use an APT mirror (removes the question of the additional mirror for APT, useless here since everything is already in ISO)
 d-i apt-setup/use_mirror boolean false
 
-# Auto and only enable security (to add automatically deb.kaisenlinux.org repository)
+#Auto and only enable security (to add automatically deb.kaisenlinux.org repository)
 d-i apt-setup/services-select multiselect security
 
-# Enable contrib and non-free
+#Enable contrib and non-free
 d-i apt-setup/non-free boolean true
 d-i apt-setup/contrib boolean true
 
-# Disable CDROM entries after install
+#Disable CDROM entries after install
 d-i apt-setup/disable-cdrom-entries boolean true
 
 #Delete the message at end installation and automatic reboot after finish install
