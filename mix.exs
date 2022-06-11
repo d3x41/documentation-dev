@@ -14,7 +14,7 @@ defmodule KaisenDocumentation.MixProject do
       homepage_url: "https://kaisenlinux.org/documentation/",
       authors: "Arnaud Cormier & Kevin Chevreuil",
       docs: [
-        main: "md/documentation",
+        main: "documentation",
         api_reference: false,
         logo: "priv/assets/kaisen-logo.jpg",
         assets: "priv/assets",
