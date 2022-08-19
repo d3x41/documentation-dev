@@ -31,4 +31,4 @@ This repository is a snapshot of the last official revision of the project. This
 
 ## Which repository to use
 
-You can use them all. However, if you are new to GNU / Linux, avoid the kaisen-testing repository, repairing your system can be complicated in case of problems.
+You can use them all. However, if you are new to GNU/Linux, avoid the kaisen-testing repository, repairing your system can be complicated in case of problems.

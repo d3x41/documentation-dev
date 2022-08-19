@@ -148,7 +148,7 @@ openvpn, wireguard, openfortivpn, network-manager-openvpn, network-manager-forti
 
 ### Remote administration
 ```bash
-virt-viewer, rdesktop, grdesktop, freerdp2-x11, ssh, sshfs, pssh, clusterssh, tmux, zssh, remmina, remmina-plugin-exec, remmina-plugin-kwallet, remmina-plugin-spice, remmina-plugin-www, smbclient, ssh-askpass, sshpass
+virt-viewer, rdesktop, grdesktop, freerdp2-x11, ssh, sshfs, pssh, clusterssh, tmux, zssh, remmina, remmina-plugin-exec, remmina-plugin-kwallet, remmina-plugin-spice, remmina-plugin-www, smbclient, ssh-askpass, sshpass, sshs
 ```
 
 ### Backup tools
@@ -168,7 +168,7 @@ bloodhound, powershell
 
 ### Virtualization
 ```bash
-virtualbox, virtualbox-qt, virtualbox-dkms, virtualbox-source, virtualbox-guest-additions-iso, virtualbox-ext-pack, virt-manager, qemu, qemu-system, qemu-system-x86, qemu-system-gui, qemu-efi, qemu-utils, libvirt-clients, libvirt-daemon-system, virtinst, virt-viewer
+virtualbox, virtualbox-qt, virtualbox-dkms, virtualbox-source, virtualbox-guest-additions-iso, virtualbox-ext-pack, virt-manager, qemu-system, qemu-system-x86, qemu-system-gui, qemu-efi, qemu-utils, libvirt-clients, libvirt-daemon-system, virtinst, virt-viewer
 ```
 
 ### Various system administrators tools
@@ -188,7 +188,7 @@ mariadb-client, etcd-client, postgresql-client
 
 ## DevOps and Cloud
 ```bash
-docker-compose, docker.io, ansible, lxc, lxctl, kubernetes-client, vagrant, vagrant-lxc, vagrant-sshfs, jmeter, awscli, azure-cli, packer, puppet-agent, pdk, terraform, s3fs, k6, k9s, helm, podman, buildah, minikube, eksctl, trivy, kustomize, kind, krew, kubectx, kyverno, popeye, tfsec, vault, velero, terragrunt
+docker-compose, docker.io, ansible, lxc, lxctl, kubernetes-client, vagrant, vagrant-lxc, vagrant-sshfs, jmeter, awscli, azure-cli, packer, puppet-agent, pdk, terraform, s3fs, k6, k9s, helm, podman, buildah, minikube, eksctl, trivy, kustomize, kind, krew, kubectx, kyverno, popeye, tfsec, vault, velero, terragrunt, openstack-client
 ```
 
 ## System snapshots
@@ -228,7 +228,7 @@ kaisen-interfaces-common, mate-desktop-environment, mate-tweak, network-manager-
 
 ## XFCE
 ```bash
-kaisen-interfaces-common, xfce4, xfce4-panel, xfce4-power-manager, xfce4-power-manager-data, xfce4-power-manager-plugins, xfce4-pulseaudio-plugin, xfce4-screenshooter, xfce4-session, xfce4-settings, xfce4-terminal, xfce4-whiskermenu-plugin, gedit, network-manager, thunar-archive-plugin, xarchiver, gnome-calculator
+kaisen-interfaces-common, xfce4, xfce4-panel, xfce4-power-manager, xfce4-power-manager-data, xfce4-power-manager-plugins, xfce4-pulseaudio-plugin, xfce4-screenshooter, xfce4-session, xfce4-settings, xfce4-terminal, xfce4-whiskermenu-plugin, gedit, network-manager, network-manager-gnome, thunar-archive-plugin, xarchiver, gnome-calculator
 ```
 
 ### Interfaces common

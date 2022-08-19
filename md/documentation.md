@@ -29,7 +29,7 @@ The documentation is splitted in 6 GUIDES on the left menu bar:
 - INFOS
 - TUTORIALS
 - GOODIES
-- FAQ
+- TIPS AND TRICKS
 
 ## Help Summary 
 
@@ -65,20 +65,20 @@ The documentation is splitted in 6 GUIDES on the left menu bar:
     - [Conky theme](kaisen-conky.html)
     - [LUKS hardening](cryptsetup-nuke-password.html)
     - [ZSH](zsh.html)
-- FAQ        
-    - [Where can I find more documentation?](faq.html#where-can-i-find-more-documentation)
-    - [What are the revisions of the rolling version ?](faq.html#what-are-the-revisions-of-the-rolling-version)
-    - [Why are all additional services disabled by default ?](faq.html#why-are-all-additional-services-disabled-by-default)
-    - [How to build a custom ISO ?](faq.html#how-to-build-a-custom-iso)
-    - [Why no sources on some packages ?](faq.html#why-no-sources-on-some-packages)
-    - [How to update GUI default profile ?](faq.html#how-to-update-gui-default-profile)
-    - [Informations on the rolling version](faq.html#how-do-i-know-the-number-of-the-rolling-version-i-use)
-    - [Why root account is disabled by default ?](faq.html#why-root-account-is-disabled-by-default)
-    - [How to switch to root directly with the ZSH terminal ?](faq.html#how-to-switch-to-root-directly-with-the-zsh-terminal)
-    - [How to change the graphical interface ?](faq.html#how-to-change-graphical-interface)
-    - [How to update Kaisen Linux Rolling ?](faq.html#update-kaisen-linux-rolling)
-    - [How to change login wallpaper ?](faq.html#how-to-change-login-wallpaper)
-    - [Why create user accounts only on /home ?](faq.html#why-create-user-accounts-only-on-home)
-    - [Why KDE installed with lightdm by default ?](faq.html#why-kde-installed-with-lightdm-by-default)
-    - [How to create your own default profile for user configurations (skel) ?](faq.html#how-to-create-your-own-default-profile-for-user-configurations-skel)
-    - [Where can I find documentation on the built-in tools or how certain settings work?](faq.html#where-can-i-find-documentation-on-the-built-in-tools-or-how-certain-settings-work)
+- TIPS AND TRICKS        
+    - [Where can I find more documentation?](tips-and-tricks.html#where-can-i-find-more-documentation)
+    - [What are the revisions of the rolling version ?](tips-and-tricks.html#what-are-the-revisions-of-the-rolling-version)
+    - [Why are all additional services disabled by default ?](tips-and-tricks.html#why-are-all-additional-services-disabled-by-default)
+    - [How to build a custom ISO ?](tips-and-tricks.html#how-to-build-a-custom-iso)
+    - [Why no sources on some packages ?](tips-and-tricks.html#why-no-sources-on-some-packages)
+    - [How to update GUI default profile ?](tips-and-tricks.html#how-to-update-gui-default-profile)
+    - [Informations on the rolling version](tips-and-tricks.html#how-do-i-know-the-number-of-the-rolling-version-i-use)
+    - [Why root account is disabled by default ?](tips-and-tricks.html#why-root-account-is-disabled-by-default)
+    - [How to switch to root directly with the ZSH terminal ?](tips-and-tricks.html#how-to-switch-to-root-directly-with-the-zsh-terminal)
+    - [How to change the graphical interface ?](tips-and-tricks.html#how-to-change-graphical-interface)
+    - [How to update Kaisen Linux Rolling ?](tips-and-tricks.html#update-kaisen-linux-rolling)
+    - [How to change login wallpaper ?](tips-and-tricks.html#how-to-change-login-wallpaper)
+    - [Why create user accounts only on /home ?](tips-and-tricks.html#why-create-user-accounts-only-on-home)
+    - [Why KDE installed with lightdm by default ?](tips-and-tricks.html#why-kde-installed-with-lightdm-by-default)
+    - [How to create your own default profile for user configurations (skel) ?](tips-and-tricks.html#how-to-create-your-own-default-profile-for-user-configurations-skel)
+    - [Where can I find documentation on the built-in tools or how certain settings work?](tips-and-tricks.html#where-can-i-find-documentation-on-the-built-in-tools-or-how-certain-settings-work)

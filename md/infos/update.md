@@ -11,7 +11,7 @@ This update system distributes continuously via the kaisen-rolling repository al
 
 ## How to update rolling release
 
-All methods here: [Update Kaisen Linux Rolling](https://kaisenlinux.org/documentation/faq#update-kaisen-linux-rolling)
+All methods here: [Update Kaisen Linux Rolling](https://kaisenlinux.org/documentation/tips-and-tricks#update-kaisen-linux-rolling)
 
 ## Know my version
 

@@ -4,7 +4,7 @@ defmodule KaisenDocumentation.MixProject do
   def project do
     [
       app: :kaisen_documentation,
-      version: "2.1.0",
+      version: "2.1.1",
       elixir: "~> 1.13.4",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
@@ -49,16 +49,32 @@ defmodule KaisenDocumentation.MixProject do
 	  "md/goodies/kaisen-conky.md": [ title: "Kaisen Conky"],
 	  "md/goodies/zsh.md": [ title: "ZSH"],
 	  "md/goodies/cryptsetup-nuke-password.md": [ title: "Cryptsetup nuke password"],
-          "md/faq/faq.md": [title: "Frequently asked Questions" ]
+          "md/tips-and-tricks/How-to-build-custom-ISO.md": [ title: "How to build custom ISO?"],
+          "md/tips-and-tricks/How-to-change-graphical-interface.md": [ title: "How to change graphical interface?"],
+          "md/tips-and-tricks/How-to-change-login-wallpaper.md": [ title: "How to change login wallpaper?"],
+          "md/tips-and-tricks/How-to-reapply-the-GUI-default-profile.md": [ title: "How to reapply the GUI default profile?"],
+          "md/tips-and-tricks/How-to-switch-to-root-directly-with-zsh.md": [ title: "How to switch to root directly with ZSH?"],
+          "md/tips-and-tricks/Informations-on-rolling-version.md": [ title: "Informations on rolling version"],
+          "md/tips-and-tricks/Update-Kaisen-Linux-Rolling.md": [ title: "Update Kaisen Linux Rolling"],
+          "md/tips-and-tricks/What-are-the-revisions-of-the-rolling-version.md": [ title: "What are the revisions of the rolling version?"],
+          "md/tips-and-tricks/Where-can-I-find-documentation-on-the-built-in-tools-or-how-certain-settings-work.md": [ title: "Where can I find documentation on the built in tools or how certain settings work?"],
+          "md/tips-and-tricks/Where-can-I-find-more-documentation.md": [ title: "Where can I find more documentation?"],
+          "md/tips-and-tricks/Why-are-all-additional-services-disabled-by-default.md": [ title: "Why are all additional services disabled by default?"],
+          "md/tips-and-tricks/Why-create-user-accounts-only-on-home.md": [ title: "Why create user accounts only on home?"],
+          "md/tips-and-tricks/Why-KDE-installed-with-lightdm-by-default.md": [ title: "Why KDE installed with lightdm by default?"],
+          "md/tips-and-tricks/Why-no-source-on-some-packages.md": [ title: "Why no source on some packages?"],
+          "md/tips-and-tricks/Why-root-account-is-disabled.md": [ title: "Why root account is disabled?"],
+          
+
 
         ],
         groups_for_extras: [
           "START": Path.wildcard("md/start/*.md"),
           "TOOLS & PACKAGES": Path.wildcard("md/tools/*.md"),
           "INFOS": Path.wildcard("md/infos/*.md"),
-	  "GOODIES": Path.wildcard("md/goodies/*.md"),
+	        "GOODIES": Path.wildcard("md/goodies/*.md"),
           "TUTORIALS": Path.wildcard("md/tutorials/*.md"),
-          "FAQ": Path.wildcard("md/faq/faq.md")
+          "TIPS AND TRICKS": Path.wildcard("md/tips-and-tricks/*.md")
           # only one file is read for faq category
 
         ],
@@ -77,7 +93,7 @@ defmodule KaisenDocumentation.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:ex_doc, "~> 0.26", only: :dev, runtime: false},
+      {:ex_doc, "~> 0.28.5", only: :dev, runtime: false},
     ]
   end
 

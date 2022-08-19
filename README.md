@@ -53,7 +53,7 @@ firefox doc/documentation.html`
 - Create a markdown file in `md\[category]` folder.
 - There is 5 `[category]` folders:
     - infos
-    - faq
+    - pros-and-tips
     - start
     - tools
     - tutorials
