@@ -71,7 +71,7 @@ The documentation is splitted in 6 GUIDES on the left menu bar:
     - [Why are all additional services disabled by default ?](why-are-all-additional-services-disabled-by-default.html)
     - [How to build a custom ISO ?](how-to-build-custom-iso.html)
     - [Why no sources on some packages ?](why-no-source-on-some-packages.html)
-    - [How to reapply the GUI default profile ?](how-to-reapply-the-GUI-default-profile.html)
+    - [How to reapply the GUI default profile ?](how-to-reapply-the-gui-default-profile.html)
     - [Informations on the rolling version](informations-on-rolling-version.html)
     - [Why root account is disabled by default ?](why-root-account-is-disabled.html)
     - [How to switch to root directly with the ZSH terminal ?](how-to-switch-to-root-directly-with-zsh.html)
