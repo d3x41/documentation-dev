@@ -76,21 +76,21 @@ We recommend that you have at least a 64GB USB drive to take full advantage of t
 Check with the command `sudo fdisk -l` what your key is called. Here we will assume that our USB stick is `/dev/sdb`.
 
 ### USB key with persistence creation
-This documentation was made with ISO MATE but also works with KDE, LXQT and XFCE and SR (System Rescue).  
+This documentation was made with ISO SR but also works with KDE, LXQT, MATE and XFCE.  
 Make sure you are in the same folder as the ISO to do all this!!! The dd command will erase your entire device, make sure you have backed up the important content.  
 
 - Create a bootable Kaisen USB drive with the following command:
 
 ```bash
-sudo dd if=kaisenlinuxrolling2.1-amd64-MATE.iso of=/dev/sdb bs=4M
+sudo dd if=kaisenlinuxrolling2.1-amd64-SR.iso of=/dev/sdb bs=4M status=progress
 ```
 Normally two partitions were created by dd. You can check this with the sudo fdisk -l command. You need to create a third to add persistence to it.
 
 - To do this, type the following commands (always in the same folder where the ISO is):
 
 ```bash
-end=55GiB (if key is 64gb, for security we will put the key ending at 55gb plus the size of the ISO so 4GB)
-read start _ <<(du -bcm kaisenlinuxrolling2.1-amd64-MATE.iso | tail -1); echo $start
+end=50GiB (if key is 64GiB, for security we will put the key ending at 50GiB plus the size of the ISO so 4GiB)
+read start _ <<< $(du -bcm kaisenlinuxrolling2.1-amd64-SR.iso | tail -1); echo $start
 sudo parted /dev/sdb mkpart primary ${start}MiB $end
 ```
 
@@ -116,7 +116,7 @@ sudo umount /mnt/persistence
 
 **Your key is now ready!**
 
-Restart a live Kaisen with the persistence option enabled. To test that the persistence is functional, for example change the theme of the graphical interface then restart your live session by always choosing "persistence". If the theme you modified has been kept instead of the default one, persistence is functional :-)
+Restart a live Kaisen with the persistence option enabled. To test that the persistence is functional, for example change the theme of the graphical interface then restart your live session by always choosing "persistence". If the theme you modified has been kept instead of the default one, the persistence is functional.
 
 ## Create live USB key with encrypted persistence
 ### **Prerequisite**
@@ -126,13 +126,13 @@ We recommend that you have at least a 64GB USB drive to take full advantage of t
 Check with the command `sudo fdisk -l` what your key is called. Here we will assume that our USB stick is `/dev/sdb`.
 
 ### USB key with encrypted persistence creation
-This documentation was made with ISO MATE but also works with KDE, LXQT and XFCE and SR (System Rescue).  
+This documentation was made with ISO SR but also works with KDE, LXQT, MATE and XFCE.  
 Make sure you are in the same folder as the ISO to do all this!!! The dd command will erase your entire device, make sure you have backed up the important content.  
 
 - Create a bootable Kaisen USB drive with the following command:
 
 ```bash
-sudo dd if=kaisenlinuxrolling2.1-amd64-MATE.iso of=/dev/sdb bs=4M
+sudo dd if=kaisenlinuxrolling2.1-amd64-SR.iso of=/dev/sdb bs=4M status=progress
 ```
 
 Normally two partitions were created by dd. You can check this with the `sudo fdisk -l` command. You need to create a third to add persistence to it.
@@ -140,8 +140,8 @@ Normally two partitions were created by dd. You can check this with the `sudo fd
 - To do this, type the following commands (always in the same folder where the ISO is):
 
 ```bash
-end=55GiB (if key is 55gb, for security we will put the key ending at 10gb plus the size of the ISO so 4GB)
-read start _ <<(du -bcm kaisenlinuxrolling2.1-amd64-MATE.iso | tail -1); echo $start
+end=50GiB (if key is 64GiB, for security we will put the key ending at 50GiB plus the size of the ISO so 4GiB)
+read start _ <<< $(du -bcm kaisenlinuxrolling2.1-amd64-SR.iso | tail -1); echo $start
 sudo parted /dev/sdb mkpart primary ${start}MiB $end
 ```
 
@@ -150,33 +150,33 @@ WARNING: do not forget the passphrase to unlock the partition, otherwise you wil
 
 ```bash
 sudo cryptsetup --verbose --verify-passphrase luksFormat /dev/sdb3
-sudo cryptsetup luksOpen /dev/sdb3 my_usb
+sudo cryptsetup luksOpen /dev/sdb3 kaisen-usb-persistent
 ```
 
 Then do this for create filesystems and partition label:
 The `mkfs.ext4` command below will ask a question (on the size of the blocks). Just press enter to use the default settings (not affected here).
 
 ```bash
-sudo mkfs.ext4 -L persistence /dev/mapper/my_usb
-sudo e2label /dev/mapper/my_usb persistence
+sudo mkfs.ext4 -L persistence /dev/mapper/kaisen-usb-persistent
+sudo e2label /dev/mapper/kaisen-usb-persistent persistence
 ```
 To take into account this new persistence partition, we should have a file named persistence.conf at the root of this partition with in this file marked: `/ union`
 
 - We are going to proceed like this:
 
 ```bash
-sudo mkdir -p /mnt/my_usb
-sudo mount /dev/mapper/my_usb /mnt/my_usb
-echo "/ union" | sudo tee /mnt/my_usb/persistence.conf
-sudo umount /dev/mapper/my_usb
+sudo mkdir -p /mnt/kaisen-usb-persistent
+sudo mount /dev/mapper/kaisen-usb-persistent /mnt/kaisen-usb-persistent
+echo "/ union" | sudo tee /mnt/kaisen-usb-persistent/persistence.conf
+sudo umount /dev/mapper/kaisen-usb-persistent
 ```
 
 - Let's close the encrypted channel:
 
 ```bash
-sudo cryptsetup luksClose /dev/mapper/my_usb
+sudo cryptsetup luksClose /dev/mapper/kaisen-usb-persistent
 ```
 **Your key is now ready!**
 
-Restart a live Kaisen with the encrypted persistence option enabled. To test that the persistence is functional, for example change the theme of the graphical interface then restart your live session by always choosing "encrypted persistence".  If the theme you modified has been kept instead of the default one, encrypted persistence is functional :-)
-
+Restart a live Kaisen with the encrypted persistence option enabled. To test that the persistence is functional, for example change the theme of the graphical interface then restart your live session by always choosing "encrypted persistence".  If the theme you modified has been kept instead of the default one, encrypted persistence is functional.  
+Caution, the keyboard will be in QWERTY.
