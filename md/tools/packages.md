@@ -136,6 +136,9 @@ Forked to change default debconf
 ### python-async-timeout
 Forked to adapt the distributed version to the version required by GNS3
 
+### netsniff-ng
+Forked to replace ntpsec by chrony as recommanded package
+
 
 ## Kaisen Linux packages
 
@@ -405,6 +408,12 @@ Stress test application for simulating high load situations
 
 ### wxfixboot
 Utility to assist with fixing the bootloader on a computer quickly
+
+### grub-btrfs
+BASH scripts and conffiles to add snapshots taken by various BTRFS snapshots tools directly in the GRUB menu
+
+### linux-firmware
+Collection of non open-source firmwares provided by Linux maintainers
 
 ## Source of packages
 All the sources of the packages can be found here:

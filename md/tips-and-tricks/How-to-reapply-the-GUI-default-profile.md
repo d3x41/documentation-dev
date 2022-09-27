@@ -6,10 +6,10 @@ However, there are a few things you should know before updating the skel and the
 
 ## Reapply the KDE default profile
 To reapply the default profile for KDE, run this command with your current user to delete your KDE settings:  
-```rm -rf .kde .local/share/konsole .config/{gtkrc,gtkrc-2.0,gtk-3.0,gtk-4.0,katerc,katevirc,kdeglobals,konsolerc,kscreenlockerrc,ksmserverrc,kwinrc,kwriterc,plasmarc,kwalletrc,plasma-org.kde.plasma.desktop-appletsrc,plasmashellrc}```  
+```rm -rf .kde .local/share/konsole .config/{gtkrc,gtkrc-2.0,gtk-3.0,gtk-4.0,kactivitymanagerdrc,katerc,katevirc,kdeglobals,konsolerc,kscreenlockerrc,ksmserverrc,kwinrc,kwriterc,plasmarc,kwalletrc,plasma-org.kde.plasma.desktop-appletsrc,plasmashellrc}```  
 
 To reapply the default Kaisen settings, run this command with your current user:  
-```cp /etc/skel/.config/{kwalletrc,plasma-org.kde.plasma.desktop-appletsrc,plasmashellrc} ~/.config```  
+```cp /etc/skel/.config/{kactivitymanagerdrc,kwalletrc,plasma-org.kde.plasma.desktop-appletsrc,plasmashellrc} ~/.config```  
 
 Now you can log out and log back in.
 
