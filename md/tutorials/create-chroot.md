@@ -9,10 +9,7 @@ This is mainly useful for systems that can no longer boot conventionally.
 ```bash
 sudo fdisk -l (Locate the EFI Linux partition and /)
 sudo mount /dev/sdX /mnt (X represents the drive letter)
-sudo mount --bind /dev /mnt/dev
-sudo mount --bind /dev/pts /mnt/dev/pts
-sudo mount --bind /proc /mnt/proc
-sudo mount --bind /sys /mnt/sys
+for mountpoints in /dev/ /dev/pts/ /proc/ /sys/; do sudo mount --bind $mountpoints /mnt/$mountpoints; done
 sudo mount /dev/sdXY /mnt/boot/efi (X represents the drive letter, and the Y the EFI partition number, it should be the first)
 sudo chroot /mnt
 ```
@@ -26,10 +23,7 @@ sudo vgchange -ay
 sudo mount /dev/mapper/name--vg-root /mnt (name--vg-root represents the name of the logical volume returned by the 
 vgscan command)
 sudo mount /dev/sdXY /mnt/boot (mount boot partition)
-sudo mount --bind /dev /mnt/dev
-sudo mount --bind /dev/pts /mnt/dev/pts
-sudo mount --bind /proc /mnt/proc
-sudo mount --bind /sys /mnt/sys
+for mountpoints in /dev/ /dev/pts/ /proc/ /sys/; do sudo mount --bind $mountpoints /mnt/$mountpoints; done
 sudo mount /dev/sdXY /mnt/boot/efi (mount the EFI partition often, this partition is often the first)
 sudo chroot /mnt
 ```
@@ -42,10 +36,7 @@ sudo vgscan
 sudo vgchange -ay
 sudo mount /dev/mapper/name--vg-root /mnt (name--vg-root represents the name of the logical volume returned by the vgscan command)
 sudo mount /dev/sdXY /mnt/boot (mount boot partition)
-sudo mount --bind /dev /mnt/dev
-sudo mount --bind /dev/pts /mnt/dev/pts
-sudo mount --bind /proc /mnt/proc
-sudo mount --bind /sys /mnt/sys
+for mountpoints in /dev/ /dev/pts/ /proc/ /sys/; do sudo mount --bind $mountpoints /mnt/$mountpoints; done
 sudo mount /dev/sdXY /mnt/boot/efi (mount the EFI partition often /dev/sdX1)
 sudo chroot /mnt
 ```

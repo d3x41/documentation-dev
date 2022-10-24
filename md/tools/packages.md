@@ -139,7 +139,6 @@ Forked to adapt the distributed version to the version required by GNS3
 ### netsniff-ng
 Forked to replace ntpsec by chrony as recommanded package
 
-
 ## Kaisen Linux packages
 
 ### kaisen-basemenu-purge
@@ -316,9 +315,6 @@ i3 fork with more features
 ### ddrescue
 Data recovery and data protection tool
 
-### apt-btrfs-snapshot
-Tool to take snapshot when APT used
-
 ### bloodhound
 Tool to check Active Directory configurations
 
@@ -414,6 +410,27 @@ BASH scripts and conffiles to add snapshots taken by various BTRFS snapshots too
 
 ### linux-firmware
 Collection of non open-source firmwares provided by Linux maintainers
+
+### tflint
+A Pluggable Terraform Linter
+
+### lazygit
+A simple terminal UI for git commands
+
+### lazydocker
+The lazier way to manage everything docker
+
+### terraform-docs
+A utility to generate documentation from Terraform modules in various output formats
+
+### yq
+Portable command-line YAML, JSON, XML, CSV and properties processor
+
+### kaisen-timeshift-apt
+Automatically create snapshots when APT is used with Timeshift
+
+### kaisen-live-guest-additions
+Management of guests additions services for Kaisen live systems
 
 ## Source of packages
 All the sources of the packages can be found here:

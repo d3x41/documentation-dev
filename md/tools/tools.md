@@ -133,7 +133,7 @@ netcat, netcat-openbsd, tcpreplay, tcpflow, tcptrace, tcptraceroute, packetsende
 
 ### Wi-Fi
 ```bash
-aircrack-ng, hostapd, iw, rfkill, linssid
+aircrack-ng, iw, rfkill, linssid
 ```
 
 ### VPN
@@ -148,7 +148,7 @@ openvpn, wireguard, openfortivpn, network-manager-openvpn, network-manager-forti
 
 ### Remote administration
 ```bash
-virt-viewer, rdesktop, grdesktop, freerdp2-x11, ssh, sshfs, pssh, clusterssh, tmux, zssh, remmina, remmina-plugin-exec, remmina-plugin-kwallet, remmina-plugin-spice, remmina-plugin-www, smbclient, ssh-askpass, sshpass, sshs
+virt-viewer, rdesktop, grdesktop, freerdp2-x11, ssh, sshfs, pssh, clusterssh, tmux, zssh, remmina, remmina-plugin-exec, remmina-plugin-kwallet, remmina-plugin-www, smbclient, ssh-askpass, sshpass, sshs
 ```
 
 ### Backup tools
@@ -173,7 +173,7 @@ virtualbox, virtualbox-qt, virtualbox-dkms, virtualbox-source, virtualbox-guest-
 
 ### Various system administrators tools
 ```bash
-xca, krb5-config, krb5-pkinit, krb5-user, krb5-locales, ctop, apache2-utils, ntpsec, ntpsec-ntpdate, python3-ldapdomaindump
+xca, krb5-config, krb5-pkinit, krb5-user, krb5-locales, ctop, apache2-utils, chrony, python3-ldapdomaindump
 ```
 
 ### Apparmor tools and profiles
@@ -188,12 +188,12 @@ mariadb-client, etcd-client, postgresql-client
 
 ## DevOps and Cloud
 ```bash
-docker-compose, docker.io, ansible, lxc, lxctl, kubernetes-client, vagrant, vagrant-lxc, vagrant-sshfs, jmeter, awscli, azure-cli, packer, puppet-agent, pdk, terraform, s3fs, k6, k9s, helm, podman, buildah, minikube, eksctl, trivy, kustomize, kind, krew, kubectx, kyverno, popeye, tfsec, vault, velero, terragrunt, openstack-client
+docker-compose, docker.io, ansible, ansible-lint, lxc, lxctl, kubernetes-client, vagrant, vagrant-lxc, vagrant-sshfs, jmeter, awscli, azure-cli, packer, puppet-agent, pdk, terraform, terraform-docs, s3fs, k6, k9s, helm, podman, buildah, minikube, eksctl, trivy, kustomize, kind, krew, kubectx, kyverno, popeye, tfsec, tflint, vault, velero, terragrunt, openstack-client, lazydocker
 ```
 
 ## System snapshots
 ```bash
-apt-btrfs-snapshot, btrbk, snapper, timeshift
+kaisen-timeshift-apt, btrbk, snapper, timeshift, grub-btrfs
 ```
 
 ## Filesystems tools
@@ -203,7 +203,7 @@ cryptsetup, dmraid, dmsetup, mdadm, lvm2, dosfstools, f2fs-tools, nilfs-tools, o
 
 ## Miscellaneous tools
 ```bash
-progress, pv, less, plocate, dirmngr, gpa, gpg, gnupg2, curl, wget, git, gpg-agent, neofetch, git-repair, img2pdf, mc, strace, yamllint, ltrace, tree, vim, codium, cups, hexedit, file, psmisc, htop, lsof, lzop, p7zip-full, pigz, unp, unar, unrar-free, unzip, zip, bzip2, tar, unrar, zstd, gtkhash, keepassxc, apg, pwgen, isomaster, fred, cabextract, btop
+progress, pv, less, plocate, dirmngr, gpa, gpg, gnupg2, curl, wget, git, gpg-agent, neofetch, git-repair, img2pdf, mc, strace, yamllint, ltrace, tree, vim, codium, cups, hexedit, file, psmisc, htop, lsof, lzop, p7zip-full, pigz, unp, unar, unrar-free, unzip, zip, bzip2, tar, unrar, zstd, gtkhash, keepassxc, apg, pwgen, isomaster, fred, cabextract, btop, jq, yq, lazygit
 ```
 
 ## Integrated firmwares
