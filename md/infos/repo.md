@@ -4,7 +4,7 @@
 
 ```bash
 deb https://deb.kaisenlinux.org kaisen-rolling main contrib non-free
-#deb-src https://deb.kaisenlinux.org kaisen-rolling main contrib non-free
+deb-src https://deb.kaisenlinux.org kaisen-rolling main contrib non-free
 ```
 
 ## Referential lists

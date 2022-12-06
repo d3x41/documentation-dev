@@ -9,12 +9,12 @@ Since release 1.0 named, Kaisen Linux is a rolling release (continuous update) b
 ## Quick start
 
 1. Choose and download an iso :
-    - [Kaisen Linux MATE (default GUI)](https://iso.kaisenlinux.org/rolling/kaisenlinuxrolling2.2RC1-amd64-MATE.iso)
-    - [Kaisen Linux KDE](https://iso.kaisenlinux.org/rolling/kaisenlinuxrolling2.2RC1-amd64-KDE.iso)
-    - [Kaisen Linux XFCE](https://iso.kaisenlinux.org/rolling/kaisenlinuxrolling2.2RC1-amd64-XFCE.iso)
-    - [Kaisen Linux LXQT](https://iso.kaisenlinux.org/rolling/kaisenlinuxrolling2.2RC1-amd64-LXQT.iso)
-    - [Kaisen Linux System Rescue (no installer)](https://iso.kaisenlinux.org/rolling/kaisenlinuxrolling2.2RC1-amd64-SR.iso)
-    - [Kaisen Linux NETINST (network required)](https://iso.kaisenlinux.org/rolling/kaisenlinuxrolling2.2RC1-amd64-NETINST.iso)
+    - [Kaisen Linux MATE (default GUI)](https://iso.kaisenlinux.org/rolling/kaisenlinuxrolling2.2-amd64-MATE.iso)
+    - [Kaisen Linux KDE](https://iso.kaisenlinux.org/rolling/kaisenlinuxrolling2.2-amd64-KDE.iso)
+    - [Kaisen Linux XFCE](https://iso.kaisenlinux.org/rolling/kaisenlinuxrolling2.2-amd64-XFCE.iso)
+    - [Kaisen Linux LXQT](https://iso.kaisenlinux.org/rolling/kaisenlinuxrolling2.2-amd64-LXQT.iso)
+    - [Kaisen Linux System Rescue (no installer)](https://iso.kaisenlinux.org/rolling/kaisenlinuxrolling2.2-amd64-SR.iso)
+    - [Kaisen Linux NETINST (network required)](https://iso.kaisenlinux.org/rolling/kaisenlinuxrolling2.2-amd64-NETINST.iso)
 2. Launch it in a VM
 3. Boot on the live mode or install Kaisen Linux
 4. Explore and test sysadmin and technicians tools

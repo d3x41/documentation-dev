@@ -33,7 +33,7 @@ The Kaisen Linux kernel has been recompiled and optimized as much as possible to
 Kaisen Linux offers support for anyone and questions, today, this supports is present by mail and soon by a forum.
 
 ## System free
-Kaisen Linux is free and will stay !
+Kaisen Linux is free and will stay!
 
 ## Rolling updates
 Since its release in stable version, Kaisen Linux is updated continuously, possible to our repository created for Kaisen Linux. This allows if you choose to install the system, to be able to update the whole system without having to reinstall it, it is an important stage of the project which will remove big constraints to the users concerning the maintenance of the system.  

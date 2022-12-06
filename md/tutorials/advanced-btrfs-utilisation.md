@@ -64,7 +64,8 @@ To delete a specific snapshots with its name, type this command:
 This functionality can also be completely removed by fully uninstalling the package. In this case, you have to run this command:  
 ```sudo apt remove --purge kaisen-timeshift-apt```  
 
-Remember to regularly delete your BTRFS snapshots taken with apt-btrfs-snapshot, they can take up considerable space on your storage device.
+A systemd timer and service are installed by default to remove automatically all snapshots older than 7 days. Manual deletion isn't required, but it's possible to delete them manually.
+Snapshots restored can also be deleted with the timeshift --remove command.
 
 ### The grub-btrfs package
 Since the 2.2RC2 release, the grub-btrfs package is included by default when Kaisen uses BTRFS as default filesystem. The grub-btrfs package allows to boot on a previously created snapshot directly from the GRUB menu! All taken snapshots will can be restored from the started snapshot!  

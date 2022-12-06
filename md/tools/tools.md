@@ -211,6 +211,11 @@ progress, pv, less, plocate, dirmngr, gpa, gpg, gnupg2, curl, wget, git, gpg-age
 linux-firmware-acenic, linux-firmware-adaptec, linux-firmware-advansys, linux-firmware-alacritech, linux-firmware-amd-graphics, linux-firmware-amd-microcode, linux-firmware-atheros, linux-firmware-atmel, linux-firmware-atusb, linux-firmware-broadcom, linux-firmware-cadence, linux-firmware-cavium, linux-firmware-chelsio, linux-firmware-cirrus, linux-firmware-conexant, linux-firmware-doc, linux-firmware-edgeport, linux-firmware-ene, linux-firmware-inside-secure, linux-firmware-intel-bluetooth, linux-firmware-intel-ethernet, linux-firmware-intel-graphics, linux-firmware-intel-hfi1, linux-firmware-intel-iscsi, linux-firmware-intel-qat, linux-firmware-intel-sound, linux-firmware-iwlwifi, linux-firmware-kaweth, linux-firmware-libertas, linux-firmware-mediatek, linux-firmware-mellanox, linux-firmware-microchip, linux-firmware-multitec-usb, linux-firmware-myricom, linux-firmware-netronome, linux-firmware-nvidia-graphics, linux-firmware-qlogic, linux-firmware-ralink, linux-firmware-realtek, linux-firmware-redpine, linux-firmware-renesas, linux-firmware-rockchip, linux-firmware-rocketport, linux-firmware-tehuti, linux-firmware-vxge, linux-firmware-wfx, firmware-b43-installer, firmware-ast, firmware-microbit-micropython, firmware-sof-signed, firmware-zd1211, bluetooth, blueman, bluez-tools, bluez-firmware, alsa-firmware-loaders, nvidia-driver, nvidia-legacy-390xx-driver, intel-microcode
 ```
 
+## Exegol
+```bash
+exegol, exegol-docs
+```
+
 ## KDE
 ```bash
 kaisen-interfaces-common, kde-standard, sddm, sddm-theme-breeze, network-manager

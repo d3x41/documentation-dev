@@ -60,6 +60,10 @@ These launchers open a full help or man page.
 
 This menu has been specially designed to simplify the management of services in a simple way. All the services added by the tools present by default in the distribution are disabled for performance and resource saving reasons. Launchers point to scripts in /opt/services, and are sorted by the name of the service, for example, Avahi, 2ping, etc. Certain categories like containerization as well as virtualization encompass multiple launchers. For example in virtualization, the services for QEMU/KVM, VirtualBox and VMWare are arranged here, this allows to reduce the size of the menu. There are also two additional scripts that allow them to turn everything on or off, to avoid having to manually turn each service on or off in the categories. On these two scripts, logical conditions exist to allow you to run these scripts even if the commands executed by this script return an error because the service does not exist. Scripts can also be started manually with the terminal, but are not intentionally present in /usr/sbin or /sbin because they are intended to be used from the menu (which will only reference the launchers of the installed services).
 
+### Exegol
+
+The Exegol menu is a menu to group together the exegol tool and its documentation.
+
 ## Dynamic menu update
 
 All launchers of each category are present in the menu only if the package associated with the program executed by the launcher is present on the system. So if you uninstall a package, or use the ISO dedicated to the rescue system, only the launchers associated with installed software will be listed. This behavior is the same as for the services menu, the scripts will still be present in /opt/services but will no longer be listed in the menu.

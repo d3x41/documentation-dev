@@ -432,8 +432,13 @@ Automatically create snapshots when APT is used with Timeshift
 ### kaisen-live-guest-additions
 Management of guests additions services for Kaisen live systems
 
+### exegol
+Fully featured and community-driven hacking environment
+
+### exegol-docs
+Documentation for Exegol
+
 ## Source of packages
 All the sources of the packages can be found here:
 
 https://gitlab.com/kaisenlinux/packages
-

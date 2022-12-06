@@ -44,5 +44,5 @@ deb-src https://deb.kaisenlinux.org kaisen-testing main contrib non-free
 
 ## Feedback and discussions
 
-- Feedback & contact: team@kaisenlinux.org
-- Forum : https://forum.kaisenlinux.org
+- Forum: https://forum.kaisenlinux.org
+- Telegram: https://t.me/KaisenLinux

@@ -179,6 +179,10 @@ This metapackage install all tools listed [here](tools.html#filesystems-tools).
 ### kaisen-miscellaneous
 This metapackage install all tools listed [here](tools.html#miscellaneous-tools).
 
+### kaisen-exegol
+This metapackage install all tools listed [here](tools.html#exegol).
+
+
 ## Kaisen Linux metapackages for graphical interfaces
 
 ### kaisen-kde

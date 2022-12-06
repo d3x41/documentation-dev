@@ -104,3 +104,5 @@ The entry **Install offline manpages** will install only this [tool](packages.ht
 The entry **Install offline documentation** will install only this [tool](packages.html#kaisen-documentation)
 
 The entry **Install Conky** will install only this [tool](packages.html#kaisen-conky)
+
+The entry **Install Exegol and its documentation** will install only this [tool](tools.html#exegol)
