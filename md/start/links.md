@@ -38,7 +38,7 @@ deb-src https://deb.kaisenlinux.org kaisen-testing main contrib non-free
 
 ## Distribution sources
 
-- GitHub (alpha and beta versions): https://github.com/KaisenCAS/kaisenlinux
+- GitHub (alpha and beta versions): https://github.com/kevinchevreuil/kaisenlinux
 - GitLab (rolling version): https://gitlab.com/kaisenlinux
 - GitLab mirror GitHub (rolling version): https://github.com/kaisenlinux
 
