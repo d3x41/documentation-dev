@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# DESCRIPTION : install asdf manager 
+# DESCRIPTION : install asdf manager
 # REQUIREMENTS : sudo
 # USAGE1 : chmod +x install-asdf.sh && ./install-asdf.sh
 
@@ -8,7 +8,7 @@
 asdf_git="https://github.com/asdf-vm/asdf.git"
 asdf_version="v0.10.2"
 # requirements on linux (git or minimal with git-core)
-sudo apt install curl git libssl-dev automake autoconf libncurses5-dev make gcc unzip 
+sudo apt install curl git libssl-dev automake autoconf libncurses5-dev make gcc unzip
 
 # clone the latest branch via git
 git clone $asdf_git ~/.asdf --branch $asdf_version

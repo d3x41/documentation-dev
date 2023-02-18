@@ -13,7 +13,7 @@ This section lists all existing official links for the project.
 ## Officials ISO downloads mirrors
 
 - Official mirror: https://iso.kaisenlinux.org
-- Alternative mirror: https://iso.kaisenlinux.xyz
+- Torrent mirror: https://torrent.kaisenlinux.org
 
 ## APT repositories
 

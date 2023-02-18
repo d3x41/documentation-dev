@@ -4,8 +4,8 @@ defmodule KaisenDocumentation.MixProject do
   def project do
     [
       app: :kaisen_documentation,
-      version: "2.2.0",
-      elixir: "~> 1.14.2",
+      version: "2.2.1",
+      elixir: "~> 1.14.3",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
 
@@ -36,6 +36,7 @@ defmodule KaisenDocumentation.MixProject do
           "md/tools/tools.md": [ title: "Tools"],
           "md/tools/packages.md": [ title: "Packages"],
           "md/tools/metapackages.md": [ title: "Metapackages"],
+	  "md/tutorials/gns3-utilization.md": [ title: "GNS3 utilization"],
           "md/tutorials/Windows-bootable-USB-key.md": [ title: "Windows bootable USB key"],
           "md/tutorials/Bad-sectors-analyses.md": [ title: "Bad sectors analyses"],
           "md/tutorials/grub-repair.md": [ title: "Repair GRUB"],

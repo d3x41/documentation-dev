@@ -1,7 +1,7 @@
 # How to change login wallpaper?
 
 ## Text edition method
-On MATE, LXDE, XFCE and KDE (defined by default by kaisen-kde postinst script), lightdm manages the login wallpaper. 
+On MATE, LXQT, XFCE and KDE (defined by default by kaisen-kde postinst script), lightdm manages the login wallpaper. 
 
 To change it, place the command:
 
@@ -50,4 +50,4 @@ indicators = ~spacer;~spacer;~host;~spacer;~session;~clock;~power
 ```
 
 ## Graphic method
-The **lightdm-gtk-greeter-settings** tool is integrated by default on MATE, LXDE, XFCE and KDE to be able to easily change the lightdm settings. This will produce the same result as editing the `/etc/lightdm/lightdm-gtk-greeter.conf` file as the software will modify it to reflect your settings made.
+The **lightdm-gtk-greeter-settings** tool is integrated by default on MATE, LXQT, XFCE and KDE to be able to easily change the lightdm settings. This will produce the same result as editing the `/etc/lightdm/lightdm-gtk-greeter.conf` file as the software will modify it to reflect your settings made.
