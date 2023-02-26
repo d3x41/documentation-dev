@@ -54,6 +54,7 @@ The documentation is splitted in 6 GUIDES on the left menu bar:
     - [Kaisen Linux repositories](repo.html)
     - [Kaisen Linux updates](update.html)
 - Tutorials
+    - [GNS3 Utilization](gns3-utilization.html)
     - [Windows bootable USB key](windows-bootable-usb-key.html)
     - [Bad sectors analyses](bad-sectors-analyses.html)
     - [Repair GRUB](grub-repair.html)

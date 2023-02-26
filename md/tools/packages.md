@@ -438,6 +438,9 @@ Fully featured and community-driven hacking environment
 ### exegol-docs
 Documentation for Exegol
 
+### kubeshark
+Wireshark for Kubernetes
+
 ## Source of packages
 All the sources of the packages can be found here:
 

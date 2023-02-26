@@ -17,3 +17,7 @@ The GNS3 daemon must be disabled for this use case.
 If you need to use GNS3 with the GNS3 server installed and used directly on the localhost, the GNS3 server only accepts to write in the **/var/lib/gns3** directory, because the gns3-server package was built to automatically add all usable users on the system in the GNS3 group. You can create a GNS3 project in the **/var/lib/gns3** directory.
 
 The GNS3 daemon must be enabled for this use case.
+
+## GNS3 server configuration
+
+The configuration file for the GNS3 server can be found here: ```/var/lib/gns3/gns3_server.conf```. In this configuration file, you can set many settings like the TCP port or the IP address.
