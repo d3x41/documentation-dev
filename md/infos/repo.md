@@ -3,8 +3,8 @@
 - Default `sources.list` in `/etc/apt/`:
 
 ```bash
-deb https://deb.kaisenlinux.org kaisen-rolling main contrib non-free
-deb-src https://deb.kaisenlinux.org kaisen-rolling main contrib non-free
+deb https://deb.kaisenlinux.org kaisen-rolling main contrib non-free non-free-firmware
+deb-src https://deb.kaisenlinux.org kaisen-rolling main contrib non-free non-free-firmware
 ```
 
 ## Referential lists
