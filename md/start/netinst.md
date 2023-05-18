@@ -1,11 +1,9 @@
 # Installation with NETINST ISO
 
 ## Prerequisites
-
 Internet is mandatory for the installation via ISO netinst. Even if the system can be installed without internet, you will have a limited and certainly not fully functional installation.
 
 ## Modes
-
 Graphical install: Graphical installer with mouse support.  
 Install: Semi-graphic installer, comparable to a ncurses interface.    
 
@@ -23,7 +21,6 @@ In the most classic cases, the normal mode will be more than enough.
 The **automated install** mode is not officially supported on Kaisen, it is present because it is provided by default by the installer but the automated installation is disabled.
 
 ## How the netinst installer works
-
 The basic system will be installed after the internet has been configured.  
 Then the tasksel software will be launched. This software will allow you to install a series of software of your choice in the form of a menu. This predefined set of proposed software are the packages and metapackages developed for Kaisen Linux.  
 

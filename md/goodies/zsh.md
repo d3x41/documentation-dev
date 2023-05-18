@@ -23,7 +23,6 @@ sudo useradd -s /bin/zsh user
 ```
 
 ### Modify useradd configuration
-
 In the file `/etc/default/useradd`, change the following line:
 
 ```bash
@@ -40,7 +39,6 @@ After that, with the useradd command the bash shell will be set by default, and 
 When updating the shadow package, select the option "N" or "O" to keep your configurations.
 
 ### Adduser command
-
 Type this when adding a user with the adduser command to give them the bash shell by default:
 
 ```bash
@@ -48,7 +46,6 @@ sudo adduser --shell /bin/zsh user
 ```
 
 ### Modify adduser configuration
-
 In the file `/etc/adduser.conf`, change the following line:
 
 ```bash

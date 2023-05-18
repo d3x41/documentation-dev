@@ -5,7 +5,6 @@
 ## Forked packages
 
 ### base-files
-
 The base-files package will simply provide the following files on the system:
 
 ```bash
@@ -23,34 +22,27 @@ By consequently, personalize the GRUB entries in its default configuration by th
 
 The package has therefore been recompiled to formalize the name of the distribution on the system and customize it a little more.
 
-The file /etc/debian_version is replaced by the /etc/kaisen_version file in the base-files package.
+The file /etc/debian_version is replaced by the /etc/kaisen_version file in the Kaisen base-files package.
 
 ### linux
-
 The kernel has been recompiled to generate .udeb files (used by the Debian installer) as well as .deb files needed to install it via apt or dpkg.  
 The Kaisen Linux kernel has its own lean configuration.
-The kernel is also recompiled to disable signing modules because signing modules breaks GRUB
-with Kaisen Linux configuration.
+The kernel is also recompiled to disable signing modules because signing modules breaks GRUB with Kaisen Linux configuration.
 
 ### debian-installer
-
 This package is forked to build the installer with the custom Kaisen Linux kernel as well as our packages used by the installer (rootskel-gtk for example). It is necessary to rebuild the installer to integrate the modified packages for the installer and thus integrate them into the rolling release ISO.
 
 ### rootskel-gtk
-
 This package has been modified because it provides the graphical configuration of the installer (theme, banners). The theme of the Kaisen Linux graphical installer is based on the original Clearlooks theme.
 
 ### apt-setup
-
 This package allows you to configure the /etc/apt/sources.list file after installing the system.  
 Since the Kaisen Linux installer is configured to request no network configuration, this package has been forked to add the Kaisen Linux repository, because by default, without internet connection (therefore no mirror selection), apt-setup will configure the Debian security repositories.  
 
 ### choose-mirror
-
 This package configures the mirrors to be used to download packages.
 
 ### partman-auto
-
 This package, as its name suggests, allows you to automatically partition the disk during installation.
 This package was forked for three things:  
 - Use of BTRFS as default file system on all partitions of the disk (except /boot if the partition is separated)
@@ -58,30 +50,23 @@ This package was forked for three things:
 - Modification of the size of the partitions allocated by partman to adapt it to the size required by Kaisen Linux and thus limit any problems that may appear on insufficient disk space (especially in case of separation of the partitions /home /var /tmp and /).
 
 ### debootstrap
-
 This package builds and installs the base system (the packages mentioned as required). This package is forked to integrate the specific configurations of Kaisen Linux (build the base system from the distribution repository).
 
 ### desktop-base
-
 This package provides wallpapers for the desktop, login screen, grub etc ...  
 This package is forked to add the different Kaisen themes on the system to provide wallpapers as well as "alternatives" to define by default the theme to use. It is by default configured on kaisen-theme.  
 
 ### grub2
-
 This package was forked to integrate the kaisen-grub-configuration package as a dependency. This allowed the possibility of providing a GRUB image even when the machine is encrypted and activating the plymouth theme.
 
 ### live-build
-
 It is the official Debian tool for building system images. It was forked to add support for the "kaisen-rolling" repository.
 
 ### live-config
-
 This package contains all live configurations. Forked to add components/0031-kaisen-password script. This script add a password for live system.
 
 ### shadow
-
-This package was forked because the /etc/default/useradd file was modified to support /bin/zsh as the default terminal when adding a user.  
-The number of users to add to the system has also been changed. Maximum 100 users can be added (by default, 58999 users can be added).
+This package was forked to use the /bin/bash shell by default when a user is created.  
 
 ### live-installer
 Forked to add 61kaisen script to launch this script after the system installation.
@@ -90,7 +75,7 @@ Forked to add 61kaisen script to launch this script after the system installatio
 Forked to define kaisen-theme by default for Plymouth.
 
 ### partman-btrfs
-Forked to create BTRFS subvolumes
+Forked to automatically create BTRFS subvolumes.
 
 ### simple-cdd
 Forked to add kaisen profile. The kaisen profile add a custom preseed for NETINST ISO,
@@ -141,26 +126,21 @@ Cross-platform lib for process and system monitoring in Python
 ## Kaisen Linux packages
 
 ### kaisen-grub-configuration
-
 The GRUB package has been recompiled to change the configuration of the /etc/default/grub file to add support for the default splash screen for the user on the installed system (graphical boot) and also allow in case the command lsb_release -i -s cannot be executed because the lsb-release script is not present, you can still display Kaisen and not Debian in the GRUB entries.  
 
 The kaisen-grub-configuration package is installed automatically during system installation and automates this customization.
 
 ### kaisen-archive-keyring
-
 This package provides the public GPG keys needed to use our secure repository with identity verification via a GPG key (used by official Debian repositories and implemented security by default).
 
 ### kaisen-menu
-
 This package provides the custom menu. This includes the "skeleton" of the menu (allows you to organize the location of the different folders), the directories as well as the launchers of the applications. This menu is mainly used to reference the tools present in the distribution.
 
 ### kaisen-services-management
-
 This package provides various bash scripts allowing you to easily manage additional services (added by software supplied with the distribution).  
 The scripts are installed in `/usr/share/kaisen-services-management`. This package coupled with the "kaisen-menu" package allows you to reference and execute directly via the menu the scripts classified by service to activate or deactivate additional services. Two activation and deactivation scripts exist for all services.
 
 ### kaisen-update
-
 This package just provides a script to perform an apt update && apt upgrade in one command. The kaisen-update command also allows to remove the most necessary packages (dependencies no longer used).
 
 ### kaisen-build
@@ -178,7 +158,6 @@ All Kaisen Linux XFCE Desktop Environment configurations (themes, icons etc).
 The package kaisen-interface-common package installs the kaisen-interface-switcher command and commons packages for all interfaces.
 
 ### kaisen-skeleton
-
 This allows you to have launchers on the desktop, the conky theme...  
 This package replaces the old kaisen-*-default-profile packages which installed only the default profile of the related interface.
 This package installs the kaisen-update-skel command.  

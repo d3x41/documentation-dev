@@ -5,7 +5,6 @@ The chroot creation permit to be able to restore a damaged system, while mountin
 This is mainly useful for systems that can no longer boot conventionally.
 
 ## Classic partition
-
 ```bash
 sudo fdisk -l (Locate the EFI Linux partition and /)
 sudo mount /dev/sdX /mnt (X represents the drive letter)
@@ -15,7 +14,6 @@ sudo chroot /mnt
 ```
 
 ## LVM without LUKS encryption
-
 ```bash
 sudo fdisk -l (Locate the EFI Linux partition and /)
 sudo vgscan

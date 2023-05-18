@@ -6,12 +6,10 @@ We recommends to use VirtualBox, VMWare Workstation or QEMU/KVM hypervisors.
 The VMWare, Virtualbox and QEMU/KVM guests daemons are activated by default when Kaisen Linux is executed in them.  
 
 ## VirtualBox
-
 You can virtualize Kaisen Linux with VirtualBox hypervisor.  
 Following this step:
 
 ### Minimal Configuration
-
 ```bash
 1)  New virtual machine
 2)  Name: Your choice
@@ -31,7 +29,6 @@ Following this step:
 ```
 
 ### Recommend configuration
-
 ```bash
 1)  New virtual machine
 2)  Name: Your choice
@@ -51,7 +48,6 @@ Following this step:
 ```
 
 ### Install guest additions from a host system other than Kaisen Linux
-
 To install the VirtualBox Guest Additions from a host system other than Kaisen Linux, you must use the Guest Additions ISO provided by Oracle which can be downloaded here: https://download.virtualbox.org/virtualbox/6.1.34/VBoxGuestAdditions_6.1.34.iso (Version 6.1.34 is the latest version as of this writing).
 Once the CD is inserted into the VM, run these commands:
 ```bash
@@ -63,7 +59,6 @@ Let the process complete and follow the given steps.
 Once all this is done, you must restart the VM and you will be able to enjoy the full guest additions installed on the VM!
 
 ### Install guest additions from a Kaisen Linux system host
-
 To install the VirtualBox Guest Additions from a Kaisen Linux system host, you can find the ISO of guest additions here: **/usr/share/virtualbox/VBoxGuestAdditions.iso**
 Once the CD is inserted into the VM, run these commands:
 ```bash
@@ -75,12 +70,10 @@ Let the process complete and follow the given steps.
 Once all this is done, you must restart the VM and you will be able to enjoy the full guest additions installed on the VM!
 
 ## VMWare Workstation
-
 You can virtualize Kaisen Linux with VMWare Workstation hypervisor.
 Following this step:
 
 ### Minimal configuration
-
 ```bash
 1)  New Vitual Machine
 2)  Typical
@@ -100,7 +93,6 @@ Following this step:
 ```
 
 ### Recommend configuration
-
 ```bash
 1)  New Vitual Machine
 2)  Typical
@@ -122,7 +114,6 @@ Following this step:
 ## Informations for QEMU/KVM
 
 ### Tools and daemons
-
 To facilitate the creation of a virtualized virtual machine with QEMU/KVM, all virtual machines can be created through virt-manager. Full support for different agents like QEMU agent, SPICE, are integrated by default but disabled.  
 SPICE agents allow you to activate the shared clipboard, put the virtual machine in full screen when viewing it via the console. This is the equivalent of the virtualbox and vmware agents.  
 SPICE agents are managed by a systemd service.  

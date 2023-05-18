@@ -7,7 +7,6 @@ Note that creating a custom ISO also includes the Debian installer (default conf
 We advise you to use kaisen-build in order to create your own live system.
 
 ## The different variants
-
 We have the following variants:
 
 ```bash
@@ -44,7 +43,6 @@ CUSTOM = Variant pre-configured, but no integrated tool. Variant reserved for th
 ```
 
 ## How to proceed?
-
 Install kaisen-build with the `sudo apt install kaisen-build` command. The package will install live-build (a set of scripts used by Debian to build their official ISO images, which we also use), live-manual and live-doc which will help you get started with the live-build configuration and customize your ISO, live-boot to start your live.  
 Once the package is installed, in `/home/*` you will have a folder named **kaisen-build**.  
 In the `kaisen-build/variant/` folder, there is the folder named **CUSTOM**. This folder is reserved for you so that you can make your ISO live and installable (these options are by default in the live-build configuration file that I do not recommend that you modify), this file is complete and some options are already preconfigured like official Kaisen Linux packages, GUIs, as well as the Debian Installer [preseed](install.html#example-of-preseed-file) file.  
@@ -59,18 +57,15 @@ sudo ./kaisen-build -v CUSTOM -r 1.0
 Version 1.0 is an example, but you can put whatever you want, I advise you not to put too many letters and numbers because if the name of the ISO volume exceeds 32 characters, the compilation will crash. The name of the ISO volume is "Kaisen Linux Rolling $variant $version" ($variant corresponds here to CUSTOM and $version corresponds here to 1.0), in the example, the name of the ISO volume will be Kaisen Linux Rolling CUSTOM 1.0.
 
 ## Support
-
 Please be aware that **we will not provide support to users wishing to create their own ISO**. Not that we don't want to help you, but we are very busy professionally and on the constant development of Kaisen Linux.
 
 ## Warning on personal images
-
 One of the strengths of the GNU/Linux world, which we follow to give our users the choice to do what they want with the environment we provide them so that they can adapt it to their needs, is also a problem because the integration of malware, trackers or others can be facilitated.  
 To avoid this kind of inconvenience, do not download an ISO image outside the following two mirrors: https://iso.kaisenlinux.org and https://iso.kaisenlinux.xyz    
 Also check the SHA256 checksums indicated on the official website.
 So keep your images created by yourself for yourself, and do not use ISOS images whose origin thereof is not a certainty (check the checksums on the site to be sure).
 
 ## Update CUSTOM branch
-
 If you want to start from scratch or update the CUSTOM branch to have our latest pre-configuration (although changes are rare), you must uninstall and completely purge the package then reinstall it.  
 To do this, you have to run this command:  
 

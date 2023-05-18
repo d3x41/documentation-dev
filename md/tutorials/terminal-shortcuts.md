@@ -1,11 +1,9 @@
 # Convenient Kaisen Terminal shortcuts
 
 ## Kaisen Terminal?
-
 The Kaisen Terminal launcher is actually just the **terminator** terminal emulator (written in Python) which is executed, but has been fully customized. This tool is great because it has a lot of features including the main one which is device deduplication.
 
 ## Main keyboard shortcuts
-
 To open a new tab from the current terminal window, use the command:
 
 ```bash
@@ -30,7 +28,6 @@ CTRL +E
 ```
 
 ## Tips
-
 On the default Terminator setup on the distro, the scroll bar is disabled, and you might need it. To activate it, nothing could be simpler do this:
 
 ```bash

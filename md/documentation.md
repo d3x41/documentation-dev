@@ -1,5 +1,4 @@
 # Kaisen Linux | Documentation
-
 > Kaisen Linux is a distribution for IT professional based on the Debian GNU/Linux distribution.   
 
 It is a complete operating system whose originality is to provide a set of tools dedicated to system administration and covering all the needs for diagnosing and dealing with faults or failures of an installed system and its components. The most important system tools are available.   
@@ -7,7 +6,6 @@ It is a complete operating system whose originality is to provide a set of tools
 Since release 1.0 named, Kaisen Linux is a rolling release (continuous update) based on debian testing. 
 
 ## Quick start
-
 1. Choose and download an iso :
     - [Kaisen Linux MATE (default GUI)](https://iso.kaisenlinux.org/rolling/kaisenlinuxrolling2.3-amd64-MATE.iso)
     - [Kaisen Linux KDE](https://iso.kaisenlinux.org/rolling/kaisenlinuxrolling2.3-amd64-KDE.iso)
@@ -24,7 +22,6 @@ Since release 1.0 named, Kaisen Linux is a rolling release (continuous update) b
 8. Join our [Discord server](https://discord.gg/rCg6jjzPwj)
 
 ## Documentation guides
-
 The documentation is splitted in 6 GUIDES on the left menu bar:
 - START
 - TOOLS & PACKAGES
@@ -34,7 +31,6 @@ The documentation is splitted in 6 GUIDES on the left menu bar:
 - TIPS AND TRICKS
 
 ## Help Summary 
-
 - Start
     - [Official Kaisen Linux links](links.html)
     - [Why use Kaisen Linux ?](why.html)

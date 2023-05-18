@@ -1,7 +1,6 @@
 # GRUB repair
 
 **GRUB repair with CLI method**  
-
 Once the system is installed but after the impossibility of installing GRUB on a system in UEFI, here is the procedure to follow for the installer according to your partitioning.  
 
 You can help yourself with Gparted software for this tutorial.  
@@ -11,7 +10,6 @@ Only the CLI method will be presented, because it is the most efficient, relevan
 ## GRUB EFI
 
 ### Classic partition
-
 ```bash
 sudo fdisk -l (Locate the EFI Linux partition and /)
 sudo mount /dev/sdX /mnt (X represents the drive letter)
@@ -36,7 +34,6 @@ sudo apt install grub-efi
 The problem should be solved
 
 ### LVM without LUKS encryption
-
 ```bash
 sudo fdisk -l (Locate the EFI Linux partition and /)
 sudo vgscan
@@ -79,7 +76,6 @@ sudo apt install grub-efi
 The problem should be solved  
 
 ### LVM with LUKS encryption
-
 ```bash
 sudo fdisk -l (Locate the EFI Linux partition and /)
 sudo cryptsetup luksOpen /dev/sdXY sdxy_crypt (X represents the drive letter, Y the partition / encrypted number)

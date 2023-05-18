@@ -1,7 +1,6 @@
 # Kaisen Conky
 
 ## What is Kaisen Conky?
-
 Kaisen Conky is a package created for Kaisen Linux installing the Conky software and the theme created for Kaisen Linux. Conky is a desktop widget that displays information about processes in use, battery percentage, network connection status, disk space used, and more!
 
 ## Informations on the conky theme
@@ -84,7 +83,6 @@ X-XFCE-Autostart-enabled=true
 When updating the kaisen-kde, kaisen-lxqt, kaisen-mate or kaisen-xfce package, select the option "N" or "O" to keep your configurations.  
 
 ### Problems with KDE desktop
-
 I have seen some issues with KDE.  
 The conky is initially configured to be completely transparent and integrated into the wallpaper. KDE is initially configured to start programs that were not closed from the previous session, and Conky is one of them.  
 Kaisen Linux's default profile disables this feature by default by opening an empty session each time the computer is started/restarted.  

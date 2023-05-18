@@ -8,7 +8,6 @@ For this a tool has been created to do it simply and fully automated!
 This tool was also created so that the user does not come to reinstall his OS in the event of difficulties.
 
 ## kaisen-interface-switcher
-
 The script since Kaisen Linux 1.4 revision is designed when the script starts up (after all checks have been made), to update itself if a new, more recent version of the script (installed by the kaisen-kde package, kaisen-lxde, kaisen-mate, kaisen-xfce depending on your current GUI). This is intended if you do not update often, to be able to change your interface and update the list of packages to uninstall. The main purpose of this is to automate the task even more, saving you time.  
 The kaisen-interface-switcher script allows you to change your graphical interface by installing the one of your choice by removing your current graphical interface. It can be started by the `sudo kaisen-interface-switcher` command.  
 The first versions of this script reinstalled for each user the default profile of each interface (execution of the kaisen-interface-switcher command during the script) but this lost the personalization of the user if he wishes to reinstall his graphical interface. 'original (e.g. switching from MATE to KDE then from KDE to MATE).  
