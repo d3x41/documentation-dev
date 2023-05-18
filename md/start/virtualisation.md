@@ -157,22 +157,3 @@ SPICE agents are managed by a systemd service.
 The integrated services are named **spice-vdagent** as well as **spice-webdavd**.
 The **spice-vdagent** daemon allows you to enable copy and paste as well as to adjust the resolution of the virtual machine screen in relation to the resolution of the host. This daemon is useful for guest guests (using a graphical interface).  
 The **spice-webdavd** daemon is used to support file sharing between the host and the virtual machine.  
-
-### Daemons gestion
-
-The spice-webdavd daemon can be easily enabled and disabled here:
-
-```bash
-Kaisen Linux => Services => Virtualization => spice-webdavd-enable
-Kaisen Linux => Services => Virtualization => spice-webdavd-disable
-```
-
-The spice-vdagent daemon can be easily enabled and disabled here:
-
-```bash
-Kaisen Linux => Services => Virtualization => spice-vdagent-enable
-Kaisen Linux => Services => Virtualization => spice-vdagent-disable
-```
-
-**Warning:**
-After the activation of the spice-vdagent daemon on your virtual machine, you need to make the SPICE window full screen and manually run the "spice-vdagent" command and then disconnect your graphical session to make the virtual machine fully full screen.
