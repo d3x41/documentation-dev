@@ -21,9 +21,9 @@ https://torrent.kaisenlinux.org
 
 ### Linux
 Even if you have downloaded ISO from an official source, still perform checksum verification.
-At each release, we publish the checksums in sha256. To check the ISO, proceed as follows:
+At each release, we publish the checksums in sha256. To check the ISO, proceed as follows, for example for the MATE ISO:
 
-Command: ```sha256sum /path/of/ISO/kaisenlinuxrolling1.0-amd64.iso```
+Command: ```sha256sum /path/of/ISO/kaisenlinuxrolling2.2-amd64-MATE.iso```
 
 ### Windows
 For Windows, use **HackTab** software and check sha256 value.
@@ -34,6 +34,6 @@ Right click on the file to analyze and go to the **hashes** section.
 For MacOS, use the shasum command => Example:
 
 ```bash
-shasum -a 256 /path/your/ISO/kaisenlinuxrolling1.0-amd64.iso
-1843aad731a9c01f3e196e222baa92c8022cb9069fb2b02fb10dcad127d066a8 /path/of/ISO/kaisenlinuxrolling1.0-amd64.iso
+shasum -a 256 /path/your/ISO/kaisenlinuxrolling2.2-amd64-MATE.iso
+6103a435e675b5b13157d6102df1ee4d377c21d46bdee59e3a6615b76a04d2a5 /path/of/ISO/kaisenlinuxrolling2.2-amd64-MATE.iso
 ```

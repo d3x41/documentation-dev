@@ -46,7 +46,7 @@ dcfldd, dc3dd, fatresize, fdisk, gdisk, gparted, nwipe, parted, secure-delete, w
 
 ### Data protection
 ```bash
-fscrypt, lockfile-progs, zulucrypt-cli, zulucrypt-gui, zulumount-cli, zulumount-gui, veracrypt
+fscrypt, lockfile-progs, zulucrypt-cli, zulucrypt-gui, zulumount-cli, zulumount-gui, veracrypt, sedutil
 ```
 
 ### Data recovery
@@ -108,7 +108,7 @@ cbm, etherape, ifstat, iftop, iperf, iperf3, nethogs, netperfmeter, sockstat, tc
 
 ### PCAP
 ```bash
-darkstat, hunt, netsed, ngrep, pcapfix, scapy, python3-scapy, tcpdump, tcpreplay, tcpxtract, tshark, wireshark, notwireshark
+darkstat, hunt, netsed, ngrep, pcapfix, scapy, python3-scapy, python3-pyx, tcpdump, tcpreplay, tcpxtract, tshark, wireshark
 ```
 
 ### Console port
@@ -173,7 +173,7 @@ virtualbox, virtualbox-qt, virtualbox-dkms, virtualbox-source, virtualbox-guest-
 
 ### Various system administrators tools
 ```bash
-xca, krb5-config, krb5-pkinit, krb5-user, krb5-locales, ctop, apache2-utils, chrony, python3-ldapdomaindump
+xca, krb5-config, krb5-pkinit, krb5-user, krb5-locales, apache2-utils, chrony, python3-ldapdomaindump
 ```
 
 ### Apparmor tools and profiles
@@ -188,7 +188,7 @@ mariadb-client, etcd-client, postgresql-client
 
 ## DevOps and Cloud
 ```bash
-docker-compose, docker.io, ansible, ansible-lint, lxc, lxctl, kubernetes-client, vagrant, vagrant-lxc, vagrant-sshfs, jmeter, awscli, azure-cli, packer, puppet-agent, pdk, terraform, terraform-docs, s3fs, k6, k9s, helm, podman, buildah, minikube, eksctl, trivy, kustomize, kind, krew, kubectx, kyverno, popeye, tfsec, tflint, vault, velero, terragrunt, openstack-client, lazydocker
+docker-compose, docker.io, ansible, ansible-lint, lxc, lxctl, lxd, lxd-agent, lxd-client, lxd-migrate, lxd-tools, kubernetes-client, vagrant, vagrant-lxc, vagrant-sshfs, jmeter, awscli, azure-cli, packer, puppet-agent, pdk, terraform, s3fs, k6, k9s, helm, podman, buildah, minikube, eksctl, trivy, kustomize, kind, krew, kubectx, kyverno, popeye, tfsec, tflint, vault, velero, terragrunt, openstack-client, lazydocker, kubeshark, vagrant-libvirt, ctop
 ```
 
 ## System snapshots
@@ -198,12 +198,12 @@ kaisen-timeshift-apt, btrbk, snapper, timeshift, grub-btrfs
 
 ## Filesystems tools
 ```bash
-cryptsetup, dmraid, dmsetup, mdadm, lvm2, dosfstools, f2fs-tools, nilfs-tools, ocfs2-tools, btrfs-compsize, btrfs-heatmap, btrfs-progs, btrfsmaintenance, gfs2-utils, hfsplus, hfsprogs, hfsutils, hfsutils-tcltk, jfsutils, reiserfsprogs, vmfs-tools, xfsdump, xfsprogs, zfs-fuse, zfsnap, exfatprogs, exfat-fuse, ceph-fuse, fuse3, glusterfs-client, udfclient, udftools, reiser4progs, vmfs6-tools, xmount, archivemount, tmfs, cifs-utils, apfs-fuse, apfsutil, ecryptfs-utils, libbde-utils, dislocker, libfvde-utils, libvhdi-utils, libvmdk-utils, libfsntfs-utils, gvfs-fuse, gvfs, ntfs-3g, wimtools
+cryptsetup, dmraid, dmsetup, mdadm, lvm2, dosfstools, f2fs-tools, nilfs-tools, ocfs2-tools, btrfs-compsize, btrfs-heatmap, btrfs-progs, btrfsmaintenance, gfs2-utils, hfsplus, hfsprogs, hfsutils, hfsutils-tcltk, jfsutils, reiserfsprogs, vmfs-tools, xfsdump, xfsprogs, zfs-fuse, zfsnap, exfatprogs, exfat-fuse, ceph-fuse, fuse3, glusterfs-client, udfclient, udftools, reiser4progs, vmfs6-tools, xmount, archivemount, tmfs, cifs-utils, apfs-fuse, ecryptfs-utils, libbde-utils, dislocker, libfvde-utils, libvhdi-utils, libvmdk-utils, libfsntfs-utils, gvfs-fuse, gvfs, ntfs-3g, wimtools, apfsprogs
 ```
 
 ## Miscellaneous tools
 ```bash
-progress, pv, less, plocate, dirmngr, gpa, gpg, gnupg2, curl, wget, git, gpg-agent, neofetch, git-repair, img2pdf, mc, strace, yamllint, ltrace, tree, vim, codium, cups, hexedit, file, psmisc, htop, lsof, lzop, p7zip-full, pigz, unp, unar, unrar-free, unzip, zip, bzip2, tar, unrar, zstd, gtkhash, keepassxc, apg, pwgen, isomaster, fred, cabextract, btop, jq, yq, lazygit
+progress, pv, less, plocate, dirmngr, gpa, gpg, gnupg2, curl, wget, git, gpg-agent, neofetch, git-repair, img2pdf, mc, strace, yamllint, ltrace, tree, vim, codium, cups, hexedit, file, psmisc, htop, lsof, lzop, p7zip-full, pigz, unp, unar, unrar-free, unzip, zip, bzip2, tar, unrar, zstd, gtkhash, keepassxc, apg, pwgen, isomaster, fred, cabextract, btop, jq, yq, lazygit, simple-scan
 ```
 
 ## Integrated firmwares

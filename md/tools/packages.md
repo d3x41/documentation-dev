@@ -4,21 +4,12 @@
 
 ## Forked packages
 
-### adduser
-
-This package allows user creation via the adduser command (the binary is a perl script) and also to delete a user with the deluser command. I modified this package to modify the following configurations:
-
-```bash
-*Replace the default bash shell on zsh for user levels in file /etc/adduser.conf
-*Allow the deletion of the folder associated with a deleted user (/home/userdelete) when it is deleted with the delsuer command in file /etc/deluser.conf
-```
-
 ### base-files
 
 The base-files package will simply provide the following files on the system:
 
 ```bash
-*/etc/debian_version
+*/etc/kaisen_version
 */etc/issue
 */etc/issue.net
 */etc/os-release
@@ -31,6 +22,8 @@ They are also used to customize GRUB thanks to the lsb_release package which, in
 By consequently, personalize the GRUB entries in its default configuration by the command lsb_release -i -s (information present in /etc/default/grub at the line GRUB_DISTRIBUTOR) when executing the update-grub command. The goal here was to replace Debian with Kaisen on the GRUB entries of the installed system. This package surely has many other uses, but I have not encountered them so far.  
 
 The package has therefore been recompiled to formalize the name of the distribution on the system and customize it a little more.
+
+The file /etc/debian_version is replaced by the /etc/kaisen_version file in the base-files package.
 
 ### linux
 
@@ -127,11 +120,8 @@ Forked to add a conffile to load automatically vbox modules at boot
 ### virtualbox-ext-pack
 Forked to change the default response provided by debconf
 
-### virtualbox-guest-additions
+### virtualbox-guest-additions-iso
 Forked to adapt the dependencies to the rest of the VirtualBox packages
-
-### virtualbox-ext-pack
-Forked to change default debconf 
 
 ### python-async-timeout
 Forked to adapt the distributed version to the version required by GNS3
@@ -139,12 +129,16 @@ Forked to adapt the distributed version to the version required by GNS3
 ### netsniff-ng
 Forked to replace ntpsec by chrony as recommanded package
 
+### timeshift
+Forked to add few Kaisen specific patches
+
+### spice-vdagent
+Forked to fix the desktop launcher
+
+### python-psutil
+Cross-platform lib for process and system monitoring in Python
+
 ## Kaisen Linux packages
-
-### kaisen-basemenu-purge
-
-This package removes "double" launchers. These duplicate icons appear when updating packages containing a launcher for a graphical application, for example ettercap, lftp, kismet etc ... Custom launchers have been created for the Kaisen menu to organize them by categories (monitoring, scanner etc). The custom launchers are also launched with sudo if necessary by the software.  
-This package therefore removes the original launchers contained in `/usr/share/applications`
 
 ### kaisen-grub-configuration
 
@@ -163,7 +157,7 @@ This package provides the custom menu. This includes the "skeleton" of the menu 
 ### kaisen-services-management
 
 This package provides various bash scripts allowing you to easily manage additional services (added by software supplied with the distribution).  
-The scripts are installed in `/opt/services`. This package coupled with the "kaisen-menu" package allows you to reference and execute directly via the menu the scripts classified by service to activate or deactivate additional services. Two activation and deactivation scripts exist for all services.
+The scripts are installed in `/usr/share/kaisen-services-management`. This package coupled with the "kaisen-menu" package allows you to reference and execute directly via the menu the scripts classified by service to activate or deactivate additional services. Two activation and deactivation scripts exist for all services.
 
 ### kaisen-update
 
@@ -288,11 +282,8 @@ Vulnerabilities scanner for containers
 ### sentry-python
 Updated tool for integrating GNS3 tools in Kaisen Linux.
 
-### python-cpuinfo
+### python3-cpuinfo
 Updated tool for integrating GNS3 tools in Kaisen Linux.
-
-### pystatgrab
-Packaged tool because is a dependency of certain features offered by Conkycolors.
 
 ### python3-getdevinfo
 Repackaged to make it compatible with Kaisen Linux, is a dependency on ddrescue-gui.
@@ -309,9 +300,6 @@ Packaged because is a dependancy of sslyze
 ### nassl
 Packaged because is a dependancy of sslyze
 
-### i3-gaps
-i3 fork with more features
-
 ### ddrescue
 Data recovery and data protection tool
 
@@ -326,9 +314,6 @@ Security scanner for your Terraform code
 
 ### terragrunt
 Wrapper for Terraform
-
-### notwireshark
-A packet analyzer like tshark but developped in python
 
 ### kyverno
 Kubernetes Native Policy Management
@@ -440,6 +425,15 @@ Documentation for Exegol
 
 ### kubeshark
 Wireshark for Kubernetes
+
+### apfsprogs
+Experimental APFS tools for Linux
+
+### sedutil
+DTA sedutil Self encrypting drive software
+
+### sshs
+Terminal user interface for SSH
 
 ## Source of packages
 All the sources of the packages can be found here:
