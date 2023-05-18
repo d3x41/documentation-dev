@@ -72,7 +72,7 @@ If you are installing Kaisen Linux through manual partitioning, we recommend tha
 You should also leave the default mountpoints options provided with the BTRFS file system selection, these options are optimized for BTRFS and for Kaisen Linux.
 
 ### Installation in BTRFS
-When BTRFS is used for the / partition, the tools in the [kaisen-btrfs-snapshot](tools.html#system-snapshots) metapackage are installed by default when NETINST is used, or retained via installation from a live installer. This allows the user to install these tools only if his system configuration allows system snapshot.  
+When BTRFS is used for the / partition, the tools in the [kaisen-btrfs-snapshots](tools.html#system-snapshots) metapackage are installed by default when NETINST is used, or retained via installation from a live installer. This allows the user to install these tools only if his system configuration allows system snapshot.  
 
 ## Example of preseed file
 
