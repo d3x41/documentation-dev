@@ -6,7 +6,7 @@ Hardware recommandations for using Kaisen Linux:
 
 32-bit ISOs have never been produced by computers for over 10 years and support the amd64 architecture. Kaisen Linux being a distribution intended for IT professionals regardless of their activity, the chances of seeing a computer not supporting the amd64 architecture which is almost nil at present (except IT technicians for individuals with old hardware, but chances are slim anyway), that's why only 64-bit was produced.
 
-Kaisen Linux uses 600Mb of RAM in live and installed version (on a physical machine, not on a VM) on MATE version, and uses 7GB at 9GB of disk space in installed version.
+Kaisen Linux uses 800Mb of RAM in live and installed version (on a physical machine, not on a VM) on MATE version, and uses 9GB of disk space in installed version.
 
 On VM (on VMWare), between 700 and 800MB of RAM are consumed.
 

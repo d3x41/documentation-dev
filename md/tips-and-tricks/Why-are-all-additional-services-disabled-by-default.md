@@ -10,4 +10,4 @@ So we have to list these services, as well as to facilitate their management (ac
 
 ## Problem resolution
 If you therefore have an error telling you that the service is not indicated or certain programs (2ping for example) start but are not functional, try to activate the service corresponding to this program (via the menu or simply by typing yourself systemd commands).
-If that doesn't solve your problem, contact support.
+If that doesn't solve your problem, contact the support.

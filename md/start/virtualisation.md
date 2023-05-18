@@ -2,8 +2,8 @@
 
 In a nutshell, here's how to virtualize Kaisen Linux.  
 We assume here that you know what a hypervisor is, as well as creating a virtual machine.  
-We recommends use VirtualBox or VMWare Workstation.  
-The VMWare guests daemon as activated by default when Kaisen Linux is executed with VMWare Workstation.  
+We recommends to use VirtualBox, VMWare Workstation or QEMU/KVM hypervisors.  
+The VMWare, Virtualbox and QEMU/KVM guests daemons are activated by default when Kaisen Linux is executed in them.  
 
 ## VirtualBox
 
@@ -30,13 +30,6 @@ Following this step:
 15) Leave the other default settings (except if you have specific needs)
 ```
 
-Then start your virtual machine on the ISO.
-After starting the virtual machine, via the menu:
-
-```bash
-Kaisen Linux => Services => Virtualization => virtualbox-guest-enable
-```
-
 ### Recommend configuration
 
 ```bash
@@ -55,13 +48,6 @@ Kaisen Linux => Services => Virtualization => virtualbox-guest-enable
 13) System => Processor => CPU: 2 core
 14) You can use EFI (optional parameter)
 15) Leave the other default settings (except if you have specific needs)
-```
-
-Then start your virtual machine on the ISO.
-After starting the virtual machine, via the menu:
-
-```bash
-Kaisen Linux => Services => Virtualization => virtualbox-guest-enable
 ```
 
 ### Install guest additions from a host system other than Kaisen Linux
@@ -113,13 +99,6 @@ Following this step:
 15) For activate UEFI: Shutdown VM and click at => "Edit virtual machine settings" => Options => Advanced => UEFI
 ```
 
-Then start your virtual machine on the ISO.
-After starting the virtual machine, via the menu:
-
-```bash
-Kaisen Linux => Services => Virtualization => vmware-guest-enable
-```
-
 ### Recommend configuration
 
 ```bash
@@ -138,13 +117,6 @@ Kaisen Linux => Services => Virtualization => vmware-guest-enable
 13) Leave the other default settings (except if you have specific needs)
 14) Click in: Finish
 15) For activate UEFI: Shutdown VM and click at => "Edit virtual machine settings" => Options => Advanced => UEFI
-```
-
-Then start your virtual machine on the ISO.
-After starting the virtual machine, via the menu:
-
-```bash
-Kaisen Linux => Services => Virtualization => vmware-guest-enable
 ```
 
 ## Informations for QEMU/KVM
