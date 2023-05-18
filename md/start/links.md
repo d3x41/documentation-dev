@@ -18,21 +18,21 @@ This section lists all existing official links for the project.
 ## APT repositories
 
 ```bash
-deb https://deb.kaisenlinux.org kaisen-rolling main contrib non-free
-deb https://deb.kaisenlinux.org kaisen-devel main contrib non-free
-deb https://deb.kaisenlinux.org kaisen-packages main contrib non-free
-deb https://deb.kaisenlinux.org kaisen-testing main contrib non-free
-deb-src https://deb.kaisenlinux.org kaisen-rolling main contrib non-free
-deb-src https://deb/kaisenlinux.org kaisen-devel main contrib non-free
-deb-src https://deb.kaisenlinux.org kaisen-packages main contrib non-free
-deb-src https://deb.kaisenlinux.org kaisen-testing main contrib non-free
+deb https://deb.kaisenlinux.org kaisen-rolling main contrib non-free non-free-firmware
+deb https://deb.kaisenlinux.org kaisen-devel main contrib non-free non-free-firmware
+deb https://deb.kaisenlinux.org kaisen-packages main contrib non-free non-free-firmware
+deb https://deb.kaisenlinux.org kaisen-testing main contrib non-free non-free-firmware
+deb-src https://deb.kaisenlinux.org kaisen-rolling main contrib non-free non-free-firmware
+deb-src https://deb/kaisenlinux.org kaisen-devel main contrib non-free non-free-firmware
+deb-src https://deb.kaisenlinux.org kaisen-packages main contrib non-free non-free-firmware
+deb-src https://deb.kaisenlinux.org kaisen-testing main contrib non-free non-free-firmware
 ```
 
 ## Social medias
 
-- Twitter: https://twitter.com/KaisenLinux
+- Twitter: https://twitter.com/kaisenlinux
 - LinkedIn: https://linkedin.com/company/kaisenlinux
-- Mastodon: https://mastodon.social/@KaisenLinux
+- Mastodon: https://mastodon.social/@kaisenlinux
 - Distrowatch: https://distrowatch.com/kaisen
 - Ko-Fi: https://ko-fi.com/kaisenlinux
 
@@ -45,4 +45,5 @@ deb-src https://deb.kaisenlinux.org kaisen-testing main contrib non-free
 ## Feedback and discussions
 
 - Forum: https://forum.kaisenlinux.org
-- Telegram: https://t.me/KaisenLinux
+- Telegram: https://t.me/kaisenlinux
+- Discord: https://discord.gg/rCg6jjzPwj
