@@ -43,11 +43,7 @@ Since the Kaisen Linux installer is configured to request no network configurati
 This package configures the mirrors to be used to download packages.
 
 ### partman-auto
-This package, as its name suggests, allows you to automatically partition the disk during installation.
-This package was forked for three things:  
-- Use of BTRFS as default file system on all partitions of the disk (except /boot if the partition is separated)
-- Definition of EXT4 as the default file system for /boot if the partition is separate from / (this is the case for example during the installation of the system with LVM and cryptsetup).
-- Modification of the size of the partitions allocated by partman to adapt it to the size required by Kaisen Linux and thus limit any problems that may appear on insufficient disk space (especially in case of separation of the partitions /home /var /tmp and /).
+Forked to define BTRFS as default filesystem and reworked default schemes.
 
 ### debootstrap
 This package builds and installs the base system (the packages mentioned as required). This package is forked to integrate the specific configurations of Kaisen Linux (build the base system from the distribution repository).
