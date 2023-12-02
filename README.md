@@ -28,8 +28,8 @@ asdf plugin add erlang
 asdf plugin add elixir
 asdf install erlang latest
 asdf install elixir latest
-# asdf global elixir 1.11.3-otp-23
-# asdg global erlang 23.2.5 
+# asdf global elixir 1.15.7-otp-26
+# asdg global erlang 26.1.2 
 ```
 
 ## How to build html documentation

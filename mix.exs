@@ -4,8 +4,8 @@ defmodule KaisenDocumentation.MixProject do
   def project do
     [
       app: :kaisen_documentation,
-      version: "2.3.0",
-      elixir: "~> 1.14.4",
+      version: "2.3.1",
+      elixir: "~> 1.15.7",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
 
@@ -16,7 +16,7 @@ defmodule KaisenDocumentation.MixProject do
       docs: [
         main: "documentation",
         api_reference: false,
-        logo: "priv/assets/kaisen-logo.jpg",
+        logo: "priv/assets/kaisen.png",
         assets: "priv/assets",
         before_closing_head_tag: &docs_before_closing_head_tag/1,
         formatters: ["html"],
@@ -94,7 +94,7 @@ defmodule KaisenDocumentation.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:ex_doc, "~> 0.29.4", only: :dev, runtime: false},
+      {:ex_doc, "~> 0.30.9", only: :dev, runtime: false},
     ]
   end
 
