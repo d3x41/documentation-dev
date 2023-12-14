@@ -4,7 +4,7 @@ defmodule KaisenDocumentation.MixProject do
   def project do
     [
       app: :kaisen_documentation,
-      version: "2.3.1",
+      version: "2.3.0",
       elixir: "~> 1.15.7",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
