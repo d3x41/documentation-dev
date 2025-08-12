@@ -4,8 +4,8 @@ defmodule KaisenDocumentation.MixProject do
   def project do
     [
       app: :kaisen_documentation,
-      version: "2.3.0",
-      elixir: "~> 1.15.7",
+      version: "3.0.0",
+      elixir: "~> 1.18.4",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
 
@@ -31,7 +31,7 @@ defmodule KaisenDocumentation.MixProject do
           "md/start/live.md": [ title: "Live informations"],
           "md/start/netinst.md": [ title: "NETINST informations"],
           "md/start/install.md": [ title: "Install OS"],
-          "md/start/virtualisation.md": [ title: "Using Virtualisation"],
+          "md/start/virtualization.md": [ title: "Using Virtualization"],
           "md/start/menu.md": [ title: "Menu and Tools overview"],
           "md/tools/tools.md": [ title: "Tools"],
           "md/tools/packages.md": [ title: "Packages"],
@@ -41,8 +41,9 @@ defmodule KaisenDocumentation.MixProject do
           "md/tutorials/Bad-sectors-analyses.md": [ title: "Bad sectors analyses"],
           "md/tutorials/grub-repair.md": [ title: "Repair GRUB"],
           "md/tutorials/terminal-shortcuts.md": [ title: "Kaisen Terminal shortcuts"],
-          "md/tutorials/advanced-btrfs-utilisation.md": [ title: "Advanced BTRFS utilisation"],
+          "md/tutorials/advanced-btrfs-utilization.md": [ title: "Advanced BTRFS utilization"],
           "md/tutorials/create-chroot.md": [ title: "Create chroot"],
+          "md/tutorials/Virtualbox-utilization.md": [ title: "Virtualbox utilization"],
           "md/infos/licence.md": [ title: "Kaisen Linux licence"],
           "md/infos/download.md": [ title: "Kaisen Linux downloads"],
           "md/infos/repo.md": [ title: "Kaisen Linux repositories"],
@@ -94,7 +95,7 @@ defmodule KaisenDocumentation.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:ex_doc, "~> 0.31.0", only: :dev, runtime: false},
+      {:ex_doc, "~> 0.38.2", only: :dev, runtime: false},
     ]
   end
 

@@ -79,15 +79,12 @@ Here are the configurations of the preseed file used to customize the Kaisen Lin
 ```bash
 #Default repository information (don't include codename data, d-i figures it out from what's available in the ISO)
 d-i mirror/protocol string https
-d-i mirror/country string FR
+d-i mirror/https/countries string FR
 d-i mirror/https/hostname string deb.kaisenlinux.org
 d-i mirror/https/mirror string deb.kaisenlinux.org
 d-i mirror/https/directory string /
 d-i mirror/suite string kaisen-rolling
 d-i mirror/udeb/suite string kaisen-rolling
-
-#Disable network configuration on the installer
-d-i netcfg/enable boolean false
 
 #Force define kaisenlinux as default hostname (priority on DHCP)
 d-i netcfg/hostname string kaisenlinux
@@ -97,9 +94,34 @@ d-i netcfg/get_hostname seen false
 #Disable missing firmware message during network configuration
 d-i hw-detect/load_firmware boolean false
 
-#Disable missing ethernet message during network configuration
-d-i ethdetect/prompt_missing_firmware boolean false
-d-i ethdetect/module_select select no ethernet card
+#Disable security, updates and backports
+d-i apt-setup/services-select multiselect
+
+#Enable contrib, non-free and non-free-firmware
+d-i apt-setup/non-free-firmware boolean true
+d-i apt-setup/non-free boolean true
+d-i apt-setup/contrib boolean true
+
+#Disable CDROM entries after install
+d-i apt-setup/disable-cdrom-entries boolean true
+
+#Include packages in the base system
+d-i base-installer/includes string bash-completion zsh ca-certificates kaisen-archive-keyring
+
+#Upgrade installed packages (debootstrap)
+d-i pkgsel/upgrade select full-upgrade
+
+#Disable question about automatic security updates
+d-i pkgsel/update-policy select none
+
+#Disable popularity-contest
+popularity-contest popularity-contest/participate boolean false
+
+#Disable question about extra media
+d-i apt-setup/cdrom/set-first boolean false
+
+#Install default linux-image-amd64 kernel metapackage
+d-i base-installer/kernel/image string linux-image-amd64
 
 #Do not ask to create a root password to force the creation of a user with reduced privileges
 d-i passwd/root-login boolean false
@@ -108,7 +130,10 @@ d-i passwd/root-login boolean false
 d-i clock-setup/utc boolean false
 
 #Controls whether to use NTP to set the clock during the install
-d-i clock-setup/ntp boolean false
+d-i clock-setup/ntp boolean true
+
+#NTP server to use
+d-i clock-setup/ntp-server string 0.debian.pool.ntp.org
 
 #Automatically enable force UEFI installation
 d-i partman-efi/non_efi_system boolean true
@@ -122,41 +147,39 @@ d-i partman-auto-crypto/erase_disks boolean false
 #Disable warning when no swap partition was created
 d-i partman-basicfilesystems/no_swap boolean false
 
-#Activate eatmydata to reduce space disk used
-d-i preseed/early_command string anna-install eatmydata-udeb
+#Activate eatmydata to reduce space disk used and download simple-cdd profiles
+d-i preseed/early_command string anna-install eatmydata-udeb simple-cdd-profiles
 
-#Disable question about automatic security updates
-d-i pkgsel/update-policy select none
+#Select kaisen profile
+simple-cdd simple-cdd/profiles multiselect kaisen
 
-#Disable popularity-contest
-popularity-contest popularity-contest/participate boolean false
+#Automatically use APT mirror
+d-i apt-setup/use_mirror boolean true
 
-#Disable question about extra media
-d-i apt-setup/cdrom/set-first boolean false
-
-#Do not use an APT mirror (removes the question of the additional mirror for APT, useless here since everything is already in ISO)
-d-i apt-setup/use_mirror boolean false
-
-#Auto and only enable security (to add automatically deb.kaisenlinux.org repository)
-d-i apt-setup/services-select multiselect security
-
-#Enable contrib and non-free
-d-i apt-setup/non-free boolean true
-d-i apt-setup/contrib boolean true
-
-#Disable CDROM entries after install
-d-i apt-setup/disable-cdrom-entries boolean true
-
-#Do not eject the CDROM
-d-i cdrom-detect/eject boolean false
+#Force the ejection of the CDROM after the installation
+d-i cdrom-detect/eject boolean true
 
 #Delete the message at end installation and automatic reboot after finish install
 d-i finish-install/reboot_in_progress note
 
 #Execute at command after system installation
 #d-i preseed/late_command string in-target sh -c ''
+
+#Packages configurations
+iptables-persistent iptables-persistent/autosave_v4 boolean false
+iptables-persistent iptables-persistent/autosave_v6 boolean false
+wireshark-common wireshark-common/install-setuid boolean false
+krb5-config krb5-config/default_realm string
+krb5-config krb5-config/kerberos_servers string
+krb5-config krb5-config/admin_server string
+macchanger macchanger/automatically_run boolean false
+virtualbox-ext-pack virtualbox-ext-pack/license boolean true
+iperf3 iperf3/start_daemon boolean false
+encfs encfs/security-information boolean true
+encfs encfs/security-information seen true
+zfs-dkms zfs-dkms/note-incompatible-licenses boolean true
+zfs-dkms zfs-dkms/note-incompatible-licenses seen true
 ```  
 
 It is thanks to this file that the Debian installer is customized and for this reason that certain processes, such as password request for root, network configuration and others do not exist on the ISO. The purpose of this file is to automate certain tasks (we can completely automate the installation using this file), as well as to customize the installer according to our needs.  
-
 The choice not to leave to the installer, the choice to create a password for root is because using the default root account is highly discouraged as well as the custom terminal, although available on root by typing zsh in the terminal (bash was left by default to allow chroot), is by default available for users without privileges.

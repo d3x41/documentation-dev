@@ -5,7 +5,7 @@ We assume here that you know what a hypervisor is, as well as creating a virtual
 We recommends to use VirtualBox, VMWare Workstation or QEMU/KVM hypervisors.  
 The VMWare, Virtualbox and QEMU/KVM guests daemons are activated by default when Kaisen Linux is executed in them.  
 
-## VirtualBox
+## VirtualBox
 You can virtualize Kaisen Linux with VirtualBox hypervisor.  
 Following this step:
 

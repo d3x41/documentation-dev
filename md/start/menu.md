@@ -11,7 +11,7 @@ Some launchers like Gparted or Wireshark are launchers for graphical application
 ### CLI applications
 The CLI (Command Line Interface, therefore launching with the terminal) launchers have for a very large majority a different behavior. Since the overwhelming majority of command line tools have multiple options and user parameters (e.g. ls with ls -a ls -l etc ...), it is too complicated to make a launcher by option offered by the software. The software therefore returns a man page or a help page to indicate how the tool is used.
 
-### Icons next to the launchers
+### Icons next to the launchers
 The icons next to launchers (applications) also have their meaning. Each graphic tool has its icon as its logo. The launchers of applications that can be used on the terminal have a terminal as their icon. This is to indicate to the user that this is a command line tool or a graphical tool.  
 
 In the context of veracrypt for example, the command line executable as well as the graphical executable are integrated by default. So there is a launcher for the graphical launcher and a launcher for command line use.
@@ -34,13 +34,13 @@ Network tools are divided into several categories such as PCAP (frame capture to
 The system tools are mainly remote administration, backup and virtualization tools (type 2 hypervisors), DNS (DNS diagnostic tools), SSL/TLS (TLS certificate analysis) and many others. This category is therefore purely focused on the administration of Windows and Linux systems. Tools like parallel-ssh, rsync, zsync, ab, xca to name a few are classified in this category and its subcategories.  
 Cloud and DevOps tools are a collection of tools for cloud engineers such as trivy, terraform, k6, k9s and others!
 
-### Tools for technicians
+### Tools for technicians
 In this menu, are stored all the tools dedicated to the maintenance of computers and their hardware peripherals and operating systems. Several subcategories exist in this menu like disk scan, data recovery, mount tools etc ... Tools like gsmartcontrol, gparted, ddrescue, testdisk, photorec can be found. These tools can also be used by system administrators as part of some of their functions and not just by IT technicians. Data and disk encryption tools are also classified as well.
 
 ### Various tools
 In this menu, are stored the launchers that cannot be entered in the menu for system and network administrators or technicians, because they are too generic. Can be found there for example midnight commander, progress, and also some scripts developed for Kaisen Linux like for example, the kaisen-interface-switcher and kaisen-update (automation of updates and cleaning of non-essential packages). The kaisen-interface-switcher as well as kaisen-update can be launched directly via the menu because they do not require specific arguments to run.
 
-### Filesystems
+### Filesystems
 The menu for file systems is a menu that allows to simply reference the tools and commands that can be used to administer, repair, create, diagnose different file systems such as BTRFS, ExFAT, NTFS, XFS, EXT4 etc ... In this category, is contained for example the commands mkfs (create a filesystem on a partition), fsck (repair the filesystem of a partition) etc ...
 These launchers open a full help or man page.
 
@@ -50,5 +50,5 @@ This menu has been specially designed to simplify the management of services in 
 ### Exegol
 The Exegol menu is a menu to group together the exegol tool and its documentation.
 
-## Dynamic menu update
+## Dynamic menu update
 All launchers of each category are present in the menu only if the package associated with the program executed by the launcher is present on the system. So if you uninstall a package, or use the ISO dedicated to the rescue system, only the launchers associated with installed software will be listed. This behavior is the same as for the services menu, the scripts will still be present in /opt/services but will no longer be listed in the menu.

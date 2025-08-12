@@ -34,7 +34,7 @@ Make sure you are in the same folder as the ISO to do all this!!! The dd command
 - Create a bootable Kaisen USB drive with the following command:
 
 ```bash
-sudo dd if=kaisenlinuxrolling2.2-amd64-SR.iso of=/dev/sdb bs=4M status=progress
+sudo dd if=kaisenlinuxrolling3.0-amd64-SR.iso of=/dev/sdb bs=4M status=progress
 ```
 Normally two partitions were created by dd. You can check this with the sudo fdisk -l command. You need to create a third to add persistence to it.
 
@@ -42,7 +42,7 @@ Normally two partitions were created by dd. You can check this with the sudo fdi
 
 ```bash
 end=50GiB (if key is 64GiB, for security we will put the key ending at 50GiB plus the size of the ISO so 4GiB)
-read start _ <<< $(du -bcm kaisenlinuxrolling2.2-amd64-SR.iso | tail -1); echo $start
+read start _ <<< $(du -bcm kaisenlinuxrolling3.0-amd64-SR.iso | tail -1); echo $start
 sudo parted /dev/sdb mkpart primary ${start}MiB $end
 ```
 
@@ -84,7 +84,7 @@ Make sure you are in the same folder as the ISO to do all this!!! The dd command
 - Create a bootable Kaisen USB drive with the following command:
 
 ```bash
-sudo dd if=kaisenlinuxrolling2.2-amd64-SR.iso of=/dev/sdb bs=4M status=progress
+sudo dd if=kaisenlinuxrolling3.0-amd64-SR.iso of=/dev/sdb bs=4M status=progress
 ```
 
 Normally two partitions were created by dd. You can check this with the `sudo fdisk -l` command. You need to create a third to add persistence to it.
@@ -93,7 +93,7 @@ Normally two partitions were created by dd. You can check this with the `sudo fd
 
 ```bash
 end=50GiB (if key is 64GiB, for security we will put the key ending at 50GiB plus the size of the ISO so 4GiB)
-read start _ <<< $(du -bcm kaisenlinuxrolling2.2-amd64-SR.iso | tail -1); echo $start
+read start _ <<< $(du -bcm kaisenlinuxrolling3.0-amd64-SR.iso | tail -1); echo $start
 sudo parted /dev/sdb mkpart primary ${start}MiB $end
 ```
 

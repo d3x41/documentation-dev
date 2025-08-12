@@ -22,7 +22,7 @@ This metapackage installs the following Kaisen Linux metapackages:
 * kaisen-virus-analysis
 ```
 
-### kaisen-network-tools
+### kaisen-network-tools
 This metapackage installs the following Kaisen Linux metapackages:
 ```bash
 * kaisen-network-uncategorized
@@ -56,37 +56,37 @@ This metapackage installs the following Kaisen Linux metapackages:
 * kaisen-virtualization-tools
 ```
 
-### kaisen-disks-analysis
+### kaisen-disks-analysis
 This metapackage install all tools listed [here](tools.html#disks-analysis).
 
-### kaisen-virus-analysis
+### kaisen-virus-analysis
 This metapackage install all tools listed [here](tools.html#virus-analysis).
 
-### kaisen-cloning
+### kaisen-cloning
 This metapackage install all tools listed [here](tools.html#cloning).
 
-### kaisen-usb-boot
+### kaisen-usb-boot
 This metapackage install all tools listed [here](tools.html#usb-boot).
 
-### kaisen-hardware
+### kaisen-hardware
 This metapackage install all tools listed [here](tools.html#hardware).
 
-### kaisen-pst-tools
+### kaisen-pst-tools
 This metapackage install all tools listed [here](tools.html#outlook-pst).
 
-### kaisen-password-tools
+### kaisen-password-tools
 This metapackage install all tools listed [here](tools.html#password-tools).
 
-### kaisen-partitioning-erase
+### kaisen-partitioning-erase
 This metapackage install all tools listed [here](tools.html#partitioning-and-delete-tools).
 
-### kaisen-data-protection
+### kaisen-data-protection
 This metapackage install all tools listed [here](tools.html#data-protection).
 
-### kaisen-data-recovery
+### kaisen-data-recovery
 This metapackage install all tools listed [here](tools.html#data-recovery).
 
-### kaisen-temperature-analysis
+### kaisen-temperature-analysis
 This metapackage install all tools listed [here](tools.html#temperature-analysis).
 
 ### kaisen-network-uncategorized
@@ -170,20 +170,20 @@ This metapackage install all tools listed [here](tools.html#databases-clients).
 ### kaisen-sysops-tools
 This metapackage install all tools listed [here](tools.html#devops-and-cloud).
 
-### kaisen-firmwares
+### kaisen-firmwares
 This metapackage install all tools listed [here](tools.html#integrated-firmwares).
 
-### kaisen-filesystems
+### kaisen-filesystems
 This metapackage install all tools listed [here](tools.html#filesystems-tools).
 
-### kaisen-miscellaneous
+### kaisen-miscellaneous
 This metapackage install all tools listed [here](tools.html#miscellaneous-tools).
 
-### kaisen-exegol
+### kaisen-exegol
 This metapackage install all tools listed [here](tools.html#exegol).
 
 
-## Kaisen Linux metapackages for graphical interfaces
+## Kaisen Linux metapackages for graphical interfaces
 
 ### kaisen-kde
 This metapackage install all tools listed [here](tools.html#kde).

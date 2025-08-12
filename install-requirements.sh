@@ -1,32 +1,31 @@
 #!/usr/bin/env bash
 
-# DESCRIPTION : install asdf manager
-# REQUIREMENTS : sudo
-# USAGE1 : chmod +x install-asdf.sh && ./install-asdf.sh
+set -e
 
-# set asdf git url & versions
-asdf_git="https://github.com/asdf-vm/asdf.git"
-asdf_version="v0.13.1"
-# requirements on linux (git or minimal with git-core)
-sudo apt install curl git libssl-dev automake autoconf libncurses-dev make gcc unzip
-
-# clone the latest branch via git
-git clone $asdf_git ~/.asdf --branch $asdf_version
-# add to your shell
-read -p "What is your shell, Bash or ZSH ? enter [B or Z]: " my_shell
-# add asdf to your shell
-if [[ "$my_shell" = "B"||"b" ]]; then
-# asdf bash
-echo ". $HOME/.asdf/asdf.sh" >> ~/.bashrc
-echo ". $HOME/.asdf/completions/asdf.bash" >> ~/.bashrc
-else
-# asdf zsh
-echo ". $HOME/.asdf/asdf.sh" >> ~/.zshrc
-# autocompletions or use ohmyzsh : update ~/.zshrc and add plugins asdf
-fpath=(${ASDF_DIR}/completions $fpath)
-autoload -Uz compinit
-compinit
+if [[ "$EUID" -ne 0 ]]; then
+	echo "Run this script as root"
+	exit 1
 fi
-# ending
-echo "Installation done : Restart your shell by opening a new terminal"
-# enter : asdf
+
+asdf_version="v0.18.0"
+arch="amd64"
+
+if [[ -e /etc/debian_version ]]; then
+	apt-get install -y curl git libssl-dev automake autoconf libncurses-dev make gcc unzip
+fi
+
+if command -v dnf &> /dev/null; then
+	dnf install -y curl git openssl-devel automake autoconf ncurses-devel make gcc-c++ unzip
+fi
+
+wget -P /tmp https://github.com/asdf-vm/asdf/releases/download/"${asdf_version}/asdf-"${asdf_version}-linux-"${arch}".tar.gz
+
+tar fx /tmp/asdf-"${asdf_version}"-linux-"${arch}".tar.gz -C /tmp
+sudo mv /tmp/asdf /usr/local/bin
+
+asdf plugin add erlang
+asdf plugin add elixir
+asdf install erlang latest
+asdf install elixir latest
+
+echo "Run the command: export PATH=$PATH:$HOME/.asdf/shims"

@@ -26,10 +26,8 @@ chmod +x install-requirements.sh && ./install-requirements.sh
 # then restart your shell and enter the following command to install erlang and elixir via asdf
 asdf plugin add erlang
 asdf plugin add elixir
-asdf install erlang latest
-asdf install elixir latest
-# asdf global elixir 1.15.7-otp-26
-# asdg global erlang 26.1.2 
+asdf install erlang 28.0.2
+asdf install elixir 1.18.4-otp-28
 ```
 
 ## How to build html documentation
@@ -67,12 +65,3 @@ firefox doc/documentation.html`
 - **html files** are generated/updated in `doc` folder. Copy the content of this folder to the website\documentation
 
 - index is called documentation.md in md directory
-
-
-
-## version
-
-- started 13022021  
-- upgrade to version 1.6 in mix.exs
-
-

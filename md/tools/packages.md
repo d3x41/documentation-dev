@@ -45,7 +45,7 @@ This package configures the mirrors to be used to download packages.
 ### partman-auto
 Forked to define BTRFS as default filesystem and reworked default schemes.
 
-### debootstrap
+### debootstrap
 This package builds and installs the base system (the packages mentioned as required). This package is forked to integrate the specific configurations of Kaisen Linux (build the base system from the distribution repository).
 
 ### desktop-base
@@ -89,9 +89,6 @@ Forked to add Kaisen Linux lightdm settings
 ### net-retriever
 Forked to add kaisen-archive-keyring-udeb package
 
-### neofetch
-Forked to add Kaisen Linux ASCII logo
-
 ### docker.io
 Forked to add a conffile to change the default storage driver will be used by Docker
 
@@ -108,7 +105,7 @@ Forked to adapt the dependencies to the rest of the VirtualBox packages
 Forked to adapt the distributed version to the version required by GNS3
 
 ### netsniff-ng
-Forked to replace ntpsec by chrony as recommanded package
+Forked to replace ntpsec by chrony as recommended package
 
 ### timeshift
 Forked to add few Kaisen specific patches
@@ -119,30 +116,30 @@ Forked to fix the desktop launcher
 ### python-psutil
 Cross-platform lib for process and system monitoring in Python
 
-## Kaisen Linux packages
+## Kaisen Linux packages
 
 ### kaisen-grub-configuration
 The GRUB package has been recompiled to change the configuration of the /etc/default/grub file to add support for the default splash screen for the user on the installed system (graphical boot) and also allow in case the command lsb_release -i -s cannot be executed because the lsb-release script is not present, you can still display Kaisen and not Debian in the GRUB entries.  
 
 The kaisen-grub-configuration package is installed automatically during system installation and automates this customization.
 
-### kaisen-archive-keyring
+### kaisen-archive-keyring
 This package provides the public GPG keys needed to use our secure repository with identity verification via a GPG key (used by official Debian repositories and implemented security by default).
 
-### kaisen-menu
+### kaisen-menu
 This package provides the custom menu. This includes the "skeleton" of the menu (allows you to organize the location of the different folders), the directories as well as the launchers of the applications. This menu is mainly used to reference the tools present in the distribution.
 
-### kaisen-services-management
+### kaisen-services-management
 This package provides various bash scripts allowing you to easily manage additional services (added by software supplied with the distribution).  
 The scripts are installed in `/usr/share/kaisen-services-management`. This package coupled with the "kaisen-menu" package allows you to reference and execute directly via the menu the scripts classified by service to activate or deactivate additional services. Two activation and deactivation scripts exist for all services.
 
-### kaisen-update
+### kaisen-update
 This package just provides a script to perform an apt update && apt upgrade in one command. The kaisen-update command also allows to remove the most necessary packages (dependencies no longer used).
 
 ### kaisen-build
 This package contains all configurations for build Kaisen Linux ISO.
 
-### kaisen-interfaces
+### kaisen-interfaces
 All Kaisen Linux MATE Desktop Environment configurations (themes, icons etc). 
 
 All Kaisen Linux KDE Desktop Environment configurations (themes, icons etc). 
@@ -167,43 +164,52 @@ This package is simply an offline implementation of the entire https://kaisenlin
 ### kaisen-design
 This package contains all themes and icons for Kaisen Linux
 
-### kaisen-conky
+### kaisen-conky
 Conky theme for Kaisen Linux
 
 ### kaisen-winkey-recovery
 Official Kaisen Linux tool to recover OEM Windows key
 
-### veracrypt
+### kaisen-lib64
+Ensure of /lib64 has been created (required by debootstrap)
+
+### kaisen-systemd-subvolume-delete
+Automatically delete BTRFS subvolumes created by systemd
+
+### kaisen-webdocs
+Package for offline web documentation and manpages
+
+### veracrypt
 Tool to HDD, SSD and system disks encryption.
 
-### woeusb
+### woeusb
 Tool to create Windows USB bootable key (written in Bash).
 
 ### woeusb-ng
 Tool to create Windows USB bootable key (written in Python)
 
-### gns3-server
+### gns3-server
 Tool to network simulator (server package)
 
-### gns3-gui
+### gns3-gui
 Tool to network simulator (client package)
 
-### apfs-fuse
+### apfs-fuse
 FUSE driver for Apple FileSystem
 
-### ubridge
+### ubridge
 Bridge for UDP tunnels, Ethernet, TAP and VMnet interfaces
 
-### vpcs
+### vpcs
 Simple Virtual PC Simulator
 
-### dynamips
+### dynamips
 Router emulator for GNS3
 
-### neo4j
+### neo4j
 Graph for everyone
 
-### bettercap
+### bettercap
 Tool to testing the possibility of MITM attacks on Bluetooth, Wi-Fi, Ethernet and more.
 
 ### bettercap-caplets
@@ -212,10 +218,10 @@ Caplets and proxy modules.
 ### bettercap-ui
 Bettercap's web UI
 
-### hfsprescue
+### hfsprescue
 Tool specialized in recovering data from HFS + partitions.
 
-### conkycolors
+### conkycolors
 Tool developed with the aim of simplifying the configuration of the Conky theme. Some contributions have been made on the official GitHub repository of the software to facilitate its integration into Kaisen Linux.
 
 ### ctop
@@ -254,13 +260,13 @@ Infrastructure as code tool to provisioning cloud infrastructures.
 ### trivy
 Vulnerabilities scanner for containers
 
-### sentry-python
+### sentry-python
 Updated tool for integrating GNS3 tools in Kaisen Linux.
 
-### python3-cpuinfo
+### python3-cpuinfo
 Updated tool for integrating GNS3 tools in Kaisen Linux.
 
-### python3-getdevinfo
+### python3-getdevinfo
 Repackaged to make it compatible with Kaisen Linux, is a dependency on ddrescue-gui.
 
 ### btrbk
@@ -278,9 +284,6 @@ Packaged because is a dependancy of sslyze
 ### ddrescue
 Data recovery and data protection tool
 
-### bloodhound
-Tool to check Active Directory configurations
-
 ### ddrescue-gui
 Tool to add a GUI for ddrescue tool
 
@@ -296,9 +299,6 @@ Kubernetes Native Policy Management
 ### vault
 Hashicorp tool to for secrets management, encryption as a service, and privileged access management
 
-### ssldump
-SSL and TLS analyser
-
 ### packer
 Tool for creating identical machine images for multiple platforms from a single source configuration
 
@@ -311,9 +311,6 @@ Kubernetes IN Docker - local clusters for testing Kubernetes
 ### velero
 Tool to backup and migrate Kubernetes applications and their persistent volumes
 
-### sslscan
-SSL/TLS scanner
-
 ### rclone
 Rclone - "rsync for cloud storage"
 
@@ -322,9 +319,6 @@ A Kubernetes cluster resource sanitizer
 
 ### gtkstresstest
 System utility designed to stress and monitor various hardware components
-
-### dupeguru
-Tool to find duplicate files
 
 ### gox
 A dead simple, no frills Go cross compile tool
@@ -380,9 +374,6 @@ A simple terminal UI for git commands
 ### lazydocker
 The lazier way to manage everything docker
 
-### terraform-docs
-A utility to generate documentation from Terraform modules in various output formats
-
 ### yq
 Portable command-line YAML, JSON, XML, CSV and properties processor
 
@@ -392,7 +383,7 @@ Automatically create snapshots when APT is used with Timeshift
 ### kaisen-live-guest-additions
 Management of guests additions services for Kaisen live systems
 
-### exegol
+### exegol
 Fully featured and community-driven hacking environment
 
 ### exegol-docs
@@ -409,6 +400,33 @@ DTA sedutil Self encrypting drive software
 
 ### sshs
 Terminal user interface for SSH
+
+### argo-cd
+Declarative Continuous Deployment for Kubernetes
+
+### docker-buildx
+Docker CLI plugin for extended build capabilities with BuildKit
+
+### docker-compose
+Define and run multi-container applications with Docker
+
+### glab
+A GitLab CLI tool bringing GitLab to your command line
+
+### enumer
+A Go tool to auto generate methods for your enums
+
+### hyfetch
+Shows Linux System Information with Distribution Logo
+
+### openbao
+OpenBao exists to provide a software solution to manage, store, and distribute sensitive data including secrets, certificates, and keys
+
+### opentofu
+OpenTofu lets you declaratively manage your cloud infrastructure
+
+### tekton-cli
+A CLI for interacting with Tekton!
 
 ## Source of packages
 All the sources of the packages can be found here:

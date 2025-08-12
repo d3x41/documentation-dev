@@ -1,8 +1,8 @@
 # Advanced BTRFS utilisation
 
-## Subvolumes
+## Subvolumes
 
-### Explanations
+### Explanations
 A subvolume is a branch of the file system that behaves like a file subsystem. it appears as a directory.  
 It is thanks to these sub-volumes that the creation of snapshots of a directory is possible.
 
@@ -27,7 +27,7 @@ A snapshot, or restore point, is an image of the file system or one of its subvo
 
 Once created, a snapshot behaves like an ordinary folder on your file system: you can copy it, move it to external media, rename it...
 
-### Snapshots with BTRFS commands
+### Snapshots with BTRFS commands
 To take a snapshot of the entire system from the command line:  
 ```sudo btrfs subvolume snapshot / /opt/snapshot20210330```  
 
@@ -67,7 +67,30 @@ This functionality can also be completely removed by fully uninstalling the pack
 A systemd timer and service are installed by default to remove automatically all snapshots older than 7 days. Manual deletion isn't required, but it's possible to delete them manually.
 Snapshots restored can also be deleted with the timeshift --remove command.
 
-### The grub-btrfs package
+## The kaisen-snapshot command
+In version 3.0, the **kaisen-snapshot** command was created. This command is a wrapper for timeshift, making it easier to use on a daily basis.
+
+Examples of commands to use with the **kaisen-snapshot** command:
+
+- kaisen-snapshot **-c** (or **--create**): Create a snapshot
+- kaisen-snapshot **-m** (or **--message**): Custom message for a snapshot (**Perso** is the default value, if this argument is not used)
+- kaisen-snapshot **-d** (or **--delete**): Delete a snapshot
+- kaisen-snapshot **-a** (or **--delete-all**): Delete all snapshots
+- kaisen-snapshot **-r** (or **--restore**): Restore a snapshot
+- kaisen-snapshot **-l** (or **--list**): List all snapshots taken
+
+Examples:
+
+- Create a snapshot without custom message:
+```sudo kaisen-snapshot -c```
+
+- Create a snapshot with the message **Test**:
+```sudo kaisen-snapshot -m "Test" -c``` or ```sudo kaisen-snapshot -c -m "Test"```
+
+- Delete all snapshots taken:
+```sudo kaisen-snapshot -a```
+
+### The grub-btrfs package
 Since the 2.2RC2 release, the grub-btrfs package is included by default when Kaisen uses BTRFS as default filesystem. The grub-btrfs package allows to boot on a previously created snapshot directly from the GRUB menu! All taken snapshots will can be restored from the started snapshot!  
 
 To restore a snapshot, you should use the BTRFS commands or the commands or the commands of the software used to take the snapshots (Timeshift for example, also works with snapshots taken automatically by kaisen-timeshift-apt).  

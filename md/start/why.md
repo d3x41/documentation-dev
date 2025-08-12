@@ -8,7 +8,7 @@ I therefore combined tools intended for system and network administrators as wel
 This allowed to extend the main function of system rescue, while providing diagnostic tools mainly for the network section.
 You will find on this section, some arguments to distinguish it from other more or less similar projects.
 
-## Base
+## Base
 Kaisen linux is based at Debian GNU/Linux (testing version) distribution. The system uses Debian packages, however custom packages follow the Debian model as much as possible and are tested before production to limit bugs. Kaisen Linux respects the FHS (File Hierarchy System) standard to remain as faithful as possible to this magnificent distribution that is Debian.
 
 ## Designed for beginners
@@ -23,7 +23,7 @@ The terminal of Kaisen Linux is based on bash-completion and zsh and has been mo
 ## Installable
 Kaisen Linux has the functionality of being installed on a hard drive for daily use or to create machines dedicated to certain tasks that can be performed with Kaisen Linux. The installation is possible even in UEFI and certain tasks during the installation have been automated to facilitate the installation of the distribution, automate it a little, and customize the installation. The textual installation (reduced graphics) of classic Debian as well as the installation in graphical mode are incorporated to meet a maximum of tastes.  
 
-## Number of tools
+## Number of tools
 Kaisen Linux has more than 300 built-in [tools](tools.html) for system administrators and also has full management of many file systems, such as tools for XFS, OCFS, F2FS, EXT, NTFS, Exfat, FAT and others, with maintenance tools of these integrated file systems! Many packages have been designed by ourselves for an integration of more specialized tools for administrators like for example automated snapshots when using APT for easy restoration of the initial state of the system in the event of a problem with a software upgrade or installation.
 
 ## Kernel custom
