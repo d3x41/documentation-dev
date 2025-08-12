@@ -428,7 +428,7 @@ OpenTofu lets you declaratively manage your cloud infrastructure
 ### tekton-cli
 A CLI for interacting with Tekton!
 
-## zulucrypt
+### zulucrypt
 Tool for encrypting volumes
 
 ## Source of packages
